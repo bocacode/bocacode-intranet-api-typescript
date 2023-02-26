@@ -1,41 +1,57 @@
-# TYPESCRIPT API BOILERPLATE
+# 🦸🏻‍♀️ Boca Code Intranet API Project 🦸🏽‍♂️
 
-## Includes set up with: 📝
+A place for new students to get to know the area, engage in technology and practice the coding skills that will get you one step closer to becoming a Software Engineer 👩🏼‍💻 🧑🏽‍💻 👩🏾‍💻 🧑🏻‍💻
 
-- Typescript
-- Express
-- Eslint
-- Prettier
-- Dotenv
-- Cors
-- Nodemon
-- Run and build scripts
+### From Alumni to Coming Students
 
-## What is this boilerplate for? 🙋‍♂️
-Ever found your self starting a new Node API but want to use Typescript, eslint, prettier, cors, dotenv, express, and Nodemon?  then find your self googling how to set this up? 
+This project is built with React, primarily in TypeScript. However, JavaScript contributions are also welcomed.
 
-Well then you don't have to google this any more, just plug and play 🥁
+## Getting Started
 
-## How to use it? 
-
-Run the following commands to clone the repo and install dependencies
+1. Copy and paste this command in the command line to download the repo
 
 ```bash
-# clone the repo
-$ git clone https://github.com/jonathans199/ts-node-api-eslint-boilerplate
-
-# navigate inside the new folder
-$ cd ts-node-api-eslint-boilerplate
-
-# install all dependencies
-$ npm i
+$ git clone https://github.com/bocacode/bocacode-intranet-api-typescript.git
 ```
 
-Change the GIT repo pointer to your own repo
+2. Go to bocacode-intranet-typescript directory
 
 ```bash
-$ git remote set-url origin   <<Your GIT repository here>>
+$ cd bocacode-intranet-api-typescript
 ```
 
-## Then start coding and don't worry about the setup 😎
- ## Contributions welcome, create your PR today!
+3. Install third-party packages and libraries
+
+```bash
+$ npm install
+```
+
+4. Run Docker client in your machine to build the local MongoDB
+
+5. Build the docker container
+
+```bash
+$ docker compose up
+```
+
+6. Seed data into local MongoDb
+
+```bash
+$ npm run seed
+```
+
+7. Run project locally
+
+```bash
+$ npm run start
+```
+
+## IMPORTANT
+
+You don't need the Production MONGO_URI to run the project, you should be able to run the API with the seeded data
+
+## Tech Stack
+
+![Mongoose](https://img.shields.io/badge/Mongoose-61DAFB?logo=Mongoose&logoColor=black)
+![Node](https://img.shields.io/badge/Node-61DAFB?logo=Node&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white)

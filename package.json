@@ -8,7 +8,7 @@
     "build": "tsc ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint:fix": "eslint --fix",
-    "seed": "node --trace-warnings  scripts/seedDb.js"
+    "seed": "npm run build && node --trace-warnings  scripts/seedDb.js"
   },
   "keywords": [
     "typescript",
