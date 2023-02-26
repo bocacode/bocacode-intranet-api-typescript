@@ -3,6 +3,7 @@ import mongoose, { ConnectOptions } from 'mongoose'
 mongoose.set('debug', true)
 
 export const mongooseConnect = async () => {
+  mongoose.set('strictQuery', false)
   mongoose
     .connect(
       process.env.MONGO_URI as string,
@@ -18,5 +19,5 @@ export const mongooseConnect = async () => {
         console.error
       }
     })
-    .catch(err => console.error(err))
+    .catch((err) => console.error(err))
 }

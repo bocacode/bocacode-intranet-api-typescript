@@ -7,7 +7,8 @@
     "start": "nodemon --watch '*.ts'  --watch '*.json' --exec 'ts-node' ./src/index.ts",
     "build": "tsc ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint:fix": "eslint --fix"
+    "eslint:fix": "eslint --fix",
+    "seed": "node --trace-warnings  scripts/seedDb.js"
   },
   "keywords": [
     "typescript",

@@ -6,3 +6,9 @@ package-lock.json
 
 # build folder
 dist
+
+# environment variable s
+.env
+
+# mongo data
+.mongo_data

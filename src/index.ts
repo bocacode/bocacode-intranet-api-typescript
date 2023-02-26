@@ -2,10 +2,15 @@ import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
 
+import { mongooseConnect } from './utils/mongoUtility'
+
 const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.listen('4040', () => console.log('app running '))
+app.listen(process.env.PORT || 4040, () => console.log(`port running on ${process.env.PORT}`))
 
-app.get('/', (req, res) => res.json('API on testing here '))
+import restaurantRoutes from './routes/restaurantsRoutes'
+app.use('/api/restaurants', restaurantRoutes)
+
+mongooseConnect()
