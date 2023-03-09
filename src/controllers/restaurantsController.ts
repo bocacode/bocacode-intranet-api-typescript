@@ -7,8 +7,8 @@ import { addLog } from './logController'
 export const addRestaurant: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
     try {
-      const dupplicateRestaurant = req.body.uid ? await Restaurant.findOne({ uid: req.body.uid }) : null
-      if (dupplicateRestaurant) {
+      const duplicateRestaurant = req.body.uid ? await Restaurant.findOne({ uid: req.body.uid }) : null
+      if (duplicateRestaurant) {
         return res.status(401).json({ error: 'Property already in system' })
       }
 
