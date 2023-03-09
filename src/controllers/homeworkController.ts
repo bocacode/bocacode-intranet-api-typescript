@@ -9,10 +9,10 @@ export const addHomework: RequestHandler = async (req, res) => {
     try {
       const duplicateHomework = req.body.uid ? await Homework.findOne({ uid: req.body.uid }) : null
       if (duplicateHomework) {
-        return res.status(401).json({ error: 'Property already in system' })
+        return res.status(401).json({ error: 'Homework already in system' })
       }
 
-      const newHomework= { ...req.body, uid: createRandomId() }
+      const newHomework = { ...req.body, uid: createRandomId() }
 
       const homeworkCreated = await Homework.create(newHomework)
 
@@ -45,7 +45,7 @@ export const updateHomework: RequestHandler = async (req, res) => {
       if (homeworkUpdated) {
         const log = {
           user_id: req.body.user_id,
-          model: 'property',
+          model: 'homework',
           event_type: 'updated',
           reference_id: homeworkUpdated.uid,
         }
