@@ -26,21 +26,29 @@ $ cd bocacode-intranet-api-typescript
 $ npm install
 ```
 
-4. Run Docker client in your machine to build the local MongoDB
+4. Create a .env file and define variables
+```bash
+$MONGO_URI='mongodb://localhost:27017/intranet-data'
+PORT=4010
+```
 
-5. Build the docker container
+5. Run Docker client in your machine to build the local MongoDB
+<br><br>
+
+6. Build the docker container
 
 ```bash
 $ docker compose up
 ```
+![docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=Docker&logoColor=white)
 
-6. Seed data into local MongoDb
+7. Seed data into local MongoDb
 
 ```bash
 $ npm run seed
 ```
 
-7. Run project locally
+8. Run project locally
 
 ```bash
 $ npm run start
