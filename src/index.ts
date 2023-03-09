@@ -13,4 +13,7 @@ app.listen(process.env.PORT || 4040, () => console.log(`port running on ${proces
 import restaurantRoutes from './routes/restaurantsRoutes'
 app.use('/api/restaurants', restaurantRoutes)
 
+import homeworkRoutes from './routes/homeworkRoutes'
+app.use('/api/homework', homeworkRoutes)
+
 mongooseConnect()
