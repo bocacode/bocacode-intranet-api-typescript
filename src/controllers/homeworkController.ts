@@ -62,7 +62,9 @@ export const updateHomework: RequestHandler = async (req, res) => {
   }
 }
 
-export const getHomework: RequestHandler = async (req, res) => {
+export const getHomeworks: RequestHandler = async (req, res) => {
+  console.log('test here ')
+
   try {
     const allHomework = await Homework.find()
     res.send(allHomework)

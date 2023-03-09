@@ -1,5 +1,5 @@
 import { RequestHandler } from 'express'
-// import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 
 import User from '../models/usersModel'
 
@@ -10,15 +10,15 @@ export const auth: RequestHandler = (req, res, next) => {
     return res.status(401).send({ error: 'you must be logged in' })
   }
 
-  // jwt.verify(token, process.env.PRIVATE_KEY as string, async (err, decoded) => {
-  //   if (err) {
-  //     return res.status(401).send({ error: 'you must be logged in' })
-  //   }
+  jwt.verify(token, process.env.PRIVATE_KEY as string, async (err, decoded) => {
+    if (err) {
+      return res.status(401).send({ error: 'you must be logged in' })
+    }
 
-  //   if (decoded) {
-  //     const { realtorId }: any = decoded
-  //     const realtorFound = await User.findOne({ realtorId: realtorId })
-  //     if (realtorFound) next()
-  //   }
-  // })
+    if (decoded) {
+      const { email }: any = decoded
+      const userFound = await User.findOne({ email: email })
+      if (userFound) next()
+    }
+  })
 }
