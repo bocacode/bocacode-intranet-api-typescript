@@ -10,6 +10,9 @@ app.use(express.json())
 
 app.listen(process.env.PORT || 4040, () => console.log(`port running on ${process.env.PORT}`))
 
+import userRoutes from './routes/userRoutes'
+app.use('/api/users/', userRoutes)
+
 import restaurantRoutes from './routes/restaurantsRoutes'
 app.use('/api/restaurants', restaurantRoutes)
 
