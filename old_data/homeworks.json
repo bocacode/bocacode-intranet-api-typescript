@@ -1,0 +1,379 @@
+[
+  {
+    "timestamp": 1676490740,
+    "question": "Create an object called student and add 3 properties with their values.",
+    "subtopic": "",
+    "week": "Week 1",
+    "createdAt": {
+      "_seconds": 1676490740,
+      "_nanoseconds": 324000000
+    },
+    "topic": "Objects",
+    "day": "Day 2",
+    "id": "00OuKVIJtHPdTPoBDwNK"
+  },
+  {
+    "topic": "Functions",
+    "timestamp": 1676490522,
+    "createdAt": {
+      "_seconds": 1676490522,
+      "_nanoseconds": 999000000
+    },
+    "subtopic": "Conditionals",
+    "week": "Week 1",
+    "question": "Write a function named assignGrade, that takes one argument, a number score. Return a grade for the score, either “A,” “B,” “C,” “D,” or “F.” Invoke that function for a few different scores and log the result to make sure it works.",
+    "day": "Day 3",
+    "id": "1HSOaQJiAf4aEzRErhLy"
+  },
+  {
+    "day": "Day 4",
+    "createdAt": {
+      "_seconds": 1676489536,
+      "_nanoseconds": 604000000
+    },
+    "timestamp": 1676489536,
+    "question": "Create a function that takes an array of numbers and returns a new array with the square of each number.",
+    "subtopic": "",
+    "topic": "Functions",
+    "week": "Week 1",
+    "id": "3kA30IvLKvy73weHH0N7"
+  },
+  {
+    "subtopic": "Arrays",
+    "createdAt": {
+      "_seconds": 1676489045,
+      "_nanoseconds": 634000000
+    },
+    "week": "Week 1",
+    "timestamp": 1676489045,
+    "topic": "Functions",
+    "day": "Day 5",
+    "question": "Create a function which returns the number of true values there are in an array. const testArray = [true, false, false, true, false, false, false, true, true, true, false].",
+    "id": "6lGSJPJdnLfd1jTT7XQ0"
+  },
+  {
+    "topic": "Variables",
+    "subtopic": "",
+    "day": "Day 1",
+    "timestamp": 1676580950,
+    "week": "Week 1",
+    "createdAt": {
+      "_seconds": 1676580950,
+      "_nanoseconds": 843000000
+    },
+    "question": "Declare variables called 'country', 'continent', and 'population' and assign their values according to your own country (population in millions). Log the result to the console.",
+    "id": "6woALdwdTWKckbXJxEVj"
+  },
+  {
+    "subtopic": "Operators",
+    "week": "Week 1",
+    "topic": "Functions",
+    "createdAt": {
+      "_seconds": 1676490612,
+      "_nanoseconds": 417000000
+    },
+    "timestamp": 1676490612,
+    "day": "Day 2",
+    "question": "Write a function that adds two numbers together.",
+    "id": "74Jhe8h3qQX3ASmAhWqI"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1676566252,
+      "_nanoseconds": 946000000
+    },
+    "day": "Day 1",
+    "question": "Write a function that takes in an array of numbers as a parameter and uses the .forEach() method to double the value of all even numbers in the array. The function should not use any other loops or array methods.",
+    "timestamp": 1676566252,
+    "week": "Week 3",
+    "subtopic": "Array methods",
+    "topic": "Functions",
+    "id": "7QiqO06DDYRNRsncFUXk"
+  },
+  {
+    "week": "Week 2",
+    "createdAt": {
+      "_seconds": 1676565620,
+      "_nanoseconds": 849000000
+    },
+    "subtopic": "Operators",
+    "timestamp": 1676565620,
+    "question": "Write a function that takes your age in years and returns your age in minutes.",
+    "topic": "Functions",
+    "day": "Day 3",
+    "id": "973mAWNKZFcEPKHrfI3R"
+  },
+  {
+    "day": "Day 1",
+    "week": "Week 1",
+    "topic": "Data types",
+    "createdAt": {
+      "_seconds": 1676563894,
+      "_nanoseconds": 349000000
+    },
+    "question": "Should “15” === 15, return true or false",
+    "timestamp": 1676563894,
+    "subtopic": "Booleans",
+    "id": "EsiXuLmzHDTgKRrcTNeQ"
+  },
+  {
+    "day": "Day 1",
+    "week": "Week 1",
+    "timestamp": 1676490971,
+    "createdAt": {
+      "_seconds": 1676490971,
+      "_nanoseconds": 345000000
+    },
+    "question": "Create a folder named “homework” inside the “boca-code” folder you created in class. Move into that folder. Inside of the “homework” folder, create a file named “variables.js” and do the remaining exercises inside the file.",
+    "topic": "Command line",
+    "subtopic": "",
+    "id": "GRAOFpYcU2rePLfepzKs"
+  },
+  {
+    "day": "Day 3",
+    "topic": "Databases",
+    "subtopic": "Firestore",
+    "week": "Week 2",
+    "createdAt": {
+      "_seconds": 1676566101,
+      "_nanoseconds": 152000000
+    },
+    "question": "Using Firestore, create a collection of your favorite childhood toys/games (at least 5).",
+    "timestamp": 1676566101,
+    "id": "Gtrx8lPMvsrNPTEplQMP"
+  },
+  {
+    "question": "Create a SQL table with your favorite dishes and cuisines.",
+    "timestamp": 1676564553,
+    "subtopic": "SQL",
+    "topic": "Databases",
+    "createdAt": {
+      "_seconds": 1676564553,
+      "_nanoseconds": 519000000
+    },
+    "day": "Day 2",
+    "week": "Week 2",
+    "id": "HSqN0UxnjG9DGWTY6QeW"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1676489604,
+      "_nanoseconds": 950000000
+    },
+    "day": "Day 4",
+    "question": "Create a function that takes in a number of two-pointers and three-pointers made and returns a basketball team’s total score. Console.log the results.",
+    "topic": "Functions",
+    "timestamp": 1676489604,
+    "subtopic": "",
+    "week": "Week 1",
+    "id": "IbbDp1Auztp5D8HEZVSi"
+  },
+  {
+    "subtopic": "SQL",
+    "createdAt": {
+      "_seconds": 1676564099,
+      "_nanoseconds": 238000000
+    },
+    "topic": "Databases",
+    "question": "Create a table of 3 of your favorite television shows, including the name of the show, favorite actor/actress, where it plays (netflix, cable, etc.), and the genre. Run a query to print all of the show names.",
+    "week": "Week 2",
+    "day": "Day 1",
+    "timestamp": 1676564099,
+    "id": "KHv7Ujs2vhbx9t7KMAUC"
+  },
+  {
+    "week": "Week 2",
+    "topic": "Databases",
+    "day": "Day 5",
+    "timestamp": 1676566138,
+    "subtopic": "",
+    "createdAt": {
+      "_seconds": 1676566138,
+      "_nanoseconds": 620000000
+    },
+    "question": "Design a database (any) for a Pizza Company. Add at least 3 pizzas. Add at least 2 customers. Add at least 3 orders. Write code to connect to database, get all and console.table.",
+    "id": "MiESs6YEj62tdvSDknmQ"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1676564195,
+      "_nanoseconds": 219000000
+    },
+    "question": "Create a table of your favorite actor/actress from each tv show chosen. Include his or her first name, last name tv show, and name of character played. Run a query to print the character names.",
+    "day": "Day 1",
+    "week": "Week 2",
+    "subtopic": "SQL",
+    "topic": "Databases",
+    "timestamp": 1676564195,
+    "id": "MsqhVyBYurToKB6whrjI"
+  },
+  {
+    "subtopic": "Strings",
+    "question": "Create a variable with let or const and assign its value to a string. Make it one of your favorite things, whether’s that’s a car, a pet, a family member, a food, etc.",
+    "topic": "Variables",
+    "day": "Day 1",
+    "timestamp": 1676563671,
+    "week": "Week 1",
+    "createdAt": {
+      "_seconds": 1676563671,
+      "_nanoseconds": 419000000
+    },
+    "id": "Obe7xwudfXEuiERIvKY8"
+  },
+  {
+    "subtopic": "Arrays",
+    "createdAt": {
+      "_seconds": 1676490395,
+      "_nanoseconds": 535000000
+    },
+    "day": "Day 3",
+    "week": "Week 1",
+    "timestamp": 1676490395,
+    "question": "Create a function that removes the first element of the array below and adds “kiwi” to the end of the array.let favoriteFruits = [“mango”, “lychee”, “rambutan”, “papaya”]",
+    "topic": "Functions",
+    "id": "PZqGl2btEOFDx0WFfQ9T"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1676580687,
+      "_nanoseconds": 98000000
+    },
+    "topic": "Functions",
+    "day": "Day 4",
+    "week": "Week 1",
+    "timestamp": 1676580687,
+    "subtopic": "Arrays",
+    "question": "Write a function findNeedle() that takes an array full of items but containing one item, 'needle'. After your function finds the needle, it should return a message (as a string) that says: 'found the needle at position ' plus the index it found the needle. Example(Input --> Output) -['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'] --> 'found the needle at position 5'",
+    "id": "WgJsoWiPfWvLKfbeJLqf"
+  },
+  {
+    "question": "Write a function that converts hours into seconds. Return the result.",
+    "timestamp": 1676564492,
+    "createdAt": {
+      "_seconds": 1676564492,
+      "_nanoseconds": 660000000
+    },
+    "subtopic": "Operators",
+    "day": "Day 2",
+    "week": "Week 2",
+    "topic": "Functions",
+    "id": "alQCuYF17cifs0XbSn0D"
+  },
+  {
+    "subtopic": "Arrays",
+    "week": "Week 2",
+    "timestamp": 1676566045,
+    "question": "Write a function that takes an array of numbers and returns the sum of all even numbers.",
+    "createdAt": {
+      "_seconds": 1676566045,
+      "_nanoseconds": 340000000
+    },
+    "topic": "Functions",
+    "day": "Day 3",
+    "id": "cLJ8LooT24og2cVqt69R"
+  },
+  {
+    "topic": "Functions",
+    "day": "Day 4",
+    "subtopic": "",
+    "week": "Week 1",
+    "timestamp": 1676489634,
+    "createdAt": {
+      "_seconds": 1676489634,
+      "_nanoseconds": 491000000
+    },
+    "question": "Create a function that converts a string to uppercase letters. Console.log the results.",
+    "id": "iVTtVOkhNdwAEYoEb0OL"
+  },
+  {
+    "timestamp": 1676563600,
+    "subtopic": "",
+    "question": "Declare variables called ‘country’ and ‘continent’ and assign their values according to your own country. Log their values to the console.",
+    "day": "Day 1",
+    "createdAt": {
+      "_seconds": 1676563600,
+      "_nanoseconds": 253000000
+    },
+    "topic": "Variables",
+    "week": "Week 1",
+    "id": "nkS1rkiFqY22aXTUICoI"
+  },
+  {
+    "question": "Write a function called combineTwoArrays that takes in two arrays as arguments, and returns a single array that combines both.",
+    "timestamp": 1676489178,
+    "topic": "Functions",
+    "day": "Day 5",
+    "createdAt": {
+      "_seconds": 1676489178,
+      "_nanoseconds": 368000000
+    },
+    "subtopic": "Arrays",
+    "week": "Week 1",
+    "id": "phnpgs8zDHpVHS4GYjJ5"
+  },
+  {
+    "subtopic": "Operators",
+    "createdAt": {
+      "_seconds": 1676490657,
+      "_nanoseconds": 286000000
+    },
+    "day": "Day 2",
+    "week": "Week 1",
+    "timestamp": 1676490657,
+    "question": "Write a function that returns the square of a number.",
+    "topic": "Functions",
+    "id": "q39ErV9gx5HVbFbtHIn4"
+  },
+  {
+    "topic": "Functions",
+    "week": "Week 3",
+    "createdAt": {
+      "_seconds": 1676566304,
+      "_nanoseconds": 400000000
+    },
+    "timestamp": 1676566304,
+    "subtopic": "Array methods",
+    "question": "Write a function that takes the array below and modifies its order as follows: let myDreamCars = [“Charger”, “Cayenne”, “Cyber Truck”, “G Wagon”, “Civic)]. Remove the first element, add your dream car as the new first element, remove the last element, and add your first car as the new last element.",
+    "day": "Day 1",
+    "id": "qApVMDkCwCn9UFmMDQxE"
+  },
+  {
+    "topic": "Command line",
+    "timestamp": 1676490827,
+    "question": "Create a folder named “homework” inside the “boca-code” folder you created in class. Move into that folder. Inside of the “homework” folder, create a file named “variables.js” and do the remaining exercises inside the file.",
+    "subtopic": "",
+    "week": "Week 1",
+    "day": "Day 1",
+    "createdAt": {
+      "_seconds": 1676490827,
+      "_nanoseconds": 858000000
+    },
+    "id": "so2NZDIiIEp6naKbBIia"
+  },
+  {
+    "subtopic": "Arrays",
+    "createdAt": {
+      "_seconds": 1676489479,
+      "_nanoseconds": 479000000
+    },
+    "timestamp": 1676489479,
+    "week": "Week 1",
+    "day": "Day 5",
+    "question": "You are given 2 arrays, one called shoppingList and one called cart. Example: let shoppingList = [‘beer’, ‘milk’, ‘wine’] let cart = [‘milk’]. Create a new version of shoppingList where the items in the cart have been removed",
+    "topic": "Functions",
+    "id": "toA2ZQUtvdtRUQELorqx"
+  },
+  {
+    "timestamp": 1676564005,
+    "question": "Write a function that prints (console.log) the numbers from 1 to 100. But log “Fizz” instead of the number if it is divisible by 3, “Buzz” if the number is divisible by 5, and “FizzBuzz” if the number is divisible by both 3 and 5.",
+    "createdAt": {
+      "_seconds": 1676564005,
+      "_nanoseconds": 807000000
+    },
+    "subtopic": "Conditionals",
+    "day": "Day 1",
+    "topic": "Functions",
+    "week": "Week 2",
+    "id": "uavNDBcMX1I3pJUGjtMr"
+  }
+]

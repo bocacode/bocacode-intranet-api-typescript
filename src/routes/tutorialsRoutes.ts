@@ -8,7 +8,7 @@ const router = Router()
 router.route('/').post(addTutorial) //tested
 // router.route('/disable/:tutorialId').patch(auth,
 //   disableTutorial) //tested without auth
-// router.route('/').get(auth, getTutorials) //tested without auth
+router.route('/').get(getTutorials) //tested without auth
 // router.route('/update').patch(auth, updateTutorial)   //tested without auth
 
 export default router

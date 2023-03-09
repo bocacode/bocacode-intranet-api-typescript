@@ -1,0 +1,117 @@
+[
+  {
+    "question": "Create a function that takes two arrays and insert the second array in the middle of the first array.",
+    "name": "Tuck in Array",
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "level": "Easy",
+    "id": "53AntIoNIWFjqm6Itcpa"
+  },
+  {
+    "question": "Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialised with the attributes name and age, return a sentence in the following format:  {other person name} is {older than / younger than / the same age as} me.",
+    "name": "Older Than Me",
+    "level": "Easy",
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "id": "8VzeY50BkWK4wBDa0fbL"
+  },
+  {
+    "name": "Gianna",
+    "createdAt": {
+      "_seconds": 1674763736,
+      "_nanoseconds": 379000000
+    },
+    "question": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\".",
+    "id": "ENIzF0tXW5l9bxXHVG1T"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "level": "Easy",
+    "name": "Buggy Code (Part 1)",
+    "question": "Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.",
+    "id": "GpRTojZPRSCFLfYZVpqv"
+  },
+  {
+    "level": "Hard",
+    "name": "GIGI",
+    "createdAt": {
+      "_seconds": 1676315098,
+      "_nanoseconds": 376000000
+    },
+    "question": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\".",
+    "id": "KcCS2JbZUx8XtVHd7Nlk"
+  },
+  {
+    "level": "Easy",
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "name": "Up the Hill, Down the Hill",
+    "question": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.  Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary.",
+    "id": "LrAfdmO553CEBJdKUWz5"
+  },
+  {
+    "name": "test",
+    "createdAt": {
+      "_seconds": 1675141630,
+      "_nanoseconds": 54000000
+    },
+    "question": "easy test",
+    "id": "coawe9k0DB1ZATDWvLeg"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1674763736,
+      "_nanoseconds": 379000000
+    },
+    "name": "cass",
+    "question": "dfgdfg",
+    "id": "elQZWk1NygFJFaQGZGzG"
+  },
+  {
+    "question": "Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.",
+    "level": "Easy",
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "name": "Add up the Numbers from a Single Number",
+    "id": "fJt85gIQoWjPgvJESjQ5"
+  },
+  {
+    "question": "test",
+    "name": "Gianna",
+    "createdAt": {
+      "_seconds": 1675710450,
+      "_nanoseconds": 397000000
+    },
+    "id": "q8froxRUmWQ8vYeiVbMr"
+  },
+  {
+    "createdAt": {
+      "_seconds": 1657213855,
+      "_nanoseconds": 687000000
+    },
+    "name": "Find the Amount of Potatoes",
+    "question": "Create a function to return the amount of potatoes there are in a string.",
+    "level": "Easy",
+    "id": "vIdNAVvC4B3wy1cNAQ9V"
+  },
+  {
+    "question": "dgdffgfg",
+    "name": "Cass again",
+    "createdAt": {
+      "_seconds": 1675719485,
+      "_nanoseconds": 639000000
+    },
+    "id": "w1ljwmjMpfSLZNuLqTlx"
+  }
+]
