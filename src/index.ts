@@ -22,4 +22,7 @@ app.use('/api/homeworks', homeworkRoutes)
 import tutorialsRoutes from './routes/tutorialsRoutes'
 app.use('/api/tutorials', tutorialsRoutes)
 
+import newsRoutes from './routes/newsRoutes'
+app.use('/api/news', newsRoutes)
+
 mongooseConnect()
