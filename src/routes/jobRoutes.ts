@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { auth } from '../middleware/auth'
-import { addJob, disableJob, getJobs, updateJob } from '../controllers/jobController'
+import { addJob, disableJob, getJobs, updateJob } from '../controllers/jobsController'
 
 const router = Router()
 

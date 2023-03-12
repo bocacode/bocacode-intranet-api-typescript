@@ -25,8 +25,9 @@ app.use('/api/tutorials', tutorialRoutes)
 import newsRoutes from './routes/newsRoutes'
 app.use('/api/news', newsRoutes)
 
-
 import jobRoutes from './routes/jobRoutes'
 app.use('/api/jobs', jobRoutes)
 
+import eventRoutes from './routes/eventRoutes'
+app.use('/api/events', eventRoutes)
 mongooseConnect()

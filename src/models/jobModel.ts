@@ -8,7 +8,7 @@ const JobSchema = new mongoose.Schema(
     type: { type: String, required: true },
     frequency: { type: String, required: true },
     location: { type: String, required: true },
-    date_Posted: { type: String, required: true },
+    date_posted: { type: String, required: true },
     url: { type: String, required: true },
     created_by: { type: String, required: true },
     enabled: { type: Boolean },
