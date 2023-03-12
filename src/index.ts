@@ -43,4 +43,7 @@ app.use('/api/lectures', lectureRoutes)
 import wellnessRoutes from './routes/wellnessRoutes'
 app.use('/api/wellness', wellnessRoutes)
 
+import beerRoutes from './routes/practiceAPIs/beerRoutes'
+app.use('/api/beers', beerRoutes)
+
 mongooseConnect()
