@@ -30,4 +30,8 @@ app.use('/api/jobs', jobRoutes)
 
 import eventRoutes from './routes/eventRoutes'
 app.use('/api/events', eventRoutes)
+
+import codeChallengeRoutes from './routes/codeChallengeRoutes'
+app.use('/api/codeChallenges', codeChallengeRoutes)
+
 mongooseConnect()
