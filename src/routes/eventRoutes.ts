@@ -5,7 +5,7 @@ import { addEvent, disableEvent, getEvents, updateEvent } from '../controllers/e
 const router = Router()
 
 router.route('/').get(auth, getEvents)
-// router.route('/new').post(auth, addTutorial)
+// router.route('/new').post(auth, addEvent)
 router.route('/').post(auth, addEvent)
 router.route('/disable/:eventId').patch(auth, disableEvent)
 router.route('/update').patch(auth, updateEvent)
