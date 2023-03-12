@@ -40,4 +40,7 @@ app.use('/api/labs', labRoutes)
 import lectureRoutes from './routes/lectureRoutes'
 app.use('/api/lectures', lectureRoutes)
 
+import wellnessRoutes from './routes/wellnessRoutes'
+app.use('/api/wellness', wellnessRoutes)
+
 mongooseConnect()
