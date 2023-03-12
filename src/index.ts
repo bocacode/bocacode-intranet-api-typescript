@@ -34,4 +34,7 @@ app.use('/api/events', eventRoutes)
 import codeChallengeRoutes from './routes/codeChallengeRoutes'
 app.use('/api/codeChallenges', codeChallengeRoutes)
 
+import labRoutes from './routes/labRoutes'
+app.use('/api/labs', labRoutes)
+
 mongooseConnect()
