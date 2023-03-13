@@ -10,7 +10,6 @@ import {
 const router = Router()
 
 router.route('/').get(auth, getCodeChallenges)
-// router.route('/new').post(auth, addCodeChallenge)
 router.route('/').post(auth, addCodeChallenge)
 router.route('/disable/:codeChallengeId').patch(auth, disableCodeChallenge)
 router.route('/update').patch(auth, updateCodeChallenge)

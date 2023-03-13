@@ -5,7 +5,6 @@ import { addBeer, disableBeer, getBeers, updateBeer } from '../../controllers/pr
 const router = Router()
 
 router.route('/').get(auth, getBeers)
-// router.route('/new').post(auth, addBeer)
 router.route('/').post(auth, addBeer)
 router.route('/disable/:beerId').patch(auth, disableBeer)
 router.route('/update').patch(auth, updateBeer)

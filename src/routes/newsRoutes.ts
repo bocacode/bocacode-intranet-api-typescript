@@ -4,10 +4,9 @@ import { addNews, disableNews, getNews, updateNews } from '../controllers/newsCo
 
 const router = Router()
 
-router.route('/new').post(auth, addNews)
+router.route('/').get(auth, getNews)
 router.route('/').post(auth, addNews)
 router.route('/disable/:newsId').patch(auth, disableNews)
-router.route('/').get(auth, getNews)
 router.route('/update').patch(auth, updateNews)
 
 export default router

@@ -5,7 +5,6 @@ import { addJob, disableJob, getJobs, updateJob } from '../controllers/jobsContr
 const router = Router()
 
 router.route('/').get(auth, getJobs)
-// router.route('/new').post(auth, addJob)
 router.route('/').post(auth, addJob)
 router.route('/disable/:jobId').patch(auth, disableJob)
 router.route('/update').patch(auth, updateJob)

@@ -5,7 +5,6 @@ import { addLecture, disableLecture, getLectures, updateLecture } from '../contr
 const router = Router()
 
 router.route('/').get(auth, getLectures)
-// router.route('/new').post(auth, addLecture)
 router.route('/').post(auth, addLecture)
 router.route('/disable/:lectureId').patch(auth, disableLecture)
 router.route('/update').patch(auth, updateLecture)

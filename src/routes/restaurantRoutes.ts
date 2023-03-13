@@ -11,8 +11,7 @@ const router = Router()
 
 router.route('/').get(auth, getRestaurants)
 router.route('/').post(auth, addRestaurant)
-// router.route('/new').post(auth, addRestaurant)
-// router.route('/disable/:dealId').patch(auth, disableRestaurant)
-// router.route('/update').patch(auth, updateRestaurant)
+router.route('/disable/:dealId').patch(auth, disableRestaurant)
+router.route('/update').patch(auth, updateRestaurant)
 
 export default router
