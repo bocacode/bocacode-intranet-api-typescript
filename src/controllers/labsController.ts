@@ -39,8 +39,7 @@ export const addLab: RequestHandler = async (req, res) => {
 export const updateLab: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Labs.findOneAndUpdate({ labId: req.body.labId }, { $set: req.body })
-      const labUpdated = await Labs.findOne({ labId: req.body.labId })
+      const labUpdated = await Labs.findOneAndUpdate({ labId: req.body.labId }, { $set: req.body })
 
       if (labUpdated) {
         const log = {

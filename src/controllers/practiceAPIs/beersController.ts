@@ -39,8 +39,7 @@ export const addBeer: RequestHandler = async (req, res) => {
 export const updateBeer: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Beers.findOneAndUpdate({ beerId: req.body.beerId }, { $set: req.body })
-      const beerUpdated = await Beers.findOne({ beerId: req.body.beerId })
+      const beerUpdated = await Beers.findOneAndUpdate({ beerId: req.body.beerId }, { $set: req.body })
 
       if (beerUpdated) {
         const log = {

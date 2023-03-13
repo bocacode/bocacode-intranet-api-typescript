@@ -39,8 +39,7 @@ export const addHomework: RequestHandler = async (req, res) => {
 export const updateHomework: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Homeworks.findOneAndUpdate({ homeworkId: req.body.homeworkId }, { $set: req.body })
-      const homeworkUpdated = await Homeworks.findOne({ homeworkId: req.body.homeworkId })
+      const homeworkUpdated = await Homeworks.findOneAndUpdate({ homeworkId: req.body.homeworkId }, { $set: req.body })
 
       if (homeworkUpdated) {
         const log = {

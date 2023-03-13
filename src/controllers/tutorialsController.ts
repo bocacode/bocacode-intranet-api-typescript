@@ -39,8 +39,7 @@ export const addTutorial: RequestHandler = async (req, res) => {
 export const updateTutorial: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Tutorials.findOneAndUpdate({ tutorialId: req.body.tutorialId }, { $set: req.body })
-      const tutorialUpdated = await Tutorials.findOne({ tutorialId: req.body.tutorialId })
+      const tutorialUpdated = await Tutorials.findOneAndUpdate({ tutorialId: req.body.tutorialId }, { $set: req.body })
 
       if (tutorialUpdated) {
         const log = {

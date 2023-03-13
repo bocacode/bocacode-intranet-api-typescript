@@ -39,8 +39,7 @@ export const addLecture: RequestHandler = async (req, res) => {
 export const updateLecture: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Lectures.findOneAndUpdate({ lectureId: req.body.lectureId }, { $set: req.body })
-      const lectureUpdated = await Lectures.findOne({ lectureId: req.body.lectureId })
+      const lectureUpdated = await Lectures.findOneAndUpdate({ lectureId: req.body.lectureId }, { $set: req.body })
 
       if (lectureUpdated) {
         const log = {

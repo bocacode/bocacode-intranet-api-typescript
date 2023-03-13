@@ -39,8 +39,7 @@ export const addEvent: RequestHandler = async (req, res) => {
 export const updateEvent: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Events.findOneAndUpdate({ eventId: req.body.eventId }, { $set: req.body })
-      const eventUpdated = await Events.findOne({ eventId: req.body.eventId })
+      const eventUpdated = await Events.findOneAndUpdate({ eventId: req.body.eventId }, { $set: req.body })
 
       if (eventUpdated) {
         const log = {

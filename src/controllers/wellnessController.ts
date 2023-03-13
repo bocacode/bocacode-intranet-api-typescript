@@ -39,8 +39,7 @@ export const addWellness: RequestHandler = async (req, res) => {
 export const updateWellness: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Wellness.findOneAndUpdate({ wellnessId: req.body.wellnessId }, { $set: req.body })
-      const wellnessUpdated = await Wellness.findOne({ wellnessId: req.body.wellnessId })
+      const wellnessUpdated = await Wellness.findOneAndUpdate({ wellnessId: req.body.wellnessId }, { $set: req.body })
 
       if (wellnessUpdated) {
         const log = {

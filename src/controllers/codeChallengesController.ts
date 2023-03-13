@@ -39,8 +39,10 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
 export const updateCodeChallenge: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await CodeChallenges.findOneAndUpdate({ codeChallengeId: req.body.codeChallengeId }, { $set: req.body })
-      const codeChallengeUpdated = await CodeChallenges.findOne({ codeChallengeId: req.body.codeChallengeId })
+      const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
+        { codeChallengeId: req.body.codeChallengeId },
+        { $set: req.body }
+      )
 
       if (codeChallengeUpdated) {
         const log = {
@@ -76,7 +78,10 @@ export const disableCodeChallenge: RequestHandler = async (req, res) => {
 
   try {
     const { codeChallengeId } = req.params
-    const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate({ uid: codeChallengeId }, { $set: { enabled: false } })
+    const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
+      { uid: codeChallengeId },
+      { $set: { enabled: false } }
+    )
 
     if (codeChallengeUpdated) {
       const log = {

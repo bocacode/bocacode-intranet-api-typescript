@@ -39,8 +39,7 @@ export const addNews: RequestHandler = async (req, res) => {
 export const updateNews: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await News.findOneAndUpdate({ newsId: req.body.newsId }, { $set: req.body })
-      const newsUpdated = await News.findOne({ newsId: req.body.newsId })
+      const newsUpdated = await News.findOneAndUpdate({ newsId: req.body.newsId }, { $set: req.body })
 
       if (newsUpdated) {
         const log = {
