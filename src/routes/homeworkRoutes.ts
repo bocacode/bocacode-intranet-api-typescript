@@ -5,10 +5,8 @@ import { addHomework, disableHomework, getHomeworks, updateHomework } from '../c
 const router = Router()
 
 router.route('/').get(auth, getHomeworks)
-router.route('/').post(auth, addHomework) //tested
-// router.route('/new').post(auth, addHomework)
-// router.route('/disable/:homeworkId').patch(auth,
-//   disableHomework) //tested without auth
-// router.route('/update').patch(auth, updateHomework)   //tested without auth
+router.route('/').post(auth, addHomework)
+router.route('/disable/:homeworkId').patch(auth, disableHomework)
+router.route('/update').patch(auth, updateHomework)
 
 export default router
