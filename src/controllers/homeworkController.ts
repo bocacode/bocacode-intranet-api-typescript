@@ -1,20 +1,20 @@
 import { RequestHandler } from 'express'
 
 import { createRandomId } from '../utils/utils'
-import Homework from '../models/homeworkModel'
+import Homeworks from '../models/homeworkModel'
 import { addLog } from './logController'
 
 export const addHomework: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
     try {
-      const duplicateHomework = req.body.uid ? await Homework.findOne({ uid: req.body.uid }) : null
+      const duplicateHomework = req.body.uid ? await Homeworks.findOne({ uid: req.body.uid }) : null
       if (duplicateHomework) {
         return res.status(401).json({ error: 'Homework already in system' })
       }
 
       const newHomework = { ...req.body, uid: createRandomId() }
 
-      const homeworkCreated = await Homework.create(newHomework)
+      const homeworkCreated = await Homeworks.create(newHomework)
 
       if (homeworkCreated) {
         const log = {
@@ -39,8 +39,7 @@ export const addHomework: RequestHandler = async (req, res) => {
 export const updateHomework: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      await Homework.findOneAndUpdate({ homeworkId: req.body.homeworkId }, { $set: req.body })
-      const homeworkUpdated = await Homework.findOne({ homeworkId: req.body.homeworkId })
+      const homeworkUpdated = await Homeworks.findOneAndUpdate({ homeworkId: req.body.homeworkId }, { $set: req.body })
 
       if (homeworkUpdated) {
         const log = {
@@ -66,7 +65,7 @@ export const getHomeworks: RequestHandler = async (req, res) => {
   console.log('test here ')
 
   try {
-    const allHomework = await Homework.find()
+    const allHomework = await Homeworks.find()
     res.send(allHomework)
   } catch (error) {
     res.status(500).send({ message: 'Unable to get all Homework' })
@@ -78,7 +77,7 @@ export const disableHomework: RequestHandler = async (req, res) => {
 
   try {
     const { homeworkId } = req.params
-    const homeworkUpdated = await Homework.findOneAndUpdate({ uid: homeworkId }, { $set: { enabled: false } })
+    const homeworkUpdated = await Homeworks.findOneAndUpdate({ uid: homeworkId }, { $set: { enabled: false } })
 
     if (homeworkUpdated) {
       const log = {
