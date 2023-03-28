@@ -6,27 +6,19 @@
     "datePosted": "Dec 29, 2022",
     "timestamp": 1674744320,
     "company": "Replit",
-    "createdAt": {
-      "_seconds": 1674744320,
-      "_nanoseconds": 595000000
-    },
     "type": "Remote",
     "frequency": "Full time",
-    "id": "qAg89uQkuXIx2BQvSpMr"
+    "uid": "qAg89uQkuXIx2BQvSpMr"
   },
   {
     "datePosted": "Dec 26, 2022",
     "location": "Boston, MA",
     "type": "Remote",
-    "createdAt": {
-      "_seconds": 1674744565,
-      "_nanoseconds": 812000000
-    },
     "company": "Pearl Health",
     "position": "Senior Product Manager – Data Platform – HealthTech",
     "timestamp": 1674744565,
     "url": "hhttps://boards.greenhouse.io/pearlhealth/jobs/5307314003?gh_src=9ace4a713us",
     "frequency": "Full-time",
-    "id": "tP743zbscOFRAayoZWg3"
+    "uid": "tP743zbscOFRAayoZWg3"
   }
 ]
