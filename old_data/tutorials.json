@@ -1,465 +1,282 @@
 [
   {
     "url": "https://www.youtube.com/watch?v=UmSpfdxu3ro&ab_channel=DevDreamer",
-    "description": "JavaScript data-types, explained by Dev Dreamer",
-    "createdAt": {
-      "_seconds": 1674359259,
-      "_nanoseconds": 19000000
-    },
-    "title": "Data-Types in JavaScript",
-    "timestamp": 1674359259,
+    "description": "JavaScript data-media_types, explained by Dev Dreamer",
+    "title": "Data-media_types in JavaScript",
     "topic": "JavaScript",
-    "type": "video",
-    "id": "00ukBAc16GbKN4A9abmv"
+    "media_type": "video",
+    "uid": "00ukBAc16GbKN4A9abmv"
   },
   {
     "title": "Error Handling in JavaScript",
     "description": "JavaScript error handling, explained by Bro Code",
-    "createdAt": {
-      "_seconds": 1674359664,
-      "_nanoseconds": 370000000
-    },
     "topic": "JavaScript",
     "url": "https://www.youtube.com/watch?v=Z2l3cQ7bvBA&ab_channel=BroCode",
-    "type": "video",
-    "timestamp": 1674359664,
-    "id": "0uE1NgfG12lRhyIdLyOd"
+    "media_type": "video",
+    "uid": "0uE1NgfG12lRhyIdLyOd"
   },
   {
     "topic": "JavaScript",
     "url": "https://www.youtube.com/watch?v=T8tilXV03UI&ab_channel=DevDreamer",
-    "timestamp": 1674357431,
     "description": "JavaScript function-expressions, explained by Dev Dreamer",
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674357431,
-      "_nanoseconds": 958000000
-    },
+    "media_type": "video",
     "title": "Function-Expressions in JavaScript",
-    "id": "1D31YSOf4r1MJZBoPMtf"
+    "uid": "1D31YSOf4r1MJZBoPMtf"
   },
   {
     "url": "https://www.youtube.com/watch?v=2-ojI5M9HME&ab_channel=BroCode",
-    "createdAt": {
-      "_seconds": 1674160888,
-      "_nanoseconds": 25000000
-    },
-    "timestamp": 1674160888,
     "topic": "JavaScript",
     "title": "Arrays in JavaScript",
-    "type": "video",
+    "media_type": "video",
     "description": "JavaScript arrays for beginners, explained by Bro Code",
-    "id": "2ZI0yQCW2aUZgzn4npaY"
+    "uid": "2ZI0yQCW2aUZgzn4npaY"
   },
   {
     "topic": "JavaScript",
-    "type": "video",
+    "media_type": "video",
     "title": "Arrow-Functions in JavaScript",
-    "createdAt": {
-      "_seconds": 1674358305,
-      "_nanoseconds": 509000000
-    },
-    "timestamp": 1674358305,
     "url": "https://www.youtube.com/watch?v=Oy185MF8pnY&ab_channel=DevDreamer",
     "description": "JavaScript arrow functions, explained by Dev Dreamer",
-    "id": "3kupyIqBBHo6xhvO2tC6"
+    "uid": "3kupyIqBBHo6xhvO2tC6"
   },
   {
     "title": "Array.forEach()",
-    "type": "video",
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=KPuGKeVrmZg&ab_channel=BroCode",
-    "timestamp": 1674354517,
     "topic": "JavaScript",
     "description": "JavaScript array.forEach() for beginners, explained by Bro Code",
-    "createdAt": {
-      "_seconds": 1674354517,
-      "_nanoseconds": 766000000
-    },
-    "id": "66UbrILBiDx8W35OKDf4"
+    "uid": "66UbrILBiDx8W35OKDf4"
   },
   {
     "description": "JavaScript objects for beginners, explained by Bro Code",
     "title": "Objects in JavaScript",
-    "createdAt": {
-      "_seconds": 1674161291,
-      "_nanoseconds": 208000000
-    },
     "url": "https://www.youtube.com/watch?v=adp5-HFSD30&ab_channel=BroCode",
     "topic": "JavaScript",
-    "type": "video",
-    "timestamp": 1674161291,
-    "id": "AUDV69LAuMJ2x5KKPcX2"
+    "media_type": "video",
+    "uid": "AUDV69LAuMJ2x5KKPcX2"
   },
   {
-    "type": "video",
-    "timestamp": 1674359143,
+    "media_type": "video",
     "title": "Scope in JavaScript",
     "url": "https://www.youtube.com/watch?v=ky2mNs4kGh8&ab_channel=DevDreamer",
-    "createdAt": {
-      "_seconds": 1674359143,
-      "_nanoseconds": 352000000
-    },
     "topic": "JavaScript",
     "description": "Understanding JavaScript scope, by Dev Dreamer",
-    "id": "B1MPnv3uglTnEgXmZnut"
+    "uid": "B1MPnv3uglTnEgXmZnut"
   },
   {
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674160573,
-      "_nanoseconds": 816000000
-    },
+    "media_type": "video",
     "topic": "JavaScript",
-    "timestamp": 1674160573,
     "description": "Promises allow you to write clean non-callback-centric code, by Kyle from Web Dev Simplified",
     "url": "https://www.youtube.com/watch?v=DHvZLI7Db8E&ab_channel=WebDevSimplified",
     "title": "JavaScript Promises",
-    "id": "GjoqrenwnMTO58n7upRW"
+    "uid": "GjoqrenwnMTO58n7upRW"
   },
   {
-    "createdAt": {
-      "_seconds": 1674356843,
-      "_nanoseconds": 837000000
-    },
-    "timestamp": 1674356843,
     "url": "https://www.youtube.com/watch?v=6J54mZBC69k&ab_channel=BroCode",
-    "type": "video",
+    "media_type": "video",
     "topic": "JavaScript",
     "title": "Callbacks in Javascript",
     "description": "Javascript callbacks for beginners, explained by Bro Code",
-    "id": "J7oFeIKibHS59xF6kTG7"
+    "uid": "J7oFeIKibHS59xF6kTG7"
   },
   {
-    "createdAt": {
-      "_seconds": 1674082301,
-      "_nanoseconds": 504000000
-    },
     "url": "https://www.youtube.com/watch?v=IIyKr9QYhvc&ab_channel=JonSthewebguy",
-    "type": "video",
-    "timestamp": 1674082301,
+    "media_type": "video",
     "description": "How to deploy React App to AWS S3 bucket, by JonS the web guy",
     "title": "Deploying React App to AWS S3 bucket",
     "topic": "Deployment",
-    "id": "JOpy94LILvlrfa6CF8wK"
+    "uid": "JOpy94LILvlrfa6CF8wK"
   },
   {
-    "createdAt": {
-      "_seconds": 1674356175,
-      "_nanoseconds": 277000000
-    },
-    "timestamp": 1674356175,
     "title": "Array Methods in JavaScript",
     "url": "https://www.youtube.com/watch?v=R8rmfD9Y5-c&ab_channel=WebDevSimplified",
     "description": "8 Must Know JavaScript array methods, explained by Kyle from Web Dev Simplified",
     "topic": "JavaScript",
-    "type": "video",
-    "id": "L5jrnKLQ0fTyW8010ugs"
+    "media_type": "video",
+    "uid": "L5jrnKLQ0fTyW8010ugs"
   },
   {
-    "timestamp": 1675369011,
-    "createdAt": {
-      "_seconds": 1675369011,
-      "_nanoseconds": 422000000
-    },
-    "id": "Lee6LXnc130RudFBlbws"
-  },
-  {
-    "type": "video",
+    "media_type": "video",
     "title": "What are Parameters and Arguments in JavaScript",
-    "createdAt": {
-      "_seconds": 1674359452,
-      "_nanoseconds": 252000000
-    },
     "url": "https://www.youtube.com/watch?v=k1-tpFDyUwo&ab_channel=DevDreamer",
     "topic": "JavaScript",
     "description": "What are JavaScript parameters and arguments, explained by Dev Dreamer",
-    "timestamp": 1674359452,
-    "id": "MKRPc6LSubT5HcFrwD27"
+    "uid": "MKRPc6LSubT5HcFrwD27"
   },
   {
-    "createdAt": {
-      "_seconds": 1674356016,
-      "_nanoseconds": 660000000
-    },
     "description": "JavaScript template-literals for beginners, explained by Bro Code",
     "title": "Template-Literals in JavaScript",
     "topic": "JavaScript",
-    "type": "video",
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=Nihixmgylms&ab_channel=BroCode",
-    "timestamp": 1674356016,
-    "id": "MgT4YKg1gdfmQMIlgNeO"
+    "uid": "MgT4YKg1gdfmQMIlgNeO"
   },
   {
     "title": "Classes in JavaScript",
-    "timestamp": 1674359588,
-    "createdAt": {
-      "_seconds": 1674359588,
-      "_nanoseconds": 592000000
-    },
     "url": "https://www.youtube.com/watch?v=ndzAGJin2ZE&ab_channel=BroCode",
     "description": "JavaScript classes, explained by Bro Code",
-    "type": "video",
+    "media_type": "video",
     "topic": "JavaScript",
-    "id": "TBIC73K6PsxfV9AYJLFG"
+    "uid": "TBIC73K6PsxfV9AYJLFG"
   },
   {
-    "createdAt": {
-      "_seconds": 1674161360,
-      "_nanoseconds": 481000000
-    },
     "title": "Async-Await in JavaScript",
     "description": "JavaScript Async Await for beginners, explained by Kyle from Web Dev Simplified",
-    "type": "video",
-    "timestamp": 1674161360,
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=V_Kr9OSfDeU&ab_channel=WebDevSimplified",
     "topic": "JavaScript",
-    "id": "U9WRpz7Jgyxgk1QwCkZM"
+    "uid": "U9WRpz7Jgyxgk1QwCkZM"
   },
   {
-    "createdAt": {
-      "_seconds": 1674160389,
-      "_nanoseconds": 421000000
-    },
-    "timestamp": 1674160389,
-    "description": "How to upload a file in React using Typescript and base64, by Damian Montero",
+    "description": "How to upload a file in React using media_typescript and base64, by Damian Montero",
     "title": "Uploading a File using base64",
     "topic": "",
     "url": "https://www.youtube.com/watch?v=cZ0YsVpA1Ps&ab_channel=FloridaJS",
-    "type": "video",
-    "id": "UxFUrtwgDQh6isUYDH5Q"
+    "media_type": "video",
+    "uid": "UxFUrtwgDQh6isUYDH5Q"
   },
   {
-    "timestamp": 1674357531,
     "description": "JavaScript comparison-operators, explained by Dev Dreamer",
     "url": "https://www.youtube.com/watch?v=jhe5kwtD6dE&ab_channel=DevDreamer",
-    "createdAt": {
-      "_seconds": 1674357531,
-      "_nanoseconds": 535000000
-    },
     "title": "Comparison-Operators in JavaScript",
-    "type": "video",
+    "media_type": "video",
     "topic": "JavaScript",
-    "id": "b2lEyiAJ32Gl7iqrcy80"
+    "uid": "b2lEyiAJ32Gl7iqrcy80"
   },
   {
     "title": "JWT token & Password Hashing",
-    "type": "video",
+    "media_type": "video",
     "description": "JWT token with Password Hashing in Node Express Mongo API, by JonS the web guy",
-    "timestamp": 1674064876,
     "topic": "Security",
     "url": "https://www.youtube.com/watch?v=Gp0gY89FPqk&t=689s&ab_channel=JonSthewebguy",
-    "createdAt": {
-      "_seconds": 1674064876,
-      "_nanoseconds": 639000000
-    },
-    "id": "dEAtkLZZ4tqQNlQKLhCZ"
+    "uid": "dEAtkLZZ4tqQNlQKLhCZ"
   },
   {
     "title": "Ternary-Operator in JavaScript",
-    "type": "video",
-    "timestamp": 1674355763,
-    "createdAt": {
-      "_seconds": 1674355763,
-      "_nanoseconds": 978000000
-    },
+    "media_type": "video",
     "topic": "JavaScript",
     "url": "https://www.youtube.com/watch?v=XXcT2Tgrsx0&ab_channel=BroCode",
     "description": "JavaScript ternary-operator for beginners, explained by Bro Code",
-    "id": "eWxqVoP9WHaxg8cKWgYl"
+    "uid": "eWxqVoP9WHaxg8cKWgYl"
   },
   {
-    "timestamp": 1674160705,
     "description": "JavaScript functions for Beginners, explained by Bro Code",
     "topic": "JavaScript",
-    "type": "video",
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=d7cfhgfojLA&ab_channel=BroCode",
     "title": "Functions in JavaScript",
-    "createdAt": {
-      "_seconds": 1674160705,
-      "_nanoseconds": 246000000
-    },
-    "id": "ezDfG7HA7LuzeDp0H7QX"
+    "uid": "ezDfG7HA7LuzeDp0H7QX"
   },
   {
     "title": "Recursion in Javascript",
     "description": "Javascript recursion for beginners, explained by Dev Dreamer",
     "topic": "JavaScript",
-    "timestamp": 1674356954,
-    "createdAt": {
-      "_seconds": 1674356954,
-      "_nanoseconds": 321000000
-    },
     "url": "https://www.youtube.com/watch?v=wd2vNXCfu9s&ab_channel=DevDreamer",
-    "type": "video",
-    "id": "l2BjfmU4XUjVS61urnZJ"
+    "media_type": "video",
+    "uid": "l2BjfmU4XUjVS61urnZJ"
   },
   {
-    "createdAt": {
-      "_seconds": 1674159462,
-      "_nanoseconds": 218000000
-    },
     "url": "https://www.youtube.com/watch?v=Gr6kO2VrYSo&ab_channel=JonSthewebguy",
     "topic": "Deployment",
-    "timestamp": 1674159462,
-    "type": "video",
+    "media_type": "video",
     "description": "How to deploy React app to Firebase Hosting, by JonS the web guy",
     "title": "Deploying React App to Firebase",
-    "id": "lW87UiMmy5LbAbkwsVZT"
+    "uid": "lW87UiMmy5LbAbkwsVZT"
   },
   {
-    "type": "video",
-    "timestamp": 1674354859,
+    "media_type": "video",
     "topic": "JavaScript",
     "description": "JavaScript if statements for beginners, explained by Bro Code",
     "url": "https://www.youtube.com/watch?v=fA8BceA_cp4&ab_channel=BroCode",
     "title": "If-Statements in JavaScript",
-    "createdAt": {
-      "_seconds": 1674354859,
-      "_nanoseconds": 457000000
-    },
-    "id": "lY2w7nu9QWvgiDr6JBjN"
+    "uid": "lY2w7nu9QWvgiDr6JBjN"
   },
   {
-    "type": "video",
+    "media_type": "video",
     "description": "JavaScript For-Loop for Beginners, explained by Mosh Hamedani",
-    "timestamp": 1674160790,
     "topic": "JavaScript",
-    "createdAt": {
-      "_seconds": 1674160790,
-      "_nanoseconds": 945000000
-    },
     "url": "https://www.youtube.com/watch?v=s9wW2PpJsmQ&ab_channel=ProgrammingwithMosh",
     "title": "For-Loop in JavaScript",
-    "id": "m4PVQGfHvfIuv1q8PaZk"
+    "uid": "m4PVQGfHvfIuv1q8PaZk"
   },
   {
     "description": "JavaScript logical operators, explained by Dev Dreamer",
     "title": "Logical-Operators in JavaScript",
     "topic": "JavaScript",
     "url": "https://www.youtube.com/watch?v=-L41L0IZuv4&ab_channel=DevDreamer",
-    "createdAt": {
-      "_seconds": 1674357619,
-      "_nanoseconds": 214000000
-    },
-    "type": "video",
-    "timestamp": 1674357619,
-    "id": "mb2vY9V7LAqUdEbkooE2"
+    "media_type": "video",
+    "uid": "mb2vY9V7LAqUdEbkooE2"
   },
   {
-    "timestamp": 1674359834,
     "url": "https://www.youtube.com/watch?v=HD13eq_Pmp8&ab_channel=BroCode",
     "topic": "HTML",
-    "type": "video",
+    "media_type": "video",
     "description": "HTML full course tutorial for beginners, by Bro Code",
-    "createdAt": {
-      "_seconds": 1674359834,
-      "_nanoseconds": 427000000
-    },
     "title": "HTML",
-    "id": "obHvOhkgMlyaHzh7Iya6"
+    "uid": "obHvOhkgMlyaHzh7Iya6"
   },
   {
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674357149,
-      "_nanoseconds": 653000000
-    },
+    "media_type": "video",
     "topic": "JavaScript",
     "title": "Spread-Operator in JavaScript",
-    "timestamp": 1674357149,
     "url": "https://www.youtube.com/watch?v=AN0oTuWdLtk&ab_channel=DevDreamer",
     "description": "JavaScript spread-operator, explained by Dev Dreamer",
-    "id": "qKM3Ysvg1bZxg5HDhKBw"
+    "uid": "qKM3Ysvg1bZxg5HDhKBw"
   },
   {
     "title": "Deploying to AWS EC2 Instance",
     "description": "How to deploy a Node Express API to AWS EC2 instance, by JonS the web guy",
-    "createdAt": {
-      "_seconds": 1673911546,
-      "_nanoseconds": 820000000
-    },
     "topic": "Deployment",
-    "timestamp": 1673911546,
     "url": "https://www.youtube.com/watch?v=T-Pum2TraX4&ab_channel=JonSthewebguy",
-    "type": "video",
-    "id": "rx1sJWBuJ7NrRb1tzpyt"
+    "media_type": "video",
+    "uid": "rx1sJWBuJ7NrRb1tzpyt"
   },
   {
-    "createdAt": {
-      "_seconds": 1674355011,
-      "_nanoseconds": 772000000
-    },
     "description": "Truthy and Falsy concept explained by Dom from dcode",
     "title": "Truthy and Falsy",
-    "type": "video",
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=Xp60QbXRAPI&ab_channel=dcode",
     "topic": "JavaScript",
-    "timestamp": 1674355011,
-    "id": "uAufkHG1fEUEzanRWyu6"
+    "uid": "uAufkHG1fEUEzanRWyu6"
   },
   {
-    "timestamp": 1673993285,
     "description": "How to create simple Node Express Api with MongoDB and React, by JonS the web guy",
     "topic": "",
-    "createdAt": {
-      "_seconds": 1673993285,
-      "_nanoseconds": 994000000
-    },
-    "type": "video",
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=DkMMHKHCHPY&ab_channel=JonSthewebguy",
     "title": "Creating Express Api with MongoDB & React",
-    "id": "wARyJ2cyZMMixSmmeCsc"
+    "uid": "wARyJ2cyZMMixSmmeCsc"
   },
   {
-    "timestamp": 1674356712,
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674356712,
-      "_nanoseconds": 320000000
-    },
+    "media_type": "video",
     "url": "https://www.youtube.com/watch?v=my3f_sUObhE&ab_channel=BroCode",
-    "description": "Variables and data types in JavaScript, explained by Bro Code",
-    "title": "Variables and data types in JavaScript",
+    "description": "Variables and data media_types in JavaScript, explained by Bro Code",
+    "title": "Variables and data media_types in JavaScript",
     "topic": "JavaScript",
-    "id": "wZOojkWd12YVqEEKQQrY"
+    "uid": "wZOojkWd12YVqEEKQQrY"
   },
   {
     "description": "How to output JavaScript, explained by Dev Dreamer",
     "topic": "JavaScript",
     "url": "https://www.youtube.com/watch?v=0xShDHwdpas&ab_channel=DevDreamer",
     "title": "How to Output JavaScript",
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674359350,
-      "_nanoseconds": 130000000
-    },
-    "timestamp": 1674359350,
-    "id": "xyVtBY2sKwdJ1VfeCExf"
+    "media_type": "video",
+    "uid": "xyVtBY2sKwdJ1VfeCExf"
   },
   {
     "topic": "JavaScript",
     "title": "Rest-Parameter in JavaScript",
-    "type": "video",
-    "timestamp": 1674357249,
-    "createdAt": {
-      "_seconds": 1674357249,
-      "_nanoseconds": 263000000
-    },
+    "media_type": "video",
     "description": "JavaScript rest-parameter, explained by Dev Dreamer",
     "url": "https://www.youtube.com/watch?v=f3-Ry2lTzMU&ab_channel=DevDreamer",
-    "id": "zFuE9vlk3ruHEkfzxmGl"
+    "uid": "zFuE9vlk3ruHEkfzxmGl"
   },
   {
-    "timestamp": 1674357072,
     "topic": "JavaScript",
-    "type": "video",
-    "createdAt": {
-      "_seconds": 1674357072,
-      "_nanoseconds": 694000000
-    },
+    "media_type": "video",
     "description": "Javascript destructuring, explained by Dev Dreamer",
     "title": "Destructuring in Javascript",
     "url": "https://www.youtube.com/watch?v=h7s2kJFAkus&ab_channel=DevDreamer",
-    "id": "zZWEMqg7QaqMwzjvkyXG"
+    "uid": "zZWEMqg7QaqMwzjvkyXG"
   }
 ]
