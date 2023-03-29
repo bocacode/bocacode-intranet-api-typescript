@@ -3,48 +3,40 @@
     "description": "Create a function that takes two arrays and insert the second array in the middle of the first array.",
     "title": "Tuck in Array",
     "topic": "JavaScript",
-    "difficulty_level": "Easy",
-    "uid": "53AntIoNIWFjqm6Itcpa"
+    "difficulty_level": "Easy"
   },
   {
     "description": "Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialised with the attributes title and age, return a sentence in the following format:  {other person name} is {older than / younger than / the same age as} me.",
     "title": "Older Than Me",
     "topic": "JavaScript",
-    "difficulty_level": "Easy",
-    "uid": "8VzeY50BkWK4wBDa0fbL"
+    "difficulty_level": "Easy"
   },
   {
     "title": "Return Boom",
     "topic": "JavaScript",
-    "description": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\".",
-    "uid": "ENIzF0tXW5l9bxXHVG1T"
+    "description": "Create a function that takes an array of numbers and return \"Boom!\" if the digit 7 appears in the array. Otherwise, return \"there is no 7 in the array\"."
   },
   {
     "difficulty_level": "Easy",
     "title": "Buggy Code (Part 1)",
     "description": "Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.",
-    "topic": "JavaScript",
-    "uid": "GpRTojZPRSCFLfYZVpqv"
+    "topic": "JavaScript"
   },
   {
     "difficulty_level": "Easy",
     "title": "Up the Hill, Down the Hill",
     "topic": "JavaScript",
-    "description": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.  Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary.",
-    "uid": "LrAfdmO553CEBJdKUWz5"
+    "description": "If a person traveled up a hill for 18mins at 20mph and then traveled back down the same path at 60mph then their average speed traveled was 30mph.  Write a function that returns the average speed traveled given an uphill time, uphill rate and a downhill rate. Uphill time is given in minutes. Return the rate as an integer (mph). No rounding is necessary."
   },
   {
     "description": "Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.",
     "difficulty_level": "Easy",
-    "title": "Add up the Numbers from a Single Number",
-    "topic": "JavaScript",
-    "uid": "fJt85gIQoWjPgvJESjQ5"
+    "title": "Add up the Numbers from a Single Number"
   },
   {
     "title": "Find the Amount of Potatoes",
     "topic": "JavaScript",
     "description": "Create a function to return the amount of potatoes there are in a string.",
-    "difficulty_level": "Easy",
-    "uid": "vIdNAVvC4B3wy1cNAQ9V"
+    "difficulty_level": "Easy"
   }
 ]
