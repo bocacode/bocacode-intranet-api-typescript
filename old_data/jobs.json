@@ -3,30 +3,18 @@
     "position": "Engineering Manager, Product and Growth Engineering",
     "location": "US or Canada",
     "url": "https://jobs.ashbyhq.com/replit/bb4c779b-fad6-4c38-ab29-ece57a79abe3?utm_source=Replit+Remote+POC",
-    "datePosted": "Dec 29, 2022",
-    "timestamp": 1674744320,
+    "date_posted": "Dec 29, 2022",
     "company": "Replit",
-    "createdAt": {
-      "_seconds": 1674744320,
-      "_nanoseconds": 595000000
-    },
     "type": "Remote",
-    "frequency": "Full time",
-    "id": "qAg89uQkuXIx2BQvSpMr"
+    "frequency": "Full time"
   },
   {
-    "datePosted": "Dec 26, 2022",
+    "date_posted": "Dec 26, 2022",
     "location": "Boston, MA",
     "type": "Remote",
-    "createdAt": {
-      "_seconds": 1674744565,
-      "_nanoseconds": 812000000
-    },
     "company": "Pearl Health",
     "position": "Senior Product Manager – Data Platform – HealthTech",
-    "timestamp": 1674744565,
     "url": "hhttps://boards.greenhouse.io/pearlhealth/jobs/5307314003?gh_src=9ace4a713us",
-    "frequency": "Full-time",
-    "id": "tP743zbscOFRAayoZWg3"
+    "frequency": "Full-time"
   }
 ]

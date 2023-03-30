@@ -1,112 +1,52 @@
 [
   {
-    "day": 1,
     "description": "Look around your house and create variables for four items.",
-    "timestamp": 1675220292,
     "week": 1,
-    "createdAt": {
-      "_seconds": 1675220292,
-      "_nanoseconds": 344000000
-    },
-    "category": "JavaScript",
-    "id": "0tvlAqJ0FzCe6hGbjs2j"
+    "topic": "JavaScript"
   },
   {
-    "day": 2,
     "week": 1,
-    "createdAt": {
-      "_seconds": 1675284195,
-      "_nanoseconds": 333000000
-    },
-    "timestamp": 1675284195,
-    "category": "JavaScript",
-    "description": "Create your own person object, that includes first name, last name, gender, and age.",
-    "id": "E3MYKPxABdFhf4ynjeRV"
+    "topic": "JavaScript",
+    "description": "Create your own person object, that includes first name, last name, gender, and age."
   },
   {
-    "createdAt": {
-      "_seconds": 1675284245,
-      "_nanoseconds": 344000000
-    },
-    "timestamp": 1675284245,
-    "category": "JavaScript",
+    "topic": "JavaScript",
     "description": "Create a function that capitalizes the first letter of a string and lowercases the rest.",
-    "day": 3,
-    "week": 1,
-    "id": "IvhfX26bR21XFoGiZOiA"
+    "week": 1
   },
   {
-    "category": "back-end",
+    "topic": "back-end",
     "week": 3,
-    "day": 4,
-    "description": "Create a mongoDB for movies that has at least three documents in the collection. Create an express API that includes a GET all, GET one by id, POST, and PATCH request. ",
-    "id": "hi3uP36PcH1QOnuWIUxq"
+    "description": "Create a mongoDB for movies that has at least three documents in the collection. Create an express API that includes a GET all, GET one by id, POST, and PATCH request. "
   },
   {
-    "category": "Databases",
+    "topic": "Databases",
     "description": "Design a database (any) for a Pizza company. Add at least 3 pizzas, and at least 2 customers, at least 3 orders. Write code to connect to the database, get all and console.table results.",
-    "day": 3,
-    "createdAt": {
-      "_seconds": 1675284612,
-      "_nanoseconds": 922000000
-    },
-    "week": 2,
-    "timestamp": 1675284612,
-    "id": "igXUOfl5mIzv6Aq8PQvP"
+    "week": 2
   },
   {
-    "timestamp": 1675284441,
-    "day": 5,
     "week": 1,
-    "category": "JavaScript",
-    "createdAt": {
-      "_seconds": 1675284441,
-      "_nanoseconds": 210000000
-    },
-    "description": "Create a function that returns the number of vowels in a given string.",
-    "id": "lhXzCSMpJsRAsDVVJYcF"
+    "topic": "JavaScript",
+    "description": "Create a function that returns the number of vowels in a given string."
   },
   {
-    "createdAt": {
-      "_seconds": 1675284420,
-      "_nanoseconds": 599000000
-    },
-    "category": "JavaScript",
-    "day": 5,
+    "topic": "JavaScript",
     "description": "Write a FOR loop that outputs 'I will never give up' ten times. ",
-    "week": 1,
-    "timestamp": 1675284420,
-    "id": "nKuviMvLFaDa9bThXOmL"
+    "week": 1
   },
   {
-    "day": 5,
-    "timestamp": 1675284381,
     "week": 1,
-    "createdAt": {
-      "_seconds": 1675284381,
-      "_nanoseconds": 803000000
-    },
-    "category": "JavaScript",
-    "description": "Create a function in ES6 syntax that takes an arguement and console.log's it. ",
-    "id": "pjZOLrWTXX7igcLsG2Iu"
+    "topic": "JavaScript",
+    "description": "Create a function in ES6 syntax that takes an arguement and console.log's it. "
   },
   {
     "week": 3,
-    "timestamp": 1675285061,
     "description": "In a group of 3-4. build and deploy an API, connect to the database of your choice and write a GET and POST endpoint. If you have time, do full CRUD. ",
-    "category": "API",
-    "createdAt": {
-      "_seconds": 1675285061,
-      "_nanoseconds": 977000000
-    },
-    "day": 5,
-    "id": "rD5Fk2dxERtuwM8DezrR"
+    "topic": "API"
   },
   {
-    "day": "2",
-    "category": "back-end",
+    "topic": "back-end",
     "week": 3,
-    "description": "Create a firestore database for events that has at least three documents in the collection. Create an express API that includes a GET and POST request. ",
-    "id": "tJCkfyBap8T7Gm6hYC8V"
+    "description": "Create a firestore database for events that has at least three documents in the collection. Create an express API that includes a GET and POST request. "
   }
 ]

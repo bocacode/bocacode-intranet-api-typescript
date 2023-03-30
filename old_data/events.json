@@ -1,46 +1,21 @@
 [
   {
-    "location": "Museum of Discovery and Science",
     "url": "https://www.eventbrite.com/e/techpalooza-2022-rediscovering-innovation-tickets-405510130717",
-    "address": "401 SW 2nd St, Fort Lauderdale, FL 33312",
     "date": "December 9 2022",
     "photoUrl": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/events%2Fanother%20test%20event?alt=media&token=066570a7-39cc-4810-93e2-b43591ee8492",
-    "name": "Techpalooza",
-    "id": "0Jsvep45ejX0EE9htroN"
+    "event_name": "Techpalooza"
   },
   {
-    "address": "2801 Deer Creek Country Club Blvd",
-    "location": "Deer Creek Country Club",
     "date": "April 4, 2022",
     "photoUrl": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/events%2Fbeach-1854076__480.jpg?alt=media&token=46faef7c-a457-41d0-a80e-299cb8e411d2",
-    "name": "Alumni Event",
-    "id": "84NYmGLP7OUnMbl5OR70"
+    "event_name": "Alumni Event"
   },
   {
-    "address": "115 NW 6th St, Fort Lauderdale, FL",
-    "timestamp": 1676403184,
-    "date": "02/23/2023 5-8pm",
     "photoUrl": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/events%2FTech%20Hub%20Happy%20Hour?alt=media&token=c9094168-ffd9-413a-b62d-a88f821a9c1b",
-    "location": "Sistrunk Marketplace & Brewery",
-    "name": "Tech Hub Happy Hour",
-    "createdAt": {
-      "_seconds": 1676403184,
-      "_nanoseconds": 305000000
-    },
-    "id": "Lqd8BYL2WI8IJ2KOGbV6"
+    "event_name": "Tech Hub Happy Hour"
   },
   {
-    "name": "Alumni Happy Hour",
-    "photoUrl": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/events%2Fhand-1850120__480.jpg?alt=media&token=8fa08785-2a72-4fee-9808-4d567a4a3de1",
-    "address": "7035 Beracasa Way #207, Boca Raton, FL 33433",
-    "time": "9:42pm",
-    "location": "Boca Code",
-    "date": "October 17 2022",
-    "timestamp": 1666057386,
-    "createdAt": {
-      "_seconds": 1666057386,
-      "_nanoseconds": 703000000
-    },
-    "id": "gDiZgRCpeoxy00P3byg1"
+    "event_name": "Alumni Happy Hour",
+    "photoUrl": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/events%2Fhand-1850120__480.jpg?alt=media&token=8fa08785-2a72-4fee-9808-4d567a4a3de1"
   }
 ]
