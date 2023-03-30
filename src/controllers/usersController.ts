@@ -17,15 +17,15 @@ interface TUser {
 
 export const addUser: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
-    const { email, password, first_name, last_name, access_level } = req.body
     try {
+      const { email, password, first_name, last_name } = req.body
       const duplicateEmail = await User.findOne({ email: email })
 
       if (!duplicateEmail) {
         const newUser: TUser = {
           uid: 'u' + createRandomId(),
           email: email,
-          access_level: access_level,
+          access_level: 0,
           first_name: first_name,
           last_name: last_name,
           password: password,

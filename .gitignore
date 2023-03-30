@@ -12,3 +12,5 @@ dist
 
 # mongo data
 .mongo_data
+
+app.yaml

@@ -8,7 +8,10 @@
     "build": "tsc ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint:fix": "eslint --fix",
-    "seed": "npm run build && node --trace-warnings dist/scripts/seedDb.js"
+    "seed": "npm run build && node --trace-warnings dist/scripts/seedDb.js",
+    "gcp-build": "tsc -p . && cp app.yaml ./dist && cp package.build.json ./dist/package.json && cp package-lock.json ./dist && cp .env.prod ./dist/.env",
+    "clean": "gts clean",
+    "deploy": "yarn gcp-build && gcloud app deploy ./dist"
   },
   "engines": {
     "node": ">=18",

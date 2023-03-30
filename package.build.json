@@ -1,0 +1,34 @@
+{
+  "name": "bocacode-intranet-api-typescript",
+  "version": "1.0.0",
+  "description": "Boilerplate to start Typescript Node API projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint:fix": "eslint --fix",
+    "seed": "npm run build && node --trace-warnings dist/scripts/seedDb.js",
+    "clean": "gts clean"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "keywords": ["typescript", "eslint", "prettier", "cors", "dotenv", "nodemon"],
+  "author": "Jonathan Sanchez",
+  "contributors": [
+    {
+      "name": "Cassandra Curcio"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.10.0"
+  }
+}
