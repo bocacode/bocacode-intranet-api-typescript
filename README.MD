@@ -29,8 +29,8 @@ $ npm install
 4. Create a .env file and define variables
 
 ```bash
-$MONGO_URI='mongodb://localhost:27020/intranet-data'
-PORT=4010
+MONGO_URI='mongodb://localhost:27020/intranet-data'
+PORT=4040
 ```
 
 5. Run Docker client in your machine to build the local MongoDB
