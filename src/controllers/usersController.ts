@@ -118,7 +118,26 @@ export const updateUser: RequestHandler = async (req, res) => {
   }
 }
 
+export const getUser: RequestHandler = async (req, res) => {
+  console.log('looking for user ')
+  const token = req.headers.authorization && req.headers.authorization.split(' ')[1]
+
+  if (req.query) {
+    const { id } = req.query
+    try {
+      const userFound = await User.findById(id)
+      res.status(200).send(userFound)
+    } catch (err) {
+      res.status(500).send({ error: err })
+    }
+  } else if (Error) {
+    console.log(Error)
+    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  }
+}
+
 export const getUsers: RequestHandler = async (req, res) => {
+  console.log('getting users ');
   try {
     const allUsers = await User.find()
     res.send(allUsers)
