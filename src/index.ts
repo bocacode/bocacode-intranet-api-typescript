@@ -13,6 +13,9 @@ app.listen(process.env.PORT || 4040, () => console.log(`port running on ${proces
 import userRoutes from './routes/userRoutes'
 app.use('/api/users/', userRoutes)
 
+import logRoutes from './routes/logRoutes'
+app.use('/api/logs/', logRoutes)
+
 import restaurantRoutes from './routes/restaurantRoutes'
 app.use('/api/restaurants', restaurantRoutes)
 

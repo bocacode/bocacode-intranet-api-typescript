@@ -9,6 +9,7 @@ dist
 
 # environment variable s
 .env
+.env.prod
 
 # mongo data
 .mongo_data

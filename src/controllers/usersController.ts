@@ -13,6 +13,7 @@ interface TUser {
   first_name: string
   last_name: string
   password: string
+  status?: string
 }
 
 export const addUser: RequestHandler = async (req, res) => {
@@ -43,7 +44,7 @@ export const addUser: RequestHandler = async (req, res) => {
             res.send({ ...(decoded as any), accessToken: accessToken })
           })
         } else {
-          res.status(401).json({ error: 'Use was not created' })
+          res.status(401).json({ error: 'User was not created' })
         }
       } else {
         res.status(401).json({ error: 'Email already in use' })
@@ -85,29 +86,29 @@ export const login: RequestHandler = async (req, res) => {
 }
 
 export const updateUser: RequestHandler = async (req, res) => {
-  const token = req.headers.authorization && req.headers.authorization.split(' ')[1]
+  const { first_name, last_name, access_level, status, email, _id } = req.body
 
   if (req.body) {
     const userDetails = {
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      phone: req.body.phone,
+      first_name: first_name,
+      last_name: last_name,
+      access_level: access_level,
+      status: status,
     }
 
     try {
-      const userFound = await User.findOneAndUpdate({ realtorId: req.body.realtorId }, { $set: userDetails })
+      const userUpdated = await User.findByIdAndUpdate(_id, userDetails)
 
-      if (userFound) {
+      if (userUpdated) {
         const log = {
-          user_id: userDetails.email,
+          user_id: email,
           model: 'user',
           event_type: 'update',
-          reference_id: userDetails.email,
+          reference_id: email,
         }
 
         addLog(log)
-        res.send({ ...userFound, accessToken: token })
+        res.send({ ...userUpdated })
       }
     } catch (err) {
       res.status(500).send({ error: err })
@@ -119,9 +120,6 @@ export const updateUser: RequestHandler = async (req, res) => {
 }
 
 export const getUser: RequestHandler = async (req, res) => {
-  console.log('looking for user ')
-  const token = req.headers.authorization && req.headers.authorization.split(' ')[1]
-
   if (req.query) {
     const { id } = req.query
     try {
@@ -137,40 +135,10 @@ export const getUser: RequestHandler = async (req, res) => {
 }
 
 export const getUsers: RequestHandler = async (req, res) => {
-  console.log('getting users ');
   try {
     const allUsers = await User.find()
     res.send(allUsers)
   } catch (error) {
     res.status(500).send({ message: 'Unable to get all Users' })
-  }
-}
-
-export const disableUser: RequestHandler = async (req, res) => {
-  if (req.params) {
-    const { email } = req.params
-    try {
-      const userUpdated = await User.findOneAndUpdate({ email: email }, { $set: { enabled: false } })
-
-      if (userUpdated) {
-        if (userUpdated) {
-          const log = {
-            user_id: userUpdated.email,
-            model: 'user',
-            event_type: 'disabled',
-            reference_id: userUpdated.email,
-          }
-
-          addLog(log)
-
-          res.status(200).send({ success: `User id ${email} has been disabled ` })
-        }
-      }
-    } catch (err) {
-      res.status(500).send({ error: err })
-    }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
 }

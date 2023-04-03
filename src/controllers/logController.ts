@@ -26,3 +26,13 @@ export const getLogs: RequestHandler = async (req, res) => {
     res.status(500).send({ message: 'Unable to get all Logs' })
   }
 }
+
+export const getUserLogs: RequestHandler = async (req, res) => {
+  try {
+    const { email } = req.query
+    const allLogs = await Log.find({ user_id: email })
+    res.send(allLogs)
+  } catch (error) {
+    res.status(500).send({ message: 'Unable to get all Logs' })
+  }
+}
