@@ -60,7 +60,7 @@ export const login: RequestHandler = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email })
 
-    if (user && (await bcrypt.compare(req.body.password, user.password))) {
+    if (user && user.active && (await bcrypt.compare(req.body.password, user.password))) {
       const accessToken = jwt.sign(user.toJSON(), process.env.PRIVATE_KEY as string)
 
       jwt.verify(accessToken, process.env.PRIVATE_KEY as string, async (err, decoded) => {
@@ -74,11 +74,11 @@ export const login: RequestHandler = async (req, res) => {
           }
 
           addLog(log)
-          res.send({ ...(decoded as any), accessToken: accessToken })
+          res.status(200).send({ ...(decoded as any), accessToken: accessToken })
         }
       })
     } else {
-      res.send('No user found or invalid password')
+      res.status(401).send('No user found or invalid account/password')
     }
   } catch (err) {
     console.error(err)
@@ -86,14 +86,14 @@ export const login: RequestHandler = async (req, res) => {
 }
 
 export const updateUser: RequestHandler = async (req, res) => {
-  const { first_name, last_name, access_level, status, email, _id } = req.body
+  const { first_name, last_name, access_level, active, email, _id } = req.body
 
   if (req.body) {
     const userDetails = {
       first_name: first_name,
       last_name: last_name,
-      access_level: access_level,
-      status: status,
+      access_level: Number(access_level),
+      active: active,
     }
 
     try {
@@ -137,7 +137,7 @@ export const getUser: RequestHandler = async (req, res) => {
 export const getUsers: RequestHandler = async (req, res) => {
   try {
     const allUsers = await User.find()
-    res.send(allUsers)
+    res.status(200).send(allUsers)
   } catch (error) {
     res.status(500).send({ message: 'Unable to get all Users' })
   }

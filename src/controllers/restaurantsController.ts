@@ -18,14 +18,14 @@ export const addRestaurant: RequestHandler = async (req, res) => {
 
       if (restaurantCreated) {
         const log = {
-          user_id: req.body.user_id,
-          model: 'deal',
+          user_id: req.body.created_by,
+          model: 'restaurant',
           event_type: 'new',
           reference_id: newRestaurant.uid,
         }
         addLog(log)
 
-        res.send('Restaurant created')
+        res.status(200).send('Restaurant created')
       } else {
         res.status(401).json({ error: 'Deal was not created' })
       }
@@ -39,21 +39,18 @@ export const addRestaurant: RequestHandler = async (req, res) => {
 export const updateRestaurant: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      const restaurantUpdated = await Restaurant.findOneAndUpdate(
-        { restaurantId: req.body.restaurantId },
-        { $set: req.body }
-      )
+      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
 
       if (restaurantUpdated) {
         const log = {
-          user_id: req.body.realtorId,
-          model: 'property',
+          user_id: req.body.created_by,
+          model: 'restaurant',
           event_type: 'updated',
           reference_id: restaurantUpdated.uid,
         }
         addLog(log)
 
-        res.send(restaurantUpdated)
+        res.status(200).send(restaurantUpdated)
       }
     } catch (err) {
       res.status(500).send({ error: err })
@@ -73,6 +70,21 @@ export const getRestaurants: RequestHandler = async (req, res) => {
   }
 }
 
+export const getRestaurant: RequestHandler = async (req, res) => {
+  if (req.query) {
+    const { id } = req.query
+    try {
+      const userFound = await Restaurant.findById(id)
+      res.status(200).send(userFound)
+    } catch (err) {
+      res.status(500).send({ error: err })
+    }
+  } else if (Error) {
+    console.log(Error)
+    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  }
+}
+
 export const disableRestaurant: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
@@ -83,7 +95,7 @@ export const disableRestaurant: RequestHandler = async (req, res) => {
     if (restaurantUpdated) {
       const log = {
         user_id: req.body.user_id,
-        model: 'deal',
+        model: 'restaurant',
         event_type: 'disabled',
         reference_id: restaurantUpdated.uid,
       }

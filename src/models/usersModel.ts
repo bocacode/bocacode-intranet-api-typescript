@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema(
     first_name: { type: String, required: true },
     last_name: { type: String, required: true },
     password: { type: String, required: true },
-    status: { type: String, default: 'pending', required: true },
+    active: { type: Boolean, default: false, required: true },
   },
   { timestamps: true }
 )
