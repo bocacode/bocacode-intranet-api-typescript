@@ -1,5 +1,8 @@
 [
   {
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-11",
     "description": "Look around your house and create variables for four items.",
     "week": 1,
     "topic": "JavaScript"
@@ -7,46 +10,73 @@
   {
     "week": 1,
     "topic": "JavaScript",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-12",
     "description": "Create your own person object, that includes first name, last name, gender, and age."
   },
   {
     "topic": "JavaScript",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-13",
     "description": "Create a function that capitalizes the first letter of a string and lowercases the rest.",
     "week": 1
   },
   {
     "topic": "back-end",
     "week": 3,
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-14",
     "description": "Create a mongoDB for movies that has at least three documents in the collection. Create an express API that includes a GET all, GET one by id, POST, and PATCH request. "
   },
   {
     "topic": "Databases",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-15",
     "description": "Design a database (any) for a Pizza company. Add at least 3 pizzas, and at least 2 customers, at least 3 orders. Write code to connect to the database, get all and console.table results.",
     "week": 2
   },
   {
     "week": 1,
     "topic": "JavaScript",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-16",
     "description": "Create a function that returns the number of vowels in a given string."
   },
   {
     "topic": "JavaScript",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-17",
     "description": "Write a FOR loop that outputs 'I will never give up' ten times. ",
     "week": 1
   },
   {
     "week": 1,
     "topic": "JavaScript",
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-18",
     "description": "Create a function in ES6 syntax that takes an arguement and console.log's it. "
   },
   {
     "week": 3,
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-19",
     "description": "In a group of 3-4. build and deploy an API, connect to the database of your choice and write a GET and POST endpoint. If you have time, do full CRUD. ",
     "topic": "API"
   },
   {
     "topic": "back-end",
     "week": 3,
+    "enabled": true,
+    "created_by": "admin-import",
+    "uid": "l-110",
     "description": "Create a firestore database for events that has at least three documents in the collection. Create an express API that includes a GET and POST request. "
   }
 ]

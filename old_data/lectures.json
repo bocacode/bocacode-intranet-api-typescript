@@ -1,6 +1,9 @@
 [
   {
       "title": "String Operations",
+      "uid": "l-1",
+      "created_by": "admin-import",
+      "enabled": true,
       "topic": "JavaScript",
       "description": "This is a presentation about string methods in JavaScript.",
       "fileURL": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/lectures%2FW01-D02%20String-Operations.pdf?alt=media&token=01454165-9555-40c5-a110-780998e8337b"

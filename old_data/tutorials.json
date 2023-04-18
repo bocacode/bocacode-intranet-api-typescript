@@ -1,5 +1,7 @@
 [
   {
+    "uid": "t-1",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=UmSpfdxu3ro&ab_channel=DevDreamer",
     "description": "JavaScript data-media_types, explained by Dev Dreamer",
     "title": "Data-media_types in JavaScript",
@@ -10,17 +12,23 @@
     "title": "Error Handling in JavaScript",
     "description": "JavaScript error handling, explained by Bro Code",
     "topic": "JavaScript",
+    "uid": "t-2",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Z2l3cQ7bvBA&ab_channel=BroCode",
     "media_type": "video"
   },
   {
     "topic": "JavaScript",
+    "uid": "t-3",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=T8tilXV03UI&ab_channel=DevDreamer",
     "description": "JavaScript function-expressions, explained by Dev Dreamer",
     "media_type": "video",
     "title": "Function-Expressions in JavaScript"
   },
   {
+    "uid": "t-4",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=2-ojI5M9HME&ab_channel=BroCode",
     "topic": "JavaScript",
     "title": "Arrays in JavaScript",
@@ -31,12 +39,16 @@
     "topic": "JavaScript",
     "media_type": "video",
     "title": "Arrow-Functions in JavaScript",
+    "uid": "t-5",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Oy185MF8pnY&ab_channel=DevDreamer",
     "description": "JavaScript arrow functions, explained by Dev Dreamer"
   },
   {
     "title": "Array.forEach()",
     "media_type": "video",
+    "uid": "t-6",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=KPuGKeVrmZg&ab_channel=BroCode",
     "topic": "JavaScript",
     "description": "JavaScript array.forEach() for beginners, explained by Bro Code"
@@ -44,6 +56,8 @@
   {
     "description": "JavaScript objects for beginners, explained by Bro Code",
     "title": "Objects in JavaScript",
+    "uid": "t-7",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=adp5-HFSD30&ab_channel=BroCode",
     "topic": "JavaScript",
     "media_type": "video"
@@ -51,6 +65,8 @@
   {
     "media_type": "video",
     "title": "Scope in JavaScript",
+    "uid": "t-8",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=ky2mNs4kGh8&ab_channel=DevDreamer",
     "topic": "JavaScript",
     "description": "Understanding JavaScript scope, by Dev Dreamer"
@@ -59,10 +75,14 @@
     "media_type": "video",
     "topic": "JavaScript",
     "description": "Promises allow you to write clean non-callback-centric code, by Kyle from Web Dev Simplified",
+    "uid": "t-9",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=DHvZLI7Db8E&ab_channel=WebDevSimplified",
     "title": "JavaScript Promises"
   },
   {
+    "uid": "t-10",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=6J54mZBC69k&ab_channel=BroCode",
     "media_type": "video",
     "topic": "JavaScript",
@@ -70,6 +90,8 @@
     "description": "Javascript callbacks for beginners, explained by Bro Code"
   },
   {
+    "uid": "t-11",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=IIyKr9QYhvc&ab_channel=JonSthewebguy",
     "media_type": "video",
     "description": "How to deploy React App to AWS S3 bucket, by JonS the web guy",
@@ -78,6 +100,8 @@
   },
   {
     "title": "Array Methods in JavaScript",
+    "uid": "t-12",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=R8rmfD9Y5-c&ab_channel=WebDevSimplified",
     "description": "8 Must Know JavaScript array methods, explained by Kyle from Web Dev Simplified",
     "topic": "JavaScript",
@@ -86,6 +110,8 @@
   {
     "media_type": "video",
     "title": "What are Parameters and Arguments in JavaScript",
+    "uid": "t-13",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=k1-tpFDyUwo&ab_channel=DevDreamer",
     "topic": "JavaScript",
     "description": "What are JavaScript parameters and arguments, explained by Dev Dreamer"
@@ -95,10 +121,14 @@
     "title": "Template-Literals in JavaScript",
     "topic": "JavaScript",
     "media_type": "video",
+    "uid": "t-14",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Nihixmgylms&ab_channel=BroCode"
   },
   {
     "title": "Classes in JavaScript",
+    "uid": "t-15",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=ndzAGJin2ZE&ab_channel=BroCode",
     "description": "JavaScript classes, explained by Bro Code",
     "media_type": "video",
@@ -108,18 +138,24 @@
     "title": "Async-Await in JavaScript",
     "description": "JavaScript Async Await for beginners, explained by Kyle from Web Dev Simplified",
     "media_type": "video",
+    "uid": "t-16",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=V_Kr9OSfDeU&ab_channel=WebDevSimplified",
     "topic": "JavaScript"
   },
   {
     "description": "How to upload a file in React using media_typescript and base64, by Damian Montero",
     "title": "Uploading a File using base64",
-    "topic": "",
+    "topic": "React",
+    "uid": "t-17",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=cZ0YsVpA1Ps&ab_channel=FloridaJS",
     "media_type": "video"
   },
   {
     "description": "JavaScript comparison-operators, explained by Dev Dreamer",
+    "uid": "t-18",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=jhe5kwtD6dE&ab_channel=DevDreamer",
     "title": "Comparison-Operators in JavaScript",
     "media_type": "video",
@@ -130,12 +166,16 @@
     "media_type": "video",
     "description": "JWT token with Password Hashing in Node Express Mongo API, by JonS the web guy",
     "topic": "Security",
+    "uid": "t-19",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Gp0gY89FPqk&t=689s&ab_channel=JonSthewebguy"
   },
   {
     "title": "Ternary-Operator in JavaScript",
     "media_type": "video",
     "topic": "JavaScript",
+    "uid": "t-20",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=XXcT2Tgrsx0&ab_channel=BroCode",
     "description": "JavaScript ternary-operator for beginners, explained by Bro Code"
   },
@@ -143,6 +183,8 @@
     "description": "JavaScript functions for Beginners, explained by Bro Code",
     "topic": "JavaScript",
     "media_type": "video",
+    "uid": "t-21",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=d7cfhgfojLA&ab_channel=BroCode",
     "title": "Functions in JavaScript"
   },
@@ -150,10 +192,14 @@
     "title": "Recursion in Javascript",
     "description": "Javascript recursion for beginners, explained by Dev Dreamer",
     "topic": "JavaScript",
+    "uid": "t-22",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=wd2vNXCfu9s&ab_channel=DevDreamer",
     "media_type": "video"
   },
   {
+    "uid": "t-23",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Gr6kO2VrYSo&ab_channel=JonSthewebguy",
     "topic": "Deployment",
     "media_type": "video",
@@ -164,6 +210,8 @@
     "media_type": "video",
     "topic": "JavaScript",
     "description": "JavaScript if statements for beginners, explained by Bro Code",
+    "uid": "t-24",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=fA8BceA_cp4&ab_channel=BroCode",
     "title": "If-Statements in JavaScript"
   },
@@ -171,6 +219,8 @@
     "media_type": "video",
     "description": "JavaScript For-Loop for Beginners, explained by Mosh Hamedani",
     "topic": "JavaScript",
+    "uid": "t-25",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=s9wW2PpJsmQ&ab_channel=ProgrammingwithMosh",
     "title": "For-Loop in JavaScript"
   },
@@ -178,10 +228,14 @@
     "description": "JavaScript logical operators, explained by Dev Dreamer",
     "title": "Logical-Operators in JavaScript",
     "topic": "JavaScript",
+    "uid": "t-27",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=-L41L0IZuv4&ab_channel=DevDreamer",
     "media_type": "video"
   },
   {
+    "uid": "t-28",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=HD13eq_Pmp8&ab_channel=BroCode",
     "topic": "HTML",
     "media_type": "video",
@@ -192,6 +246,8 @@
     "media_type": "video",
     "topic": "JavaScript",
     "title": "Spread-Operator in JavaScript",
+    "uid": "t-29",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=AN0oTuWdLtk&ab_channel=DevDreamer",
     "description": "JavaScript spread-operator, explained by Dev Dreamer"
   },
@@ -199,6 +255,8 @@
     "title": "Deploying to AWS EC2 Instance",
     "description": "How to deploy a Node Express API to AWS EC2 instance, by JonS the web guy",
     "topic": "Deployment",
+    "uid": "t-30",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=T-Pum2TraX4&ab_channel=JonSthewebguy",
     "media_type": "video"
   },
@@ -206,18 +264,24 @@
     "description": "Truthy and Falsy concept explained by Dom from dcode",
     "title": "Truthy and Falsy",
     "media_type": "video",
+    "uid": "t-31",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=Xp60QbXRAPI&ab_channel=dcode",
     "topic": "JavaScript"
   },
   {
     "description": "How to create simple Node Express Api with MongoDB and React, by JonS the web guy",
-    "topic": "",
+    "topic": "Node",
     "media_type": "video",
+    "uid": "t-32",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=DkMMHKHCHPY&ab_channel=JonSthewebguy",
     "title": "Creating Express Api with MongoDB & React"
   },
   {
     "media_type": "video",
+    "uid": "t-33",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=my3f_sUObhE&ab_channel=BroCode",
     "description": "Variables and data media_types in JavaScript, explained by Bro Code",
     "title": "Variables and data media_types in JavaScript",
@@ -226,6 +290,8 @@
   {
     "description": "How to output JavaScript, explained by Dev Dreamer",
     "topic": "JavaScript",
+    "uid": "t-34",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=0xShDHwdpas&ab_channel=DevDreamer",
     "title": "How to Output JavaScript",
     "media_type": "video"
@@ -235,6 +301,8 @@
     "title": "Rest-Parameter in JavaScript",
     "media_type": "video",
     "description": "JavaScript rest-parameter, explained by Dev Dreamer",
+    "uid": "t-35",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=f3-Ry2lTzMU&ab_channel=DevDreamer"
   },
   {
@@ -242,6 +310,8 @@
     "media_type": "video",
     "description": "Javascript destructuring, explained by Dev Dreamer",
     "title": "Destructuring in Javascript",
+    "uid": "t-36",
+    "created_by": "admin-import",
     "url": "https://www.youtube.com/watch?v=h7s2kJFAkus&ab_channel=DevDreamer"
   }
 ]

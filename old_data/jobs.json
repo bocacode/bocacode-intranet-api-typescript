@@ -1,11 +1,13 @@
 [
   {
+    "uid": "j-1",
     "position": "Engineering Manager, Product and Growth Engineering",
     "location": "US or Canada",
     "url": "https://jobs.ashbyhq.com/replit/bb4c779b-fad6-4c38-ab29-ece57a79abe3?utm_source=Replit+Remote+POC",
     "date_posted": "Dec 29, 2022",
     "company": "Replit",
     "type": "Remote",
+    "created_by": "admin-import",
     "frequency": "Full time"
   },
   {
@@ -13,8 +15,10 @@
     "location": "Boston, MA",
     "type": "Remote",
     "company": "Pearl Health",
+    "uid": "j-2",
     "position": "Senior Product Manager – Data Platform – HealthTech",
     "url": "hhttps://boards.greenhouse.io/pearlhealth/jobs/5307314003?gh_src=9ace4a713us",
+    "created_by": "admin-import",
     "frequency": "Full-time"
   }
 ]
