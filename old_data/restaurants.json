@@ -1,5 +1,7 @@
 [
   {
+    "created_by": "admin-import",
+    "uid": "r-1",
     "address": "7024 Beracasa Way, Boca Raton, FL 33433",
     "menu_url": "https://www.winndixie.com/shopping/departments/deli",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fwinn.jpeg?alt=media&token=cee866b1-b3ad-4881-8779-3511772cf751",
@@ -8,6 +10,8 @@
   },
   {
     "menu_url": "starbucks.com/menu",
+    "created_by": "admin-import",
+    "uid": "r-2",
     "address": "7032 W Palmetto Park Rd, Boca Raton, FL 33433",
     "rating": "4",
     "name": "Starbucks ",
@@ -16,12 +20,16 @@
   {
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fchipotle.jpeg?alt=media&token=6e0caaf6-82fd-45c4-9ea2-60441d8ff001",
     "name": "Chipotle ",
+    "created_by": "admin-import",
+    "uid": "r-3",
     "address": "7028 W Palmetto Park Rd Ste 106, Boca Raton, FL 33433",
     "menu_url": "https://www.chipotle.com/order/#menu",
     "rating": "3"
   },
   {
     "menu_url": "https://www.publix.com/mc/order-ahead/order-subs-and-wraps",
+    "created_by": "admin-import",
+    "uid": "r-4",
     "address": "7060 W Palmetto Park Rd, Boca Raton, FL 33433",
     "rating": "3",
     "name": "Publix ",
@@ -30,6 +38,8 @@
   {
     "name": "Sushi Sake",
     "rating": "3",
+    "created_by": "admin-import",
+    "uid": "r-5",
     "address": "7020 Beracasa Way, Boca Raton, FL 33433",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fsushi.webp?alt=media&token=0731638c-8b8a-40cc-831c-82094e5baade",
     "menu_url": "https://www.sushisakemiami.com/menu/"
@@ -37,23 +47,24 @@
   {
     "name": "Mister 01",
     "menu_url": "https://www.toasttab.com/mister-o1-extraordinary-pizza-boca-raton/v3",
+    "created_by": "admin-import",
+    "uid": "r-6",
     "address": "555 N Federal Hwy Suite #5, Boca Raton, FL 33432",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fmister01.webp?alt=media&token=7df31e84-7c94-4a04-8a40-a60ddea83e9c",
     "rating": "3"
   },
   {
-    "rating": "4",
-    "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/restaurants%2Fdssdf?alt=media&token=4b6990f1-0e9f-40b0-a74b-0642827005a5",
-    "name": "dssdf",
-    "address": "sdfsdf"
-  },
-  {
     "name": "Teriyaki Madness",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/restaurants%2FTeriyaki%20Madness?alt=media&token=cc7a663a-2f41-4630-a6a0-025e64c90e14",
+    "created_by": "admin-import",
+    "uid": "r-8",
     "address": "20437 FL-7 B6, Boca Raton, FL 33498",
-    "rating": "Teriyaki Madness"
+    "rating": "Teriyaki Madness",
+    "menu_url": "https://www.toasttab.com/mister-o1-extraordinary-pizza-boca-raton/v3"
   },
   {
+    "created_by": "admin-import",
+    "uid": "r-9",
     "address": "7036 W Palmetto Park Rd #54, Boca Raton, FL 33433",
     "rating": "3",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fgyro.jpeg?alt=media&token=a5922479-c634-494a-b51e-078d72b26ec8",
@@ -63,6 +74,8 @@
   {
     "rating": "3",
     "menu_url": "https://order.firehousesubs.com/menu/1000/subs/20067",
+    "created_by": "admin-import",
+    "uid": "r-10",
     "address": "7148-B Beracasa Way, Boca Raton, FL 33433",
     "name": "Firehouse Subs ",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Ffirehouse.jpeg?alt=media&token=20890c10-dfd9-485a-bce0-065a35f90c82"
@@ -70,6 +83,8 @@
   {
     "rating": "3",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fbolay.jpeg?alt=media&token=316363dc-081e-47a0-8fea-9d6071cbc486",
+    "created_by": "admin-import",
+    "uid": "r-11",
     "address": "7152-B Beracasa Way, Boca Raton, FL 33433",
     "name": "Bolay",
     "menu_url": "https://orders.bolay.com/menu/bolay-south-boca-raton"
@@ -78,10 +93,15 @@
     "rating": "Miller's Ale House",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-intranet-api.appspot.com/o/restaurants%2FMiller's%20Ale%20House?alt=media&token=070c0e56-0241-43e9-a78f-9f97b200d388",
     "name": "Miller's Ale House",
-    "address": "9244 Glades Rd, Boca Raton, FL 33434"
+    "created_by": "admin-import",
+    "uid": "r-12",
+    "address": "9244 Glades Rd, Boca Raton, FL 33434",
+    "menu_url": "https://www.toasttab.com/mister-o1-extraordinary-pizza-boca-raton/v3"
   },
   {
     "menu_url": "https://www.brooklynwaterbagel.com/menu/",
+    "created_by": "admin-import",
+    "uid": "r-13",
     "address": "22191 Powerline Rd, Boca Raton, FL 33433",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fbagel.jpeg?alt=media&token=7b2e3f26-fad0-444e-8f73-dffacd36008f",
     "rating": "3",
@@ -89,6 +109,8 @@
   },
   {
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2FShawarma_Pita.jpeg?alt=media&token=f318b962-f295-4f1c-beb7-2257f6b93509",
+    "created_by": "admin-import",
+    "uid": "r-14",
     "address": "7158 Beracasa Way, Boca Raton, FL 33433",
     "rating": "4.5",
     "name": "Chill & Grill Pita",
@@ -96,6 +118,8 @@
   },
   {
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fmcdonalds.jpeg?alt=media&token=291cd38c-7eb7-4a6d-8f68-c61f4470a08e",
+    "created_by": "admin-import",
+    "uid": "r-15",
     "address": "7030 Palmetto Park Rd Boca Raton, FL 33433 ",
     "name": "McDonald's ",
     "menu_url": "https://www.mcdonalds.com/us/en-us/full-menu.html",
@@ -104,6 +128,8 @@
   {
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fgolden%20.avif?alt=media&token=908563da-84ef-4660-b96c-68ff026e7254",
     "rating": "3",
+    "created_by": "admin-import",
+    "uid": "r-16",
     "address": "7036 W Palmetto Park Rd, Boca Raton, FL 33433",
     "menu_url": "https://www.goldenchinabocaraton.com/menu.aspx",
     "name": "Golden China"
@@ -111,6 +137,8 @@
   {
     "name": "Blaze Pizza",
     "menu_url": "https://www.blazepizza.com/location/blaze-pizza-boca-raton-2/menu",
+    "created_by": "admin-import",
+    "uid": "r-17",
     "address": "20522 7, Boca Raton, FL 33498",
     "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fblaze.jpeg?alt=media&token=ff3864c9-68b8-44c3-b9e5-21ac8cc0972a",
     "rating": "3"

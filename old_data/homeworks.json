@@ -3,10 +3,14 @@
     "question": "Create an object called student and add 3 properties with their values.",
     "subtopic": "",
     "week": "Week 1",
-    "topic": "Objects"
+    "topic": "Objects",
+    "created_by": "admin-import",
+    "uid": "hw-11"
   },
   {
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-12",
     "subtopic": "Conditionals",
     "week": "Week 1",
     "question": "Write a function named assignGrade, that takes one argument, a number score. Return a grade for the score, either “A,” “B,” “C,” “D,” or “F.” Invoke that function for a few different scores and log the result to make sure it works."
@@ -15,16 +19,22 @@
     "question": "Create a function that takes an array of numbers and returns a new array with the square of each number.",
     "subtopic": "",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-13",
     "week": "Week 1"
   },
   {
     "subtopic": "Arrays",
     "week": "Week 1",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-14",
     "question": "Create a function which returns the number of true values there are in an array. const testArray = [true, false, false, true, false, false, false, true, true, true, false]."
   },
   {
     "topic": "Variables",
+    "created_by": "admin-import",
+    "uid": "hw-15",
     "subtopic": "",
     "week": "Week 1",
     "question": "Declare variables called 'country', 'continent', and 'population' and assign their values according to your own country (population in millions). Log the result to the console."
@@ -33,23 +43,31 @@
     "subtopic": "Operators",
     "week": "Week 1",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-16",
     "question": "Write a function that adds two numbers together."
   },
   {
     "question": "Write a function that takes in an array of numbers as a parameter and uses the .forEach() method to double the value of all even numbers in the array. The function should not use any other loops or array methods.",
     "week": "Week 3",
     "subtopic": "Array methods",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-17"
   },
   {
     "week": "Week 2",
     "subtopic": "Operators",
     "question": "Write a function that takes your age in years and returns your age in minutes.",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-18"
   },
   {
     "week": "Week 1",
     "topic": "Data types",
+    "created_by": "admin-import",
+    "uid": "hw-19",
     "question": "Should “15” === 15, return true or false",
     "subtopic": "Booleans"
   },
@@ -57,10 +75,14 @@
     "week": "Week 1",
     "question": "Create a folder named “homework” inside the “boca-code” folder you created in class. Move into that folder. Inside of the “homework” folder, create a file named “variables.js” and do the remaining exercises inside the file.",
     "topic": "Command line",
+    "created_by": "admin-import",
+    "uid": "hw-110",
     "subtopic": ""
   },
   {
     "topic": "Databases",
+    "created_by": "admin-import",
+    "uid": "hw-111",
     "subtopic": "Firestore",
     "week": "Week 2",
     "question": "Using Firestore, create a collection of your favorite childhood toys/games (at least 5)."
@@ -69,23 +91,31 @@
     "question": "Create a SQL table with your favorite dishes and cuisines.",
     "subtopic": "SQL",
     "topic": "Databases",
+    "created_by": "admin-import",
+    "uid": "hw-112",
     "week": "Week 2"
   },
   {
     "question": "Create a function that takes in a number of two-pointers and three-pointers made and returns a basketball team’s total score. Console.log the results.",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-113",
     "subtopic": "",
     "week": "Week 1"
   },
   {
     "subtopic": "SQL",
     "topic": "Databases",
+    "created_by": "admin-import",
+    "uid": "hw-114",
     "question": "Create a table of 3 of your favorite television shows, including the name of the show, favorite actor/actress, where it plays (netflix, cable, etc.), and the genre. Run a query to print all of the show names.",
     "week": "Week 2"
   },
   {
     "week": "Week 2",
     "topic": "Databases",
+    "created_by": "admin-import",
+    "uid": "hw-115",
     "subtopic": "",
     "question": "Design a database (any) for a Pizza Company. Add at least 3 pizzas. Add at least 2 customers. Add at least 3 orders. Write code to connect to database, get all and console.table."
   },
@@ -93,22 +123,30 @@
     "question": "Create a table of your favorite actor/actress from each tv show chosen. Include his or her first name, last name tv show, and name of character played. Run a query to print the character names.",
     "week": "Week 2",
     "subtopic": "SQL",
-    "topic": "Databases"
+    "topic": "Databases",
+    "created_by": "admin-import",
+    "uid": "hw-116"
   },
   {
     "subtopic": "Strings",
     "question": "Create a variable with let or const and assign its value to a string. Make it one of your favorite things, whether’s that’s a car, a pet, a family member, a food, etc.",
     "topic": "Variables",
+    "created_by": "admin-import",
+    "uid": "hw-117",
     "week": "Week 1"
   },
   {
     "subtopic": "Arrays",
     "week": "Week 1",
     "question": "Create a function that removes the first element of the array below and adds “kiwi” to the end of the array.let favoriteFruits = [“mango”, “lychee”, “rambutan”, “papaya”]",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-118"
   },
   {
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-119",
     "week": "Week 1",
     "subtopic": "Arrays",
     "question": "Write a function findNeedle() that takes an array full of items but containing one item, 'needle'. After your function finds the needle, it should return a message (as a string) that says: 'found the needle at position ' plus the index it found the needle. Example(Input --> Output) -['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'] --> 'found the needle at position 5'"
@@ -117,16 +155,22 @@
     "question": "Write a function that converts hours into seconds. Return the result.",
     "subtopic": "Operators",
     "week": "Week 2",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-120"
   },
   {
     "subtopic": "Arrays",
     "week": "Week 2",
     "question": "Write a function that takes an array of numbers and returns the sum of all even numbers.",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-121"
   },
   {
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-122",
     "subtopic": "",
     "week": "Week 1",
     "question": "Create a function that converts a string to uppercase letters. Console.log the results."
@@ -135,11 +179,15 @@
     "subtopic": "",
     "question": "Declare variables called ‘country’ and ‘continent’ and assign their values according to your own country. Log their values to the console.",
     "topic": "Variables",
+    "created_by": "admin-import",
+    "uid": "hw-123",
     "week": "Week 1"
   },
   {
     "question": "Write a function called combineTwoArrays that takes in two arrays as arguments, and returns a single array that combines both.",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-124",
     "subtopic": "Arrays",
     "week": "Week 1"
   },
@@ -147,16 +195,22 @@
     "subtopic": "Operators",
     "week": "Week 1",
     "question": "Write a function that returns the square of a number.",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-125"
   },
   {
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-126",
     "week": "Week 3",
     "subtopic": "Array methods",
     "question": "Write a function that takes the array below and modifies its order as follows: let myDreamCars = [“Charger”, “Cayenne”, “Cyber Truck”, “G Wagon”, “Civic)]. Remove the first element, add your dream car as the new first element, remove the last element, and add your first car as the new last element."
   },
   {
     "topic": "Command line",
+    "created_by": "admin-import",
+    "uid": "hw-127",
     "question": "Create a folder named “homework” inside the “boca-code” folder you created in class. Move into that folder. Inside of the “homework” folder, create a file named “variables.js” and do the remaining exercises inside the file.",
     "subtopic": "",
     "week": "Week 1"
@@ -165,12 +219,16 @@
     "subtopic": "Arrays",
     "week": "Week 1",
     "question": "You are given 2 arrays, one called shoppingList and one called cart. Example: let shoppingList = [‘beer’, ‘milk’, ‘wine’] let cart = [‘milk’]. Create a new version of shoppingList where the items in the cart have been removed",
-    "topic": "Functions"
+    "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-128"
   },
   {
     "question": "Write a function that prints (console.log) the numbers from 1 to 100. But log “Fizz” instead of the number if it is divisible by 3, “Buzz” if the number is divisible by 5, and “FizzBuzz” if the number is divisible by both 3 and 5.",
     "subtopic": "Conditionals",
     "topic": "Functions",
+    "created_by": "admin-import",
+    "uid": "hw-129",
     "week": "Week 2"
   }
 ]

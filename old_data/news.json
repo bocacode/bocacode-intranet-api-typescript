@@ -1,5 +1,8 @@
 [
   {
+    "uid": "n-1",
+    "created_by": "admin-import",
+    "enabled": true,
     "author": "Peter Lewandowski",
     "title": "Hitchhikers Guide to the Macbook",
     "link": "https://medium.com/@peter-lewandowski/hitchhikers-guide-to-the-macbook-4964dff372dd",
