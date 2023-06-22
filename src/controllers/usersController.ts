@@ -59,7 +59,6 @@ export const addUser: RequestHandler = async (req, res) => {
 export const login: RequestHandler = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email })
-
     if (user && user.active && (await bcrypt.compare(req.body.password, user.password))) {
       const accessToken = jwt.sign(user.toJSON(), process.env.PRIVATE_KEY as string)
 
@@ -75,6 +74,8 @@ export const login: RequestHandler = async (req, res) => {
 
           addLog(log)
           res.status(200).send({ ...(decoded as any), accessToken: accessToken })
+        } else {
+          res.status(401).send(err)
         }
       })
     } else {

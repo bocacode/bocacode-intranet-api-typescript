@@ -14,7 +14,7 @@ export const mongooseConnect = async () => {
     )
     .then((result: any) => {
       if (result.STATES['1']) {
-        console.log(`Connected to Mongo -  ${process.env.PORT}`)
+        console.log(`Connected to Mongo -  ${process.env.PORT} ->`)
       } else {
         console.error
       }

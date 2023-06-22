@@ -4,7 +4,7 @@ import { addUser, getUser, getUsers, login, updateUser } from '../controllers/us
 
 const router = Router()
 
-router.route('/signup').post(auth, addUser)
+router.route('/signup').post(addUser)
 router.route('/login').post(login)
 router.route('/update').patch(auth, updateUser)
 router.route('/:id').get(auth, getUser)
