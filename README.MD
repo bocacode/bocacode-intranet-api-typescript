@@ -34,8 +34,7 @@ PORT=4040
 ```
 
 5. Run Docker client in your machine to build the local MongoDB
-   <br><br>
-
+   `<br><br>`
 6. Build the docker container
 
 ```bash
@@ -97,11 +96,14 @@ https://www.postman.com/veerii/workspace/bocacodeintranet/collection/3147299-f0a
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpzbzE5MTlAZ21haWwuY29tIiwiYWNjZXNzX2xldmVsIjoxMCwiZmlyc3RfbmFtZSI6IkpvbmF0aGFuIiwibGFzdF9uYW1lIjoiU2FuY2hleiIsInBhc3N3b3.......................0dNjX6X_yCjdt1PB4Hf4NE1wuvBWCXD5aD9GD72QuDk"
 }
 ```
+
 3. Then you will need to add the `accessToken` to every other POSTMAN request under Authorization
-- Type: Bearer Token 
+
+- Type: Bearer Token
 - Token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpzbzE5MTlAZ21haWwuY29tIiwiYWNjZXNzX.................0dNjX6X_yCjdt1PB4Hf4NE1wuvBWCXD5aD9GD72QuDk`
 
-## Then you should be able to use the rest of the endpoints, 
+## Then you should be able to use the rest of the endpoints,
+
 > Remember if you don't go through this process you will not be able to run any of the other endpoints
 
 ---
@@ -115,6 +117,3 @@ You don't need the Production MONGO_URI to run the project, you should be able t
 ![Mongoose](https://img.shields.io/badge/Mongoose-61DAFB?logo=Mongoose&logoColor=black)
 ![Node](https://img.shields.io/badge/Node-61DAFB?logo=Node&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white)
-
-
-
