@@ -7,7 +7,6 @@ import { addLog } from './logController'
 // testing
 export const addNews: RequestHandler = async (req, res) => {
   if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
-  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
   try {
     const duplicateNews = req.body.uid ? await News.findOne({ uid: req.body.uid }) : null
     if (duplicateNews) {
@@ -39,7 +38,6 @@ export const addNews: RequestHandler = async (req, res) => {
 
 export const updateNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).json({ error: 'Unable to update news' })
-  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
   try {
     const { id } = req.params
     const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
@@ -82,7 +80,6 @@ export const getNews: RequestHandler = async (req, res) => {
 
 export const disableNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
   try {
     const { id } = req.params
     const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: { enabled: false } }, { new: true })
