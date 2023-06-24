@@ -12,7 +12,7 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
         return res.status(401).json({ error: 'Code Challenge already in system' })
       }
 
-      const newCodeChallenge = { ...req.body, uid: createRandomId() }
+      const newCodeChallenge = { ...req.body, uid: createRandomId(), created_by: req.body.user_id }
 
       const codeChallengeCreated = await CodeChallenges.create(newCodeChallenge)
 
