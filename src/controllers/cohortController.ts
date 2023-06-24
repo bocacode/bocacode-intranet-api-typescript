@@ -39,7 +39,7 @@ export const updateCohort: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).json({ error: 'Unable to update cohort' })
   try {
     const { id } = req.params
-    const cohortUpdated = await Cohorts.findOneAndUpdate({ uid: id }, { $set: req.body })
+    const cohortUpdated = await Cohorts.findOneAndUpdate({ uid: id }, { $set: req.body }, {new: true})
 
     if (cohortUpdated) {
       const log = {
