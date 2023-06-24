@@ -37,9 +37,10 @@ export const addJob: RequestHandler = async (req, res) => {
 }
 
 export const updateJob: RequestHandler = async (req, res) => {
-  if (req.body) {
+  if (req.body && req.params) {
+    const {id} = req.params
     try {
-      const jobUpdated = await Job.findOneAndUpdate({ jobId: req.body.jobId }, { $set: req.body })
+      const jobUpdated = await Job.findOneAndUpdate({ uid: id }, { $set: req.body }, {new: true})
 
       if (jobUpdated) {
         const log = {
