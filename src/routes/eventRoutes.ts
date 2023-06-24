@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { auth } from '../middleware/auth'
 import { addEvent, disableEvent, getEvents, updateEvent, getEvent } from '../controllers/eventsController'
+import { checkRequestBody } from '../middleware/checkBody'
 
 const router = Router()
 
