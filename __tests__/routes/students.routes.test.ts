@@ -7,7 +7,7 @@ describe('User routes', () => {
     process.env.NODE_ENV = 'development'
   })
 
-  test('Get all code challenges', async () => {
-    const res = await request(app).get('/api/codeChallenges').expect('Content-Type', /json/).expect(200)
+  test('Get all students', async () => {
+    const res = await request(app).get('/api/students').expect('Content-Type', /json/).expect(200)
   })
 })
