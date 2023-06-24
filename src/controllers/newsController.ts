@@ -61,24 +61,11 @@ export const updateNews: RequestHandler = async (req, res) => {
     res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
 }
-
-export const getNews: RequestHandler = async (req, res) => {
-  try {
-    const allNews = await News.find()
-    res.send(allNews)
-  } catch (error) {
-    res.status(500).send({ message: 'Unable to get all News' })
-  }
-}
-
 export const getNewsById: RequestHandler = async (req, res) => {
-  console.log('req.query' + req.query)
-  if (req.query) {
-    const { newsId } = req.query
+  if (req.params) {
+    const {newsId} = req.params
     try {
       const newsFound = await News.findById(newsId)
-      console.log('newsFound' + newsFound)
-      console.log('newsId' + newsId)
       res.status(200).send(newsFound)
     } catch (err) {
       res.status(500).send({ error: err })
@@ -89,21 +76,14 @@ export const getNewsById: RequestHandler = async (req, res) => {
   }
 }
 
-
-    // export const getRestaurant: RequestHandler = async (req, res) => {
-    //   if (req.query) {
-    //     const { id } = req.query
-    //     try {
-    //       const userFound = await Restaurant.findById(id)
-    //       res.status(200).send(userFound)
-    //     } catch (err) {
-    //       res.status(500).send({ error: err })
-    //     }
-    //   } else if (Error) {
-    //     console.log(Error)
-    //     res.status(401).send({ error: 'Update not completed or Access Denied' })
-    //   }
-    // }
+export const getNews: RequestHandler = async (req, res) => {
+  try {
+    const allNews = await News.find()
+    res.send(allNews)
+  } catch (error) {
+    res.status(500).send({ message: 'Unable to get all News' })
+  }
+}
 
 export const disableNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })

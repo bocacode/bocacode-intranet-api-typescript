@@ -5,7 +5,7 @@ import { addNews, disableNews, getNews, getNewsById, updateNews } from '../contr
 const router = Router()
 
 router.route('/').get(auth, getNews)
-router.route('/:id').get(auth, getNewsById)
+router.route('/:newsId').get(auth, getNewsById)
 router.route('/').post(auth, addNews)
 router.route('/disable/:newsId').patch(auth, disableNews)
 router.route('/update').patch(auth, updateNews)
