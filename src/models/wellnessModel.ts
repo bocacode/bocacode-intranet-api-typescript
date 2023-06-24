@@ -9,7 +9,7 @@ const WellnessSchema = new mongoose.Schema(
     url: { type: String },
     photo_url: { type: String, required: true },
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: true, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }
