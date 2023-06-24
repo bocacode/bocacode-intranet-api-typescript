@@ -26,7 +26,7 @@ export const addJob: RequestHandler = async (req, res) => {
       }
       addLog(log)
 
-      res.send('Job created')
+      res.send(jobCreated)
     } else {
       res.status(401).json({ error: 'Job was not created' })
     }

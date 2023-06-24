@@ -25,7 +25,7 @@ export const addLab: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Lab created')
+        res.send(labCreated)
       } else {
         res.status(401).json({ error: 'Lab was not created' })
       }

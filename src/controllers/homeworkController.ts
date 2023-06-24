@@ -25,7 +25,7 @@ export const addHomework: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Homework created')
+        res.send(homeworkCreated)
       } else {
         res.status(401).json({ error: 'Homework was not created' })
       }

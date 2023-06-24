@@ -25,7 +25,7 @@ export const addAlumni: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.status(200).send('Alumni created')
+        res.status(200).send(alumniCreated)
       } else {
         res.status(401).json({ error: 'Deal was not created' })
       }

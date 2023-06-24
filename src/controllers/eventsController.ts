@@ -25,7 +25,7 @@ export const addEvent: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Event created')
+        res.send(eventCreated)
       } else {
         res.status(401).json({ error: 'Event was not created' })
       }

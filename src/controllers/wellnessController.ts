@@ -25,7 +25,7 @@ export const addWellness: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Wellness created')
+        res.send(wellnessCreated)
       } else {
         res.status(401).json({ error: 'Wellness was not created' })
       }

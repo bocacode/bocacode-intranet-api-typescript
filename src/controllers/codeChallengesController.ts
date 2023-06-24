@@ -25,7 +25,7 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Code Challenge created')
+        res.send(codeChallengeCreated)
       } else {
         res.status(401).json({ error: 'Code Challenge was not created' })
       }

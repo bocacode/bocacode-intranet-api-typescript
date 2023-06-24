@@ -26,7 +26,7 @@ export const addNews: RequestHandler = async (req, res) => {
       }
       addLog(log)
 
-      res.send('News article created')
+      res.send(newsCreated)
     } else {
       res.status(401).json({ error: 'News article was not created' })
     }
