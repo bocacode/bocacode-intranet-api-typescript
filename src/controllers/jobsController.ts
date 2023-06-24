@@ -70,6 +70,21 @@ export const getJobs: RequestHandler = async (req, res) => {
   }
 }
 
+export const getJob: RequestHandler = async (req, res) => {
+  if (req.query) {
+    const { id } = req.query
+    try {
+      const userFound = await Job.findById(id)
+      res.status(200).send(userFound)
+    } catch (err) {
+      res.status(500).send({ error: err })
+    }
+  } else if (Error) {
+    console.log(Error)
+    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  }
+}
+
 export const disableJob: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
