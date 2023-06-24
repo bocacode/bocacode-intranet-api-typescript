@@ -39,7 +39,7 @@ export const addRestaurant: RequestHandler = async (req, res) => {
 export const updateRestaurant: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
+      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body }, {new: true})
 
       if (restaurantUpdated) {
         const log = {
