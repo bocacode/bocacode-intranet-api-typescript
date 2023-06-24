@@ -5,59 +5,57 @@ import Job from '../models/jobModel'
 import { addLog } from './logController'
 
 export const addJob: RequestHandler = async (req, res) => {
-  if (req.method === 'POST' && req.body) {
-    try {
-      const duplicateJob = req.body.uid ? await Job.findOne({ uid: req.body.uid }) : null
-      if (duplicateJob) {
-        return res.status(401).json({ error: 'Job already in system' })
-      }
-
-      const newJob = { ...req.body, uid: createRandomId() }
-
-      const jobCreated = await Job.create(newJob)
-
-      if (jobCreated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'job',
-          event_type: 'new',
-          reference_id: newJob.uid,
-        }
-        addLog(log)
-
-        res.send('Job created')
-      } else {
-        res.status(401).json({ error: 'Job was not created' })
-      }
-    } catch (error) {
-      console.log(error)
-      res.status(500).json({ error: 'Invalid data or HTTP method' })
+  if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
+  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
+  try {
+    const duplicateJob = req.body.uid ? await Job.findOne({ uid: req.body.uid }) : null
+    if (duplicateJob) {
+      return res.status(401).json({ error: 'Job already in system' })
     }
+
+    const newJob = { ...req.body, created_by: req.body.user_id, uid: createRandomId() }
+
+    const jobCreated = await Job.create(newJob)
+
+    if (jobCreated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'job',
+        event_type: 'new',
+        reference_id: newJob.uid,
+      }
+      addLog(log)
+
+      res.send('Job created')
+    } else {
+      res.status(401).json({ error: 'Job was not created' })
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Invalid data or HTTP method' })
   }
 }
 
 export const updateJob: RequestHandler = async (req, res) => {
-  if (req.body) {
-    try {
-      const jobUpdated = await Job.findOneAndUpdate({ jobId: req.body.jobId }, { $set: req.body })
+  if (!req.params) return res.status(401).json({ error: 'Unable to update lecture' })
+  if (!req.body || !req.body?.created_by) return res.status(401).json({ error: 'Invalid request body' })
+  try {
+    const { id } = req.params
+    const jobUpdated = await Job.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
 
-      if (jobUpdated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'job',
-          event_type: 'updated',
-          reference_id: jobUpdated.uid,
-        }
-        addLog(log)
-
-        res.send(jobUpdated)
+    if (jobUpdated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'job',
+        event_type: 'updated',
+        reference_id: jobUpdated.uid,
       }
-    } catch (err) {
-      res.status(500).send({ error: err })
+      addLog(log)
+
+      res.send(jobUpdated)
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  } catch (err) {
+    res.status(500).send({ error: err })
   }
 }
 
@@ -71,23 +69,19 @@ export const getJobs: RequestHandler = async (req, res) => {
 }
 
 export const getJob: RequestHandler = async (req, res) => {
-  if (req.query) {
-    const { id } = req.query
+  if (!req.params) return res.status(401).send({ error: 'ID missing or Access Denied' })
     try {
-      const itemFound = await Job.findById(id)
+      const {id} = req.params
+      const itemFound = await Job.findOne({uid: id})
       res.status(200).send(itemFound)
     } catch (err) {
       res.status(500).send({ error: err })
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
-}
 
 export const disableJob: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
+  if (!req.params) return res.status(401).json({ error: 'Unable to update job' })
+  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
   try {
     const { id } = req.params
     console.log(req.params)
