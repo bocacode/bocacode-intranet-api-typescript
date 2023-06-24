@@ -7,9 +7,7 @@ const router = Router()
 
 router.route('/:id').get(auth, getUser)
 router.route('/signup').post(checkRequestBody, addUser)
-router.route('/login').post(checkRequestBody, login)
-router.route('/signup').post(checkRequestBody, addUser)
-router.route('/login').post(checkRequestBody, login)
+router.route('/login').post(login)
 router.route('/:id').patch(auth, checkRequestBody, updateUser)
 
 export default router
