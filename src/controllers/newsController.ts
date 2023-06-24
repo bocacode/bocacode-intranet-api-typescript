@@ -6,34 +6,34 @@ import { addLog } from './logController'
 
 // testing
 export const addNews: RequestHandler = async (req, res) => {
-  if (req.method === 'POST' && req.body) {
-    try {
-      const duplicateNews = req.body.uid ? await News.findOne({ uid: req.body.uid }) : null
-      if (duplicateNews) {
-        return res.status(401).json({ error: 'News already in system' })
-      }
-
-      const newNews = { ...req.body, uid: createRandomId() }
-
-      const newsCreated = await News.create(newNews)
-
-      if (newsCreated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'news',
-          event_type: 'new',
-          reference_id: newNews.uid,
-        }
-        addLog(log)
-
-        res.send('News article created')
-      } else {
-        res.status(401).json({ error: 'News article was not created' })
-      }
-    } catch (error) {
-      console.log(error)
-      res.status(500).json({ error: 'Invalid data or HTTP method' })
+  if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
+  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
+  try {
+    const duplicateNews = req.body.uid ? await News.findOne({ uid: req.body.uid }) : null
+    if (duplicateNews) {
+      return res.status(401).json({ error: 'News already in system' })
     }
+
+    const newNews = { ...req.body, created_by: req.body.user_id, uid: createRandomId() }
+
+    const newsCreated = await News.create(newNews)
+
+    if (newsCreated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'news',
+        event_type: 'new',
+        reference_id: newNews.uid,
+      }
+      addLog(log)
+
+      res.send('News article created')
+    } else {
+      res.status(401).json({ error: 'News article was not created' })
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Invalid data or HTTP method' })
   }
 }
 
@@ -65,15 +65,15 @@ export const updateNews: RequestHandler = async (req, res) => {
 }
 
 export const getNewsById: RequestHandler = async (req, res) => {
-  if (req.params) {
-    const { id } = req.params
-    try {
-      const newsFound = await News.findById(id)
-      res.status(200).send(newsFound)
-    } catch (err) {
-      res.status(500).send({ error: err })
-    }
-  } else if (Error) {
+  if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
+  const { id } = req.params
+  try {
+    const newsFound = await News.findById(id)
+    res.status(200).send(newsFound)
+  } catch (err) {
+    res.status(500).send({ error: err })
+  }
+  if (Error) {
     console.log(Error)
     res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
@@ -90,7 +90,6 @@ export const getNews: RequestHandler = async (req, res) => {
 
 export const disableNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
   try {
     const { id } = req.params
     const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
