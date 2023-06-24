@@ -7,6 +7,7 @@
 
 ##### Bug Fixes
 
+*  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
 *  remove github action (1de48deb)
 *  update release yaml (b3769380)
