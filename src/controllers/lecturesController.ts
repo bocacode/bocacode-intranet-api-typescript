@@ -5,7 +5,8 @@ import Lectures from '../models/lectureModel'
 import { addLog } from './logController'
 
 export const addLecture: RequestHandler = async (req, res) => {
-  if (req.method !== 'POST' || !req.body) return res.status(401).json({ error: 'Invalid data or HTTP method' })
+  if (!req.body || !req.body?.created_by) return res.status(401).json({ error: 'Invalid request body' })
+  
   try {
     const duplicateLecture = req.body.uid ? await Lectures.findOne({ uid: req.body.uid }) : null
     if (duplicateLecture) {
@@ -36,27 +37,25 @@ export const addLecture: RequestHandler = async (req, res) => {
 }
 
 export const updateLecture: RequestHandler = async (req, res) => {
-  if (req.body) {
-    try {
-      const lectureUpdated = await Lectures.findOneAndUpdate({ lectureId: req.body.lectureId }, { $set: req.body }, {new: true})
+  if (!req.body || !req.body?.created_by) return res.status(401).json({ error: 'Invalid request body' })
+  
+  try {
+    const lectureUpdated = await Lectures.findOneAndUpdate({ lectureId: req.body.lectureId }, { $set: req.body }, {new: true})
 
-      if (lectureUpdated) {
-        const log = {
-          user_id: req.body.created_by,
-          model: 'lecture',
-          event_type: 'updated',
-          reference_id: lectureUpdated.uid,
-        }
-        addLog(log)
-
-        res.send(lectureUpdated)
+    if (lectureUpdated) {
+      const log = {
+        user_id: req.body.created_by,
+        model: 'lecture',
+        event_type: 'updated',
+        reference_id: lectureUpdated.uid,
       }
-    } catch (err) {
-      res.status(500).send({ error: err })
+      addLog(log)
+
+      res.send(lectureUpdated)
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  } catch (err) {
+    console.log(err)
+    res.status(500).send({ error: err })
   }
 }
 
@@ -70,20 +69,19 @@ export const getLectures: RequestHandler = async (req, res) => {
 }
 
 export const getLecture: RequestHandler = async (req, res) => {
-  if (req.params) {
-    try {
-      const lecture = await Lectures.findOne({ uid: req.params.id })
-      res.send(lecture)
-    } catch (error) {
-      res.status(500).send({ message: 'Unable to get all Lectures' })
-    }
-  } else {
-    res.status(401).send({ message: 'Unable to get Lecture' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to get Lecture' })
+
+  try {
+    const lecture = await Lectures.findOne({ uid: req.params.id })
+    res.send(lecture)
+  } catch (error) {
+    res.status(500).send({ message: 'Unable to get Lecture' })
   }
 }
 
 export const disableLecture: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
+  if (!req.body || !req.body?.created_by) return res.status(401).json({ error: 'Invalid request body' })
 
   try {
     const { lectureId } = req.params
