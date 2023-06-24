@@ -70,6 +70,18 @@ export const getTutorials: RequestHandler = async (req, res) => {
   }
 }
 
+export const getTutorial: RequestHandler = async (req, res) => {
+  if (req.params) {
+    const { id } = req.params
+    try {
+      const tutorialFound = await Tutorials.findById(id)
+      res.status(200).send(tutorialFound)
+    } catch (err) {
+      res.status(500).send({ message: 'Unable to get Tutorial'})
+    }
+  }
+}
+
 export const disableTutorial: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
