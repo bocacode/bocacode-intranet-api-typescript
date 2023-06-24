@@ -71,8 +71,8 @@ export const getRestaurants: RequestHandler = async (req, res) => {
 }
 
 export const getRestaurant: RequestHandler = async (req, res) => {
-  if (req.query) {
-    const { id } = req.query
+  if (req.params) {
+    const { id } = req.params
     try {
       const userFound = await Restaurant.findById(id)
       res.status(200).send(userFound)
