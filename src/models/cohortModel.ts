@@ -16,4 +16,4 @@ const CohortSchema = new mongoose.Schema(
     { timestamps: true }
 )
 
-export default mongoose.model('Cohort', CohortSchema)
+export default mongoose.model('Cohorts', CohortSchema)

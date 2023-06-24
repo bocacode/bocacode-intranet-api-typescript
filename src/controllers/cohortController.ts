@@ -1,4 +1,5 @@
 import { RequestHandler } from 'express'
+
 import { createRandomId } from '../utils/utils'
 import Cohorts from '../models/cohortModel'
 import { addLog } from './logController'
