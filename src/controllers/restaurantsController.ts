@@ -41,10 +41,9 @@ export const updateRestaurant: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
       const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
-
       if (restaurantUpdated) {
         const log = {
-          user_id: req.body.user_id,
+          user_id: req.body.req.body.user_id,
           model: 'restaurant',
           event_type: 'updated',
           reference_id: restaurantUpdated.uid,
@@ -63,6 +62,46 @@ export const updateRestaurant: RequestHandler = async (req, res) => {
     res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
 }
+
+  export const updateRestaurantRating: RequestHandler = async (req, res) => {
+    const { id } = req.params;
+    const newRating = Number(req.body.rating);
+    if (req.body) {
+      try {
+        const restaurant = await Restaurant.findOne({ uid: id });
+        if (!restaurant) {
+          return res.status(404).send({ error: 'Restaurant not found' });
+        }
+                restaurant.rating.push(newRating);
+        const total = restaurant.rating.reduce((sum, rating) => sum + Number(rating), 0)
+        console.log(total)
+        console.log(restaurant.rating)
+        const averageRating =  total/ restaurant.rating.length;
+
+        restaurant.average_rating = averageRating;
+  
+        const ratingUpdated = await restaurant.save();
+  
+        const log = {
+          user_id: req.body.user_id,
+          model: 'restaurant',
+          event_type: 'updated',
+          reference_id: ratingUpdated.uid,
+          average_rating: averageRating,
+        };
+        addLog(log);
+  
+        res.status(200).send({ average_rating: averageRating });
+      } catch (err) {
+        res.status(500).send({ error: err });
+      }
+    } else {
+      res.status(401).send({ error: 'Update not completed or Access Denied' });
+    }
+  };
+  
+  
+
 
 export const getRestaurants: RequestHandler = async (req, res) => {
   try {
@@ -109,3 +148,7 @@ export const disableRestaurant: RequestHandler = async (req, res) => {
     res.status(500).send({ error: err })
   }
 }
+
+
+
+
