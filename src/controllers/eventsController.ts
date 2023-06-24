@@ -37,9 +37,12 @@ export const addEvent: RequestHandler = async (req, res) => {
 }
 
 export const updateEvent: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Event' })
+
   if (req.body) {
     try {
-      const eventUpdated = await Events.findOneAndUpdate({ eventId: req.body.eventId }, { $set: req.body })
+      const eventUpdated = await Events.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (eventUpdated) {
         const log = {
@@ -74,8 +77,8 @@ export const disableEvent: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { eventId } = req.params
-    const eventUpdated = await Events.findOneAndUpdate({ uid: eventId }, { $set: { enabled: false } })
+    const { id } = req.params
+    const eventUpdated = await Events.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (eventUpdated) {
       const log = {
@@ -85,7 +88,7 @@ export const disableEvent: RequestHandler = async (req, res) => {
         reference_id: eventUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Event id ${eventId} has been disabled ` })
+      res.status(200).send({ success: `Event id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

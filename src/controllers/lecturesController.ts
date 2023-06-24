@@ -45,7 +45,7 @@ export const updateLecture: RequestHandler = async (req, res) => {
   try {
     const { user_id, ...restReqBody } = req.body
 
-    const lectureUpdated = await Lectures.findOneAndUpdate({ uid: req.params.lectureId }, { $set: {...restReqBody, created_by: user_id} }, {new: true})
+    const lectureUpdated = await Lectures.findOneAndUpdate({ uid: req.params.id }, { $set: {...restReqBody, created_by: user_id} }, {new: true})
 
     if (lectureUpdated) {
       const log = {
@@ -91,9 +91,9 @@ export const disableLecture: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { lectureId } = req.params
+    const { id } = req.params
     const { user_id } = req.body
-    const lectureUpdated = await Lectures.findOneAndUpdate({ uid: lectureId }, { $set: { enabled: false } }, { new: true })
+    const lectureUpdated = await Lectures.findOneAndUpdate({ uid: id }, { $set: { enabled: false } }, { new: true })
 
     if (lectureUpdated) {
       const log = {
@@ -103,7 +103,7 @@ export const disableLecture: RequestHandler = async (req, res) => {
         reference_id: lectureUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Lecture id ${lectureId} has been disabled ` })
+      res.status(200).send({ success: `Lecture id ${id} has been disabled ` })
     } else {
       res.status(401).json({ error: 'Lecture was not disabled' })
     }
