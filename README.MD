@@ -35,7 +35,6 @@ NODE_ENV='development'
 ```
 
 5. Run Docker client in your machine to build the local MongoDB
-   `<br><br>`
 6. Build the docker container
 
 ```bash
@@ -57,6 +56,17 @@ $ npm run start
 ```
 
 ---
+## Unit Tests
+----
+ 
+```bash
+# to run all unit tests
+npm run test 
+
+# to run only unit test for one file
+npm run test:watch name_of_file_here
+```
+
 
 # Sample Routes
 
