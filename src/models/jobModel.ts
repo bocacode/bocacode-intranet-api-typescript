@@ -11,7 +11,7 @@ const JobSchema = new mongoose.Schema(
     date_posted: { type: String, required: true },
     url: { type: String, required: true },
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean , required: true, default: false},
     modified_by: { type: String },
   },
   { timestamps: true }

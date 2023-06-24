@@ -7,7 +7,7 @@ const router = Router()
 router.route('/').get(auth, getJobs)
 router.route('/:id').get(auth, getJob)
 router.route('/').post(auth, addJob)
-router.route('/disable/:jobId').patch(auth, disableJob)
+router.route('/disable/:id').patch(auth, disableJob)
 router.route('/update').patch(auth, updateJob)
 
 export default router

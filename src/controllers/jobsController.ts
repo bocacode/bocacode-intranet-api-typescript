@@ -74,8 +74,8 @@ export const getJob: RequestHandler = async (req, res) => {
   if (req.query) {
     const { id } = req.query
     try {
-      const userFound = await Job.findById(id)
-      res.status(200).send(userFound)
+      const itemFound = await Job.findById(id)
+      res.status(200).send(itemFound)
     } catch (err) {
       res.status(500).send({ error: err })
     }
@@ -89,8 +89,9 @@ export const disableJob: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { jobId } = req.params
-    const jobUpdated = await Job.findOneAndUpdate({ uid: jobId }, { $set: { enabled: false } })
+    const { id } = req.params
+    console.log(req.params)
+    const jobUpdated = await Job.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (jobUpdated) {
       const log = {
@@ -100,7 +101,7 @@ export const disableJob: RequestHandler = async (req, res) => {
         reference_id: jobUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Job id ${jobId} has been disabled ` })
+      res.status(200).send({ success: `Job id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })
