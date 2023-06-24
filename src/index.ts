@@ -4,7 +4,7 @@ import 'dotenv/config'
 
 import { mongooseConnect } from './utils/mongoUtility'
 
-const app = express()
+export const app = express()
 app.use(cors())
 app.use(express.json())
 

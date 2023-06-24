@@ -1,10 +1,15 @@
-import request from "supertest";
+import request from 'supertest'
 
-import app from "../../src/app";
+import { app } from '../../src/index'
 
-describe("User routes", () => {
-  test("Get all users", async () => {
-    const res = await request(app).get("/users");
-    expect(res.body).toEqual(["Goon", "Tsuki", "Joe"]);
-  });
-});
+describe('User routes', () => {
+  test('should mock process.env', () => {
+    process.env.NODE_ENV = 'development'
+  })
+
+  test('Get all restaurants', async () => {
+    const res = await request(app).get('/api/restaurants').expect('Content-Type', /json/).expect(200)
+    // console.log(res)
+    // expect(res).toEqual(['Goon', 'Tsuki', 'Joe'])
+  })
+})
