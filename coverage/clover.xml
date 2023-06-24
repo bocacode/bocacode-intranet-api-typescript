@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1687637415963" clover="3.2.0">
-  <project timestamp="1687637415963" name="All files">
-    <metrics statements="865" coveredstatements="305" conditionals="224" coveredconditionals="1" methods="67" coveredmethods="2" elements="1156" coveredelements="308" complexity="0" loc="865" ncloc="865" packages="9" files="44" classes="44"/>
+<coverage generated="1687645025072" clover="3.2.0">
+  <project timestamp="1687645025072" name="All files">
+    <metrics statements="956" coveredstatements="351" conditionals="224" coveredconditionals="3" methods="75" coveredmethods="5" elements="1255" coveredelements="359" complexity="0" loc="956" ncloc="956" packages="9" files="47" classes="47"/>
     <package name="src">
-      <metrics statements="35" coveredstatements="35" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="index.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/index.ts">
-        <metrics statements="35" coveredstatements="35" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <metrics statements="37" coveredstatements="37" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/index.ts">
+        <metrics statements="37" coveredstatements="37" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -41,17 +41,19 @@
         <line num="49" count="1" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="586" coveredstatements="89" conditionals="190" coveredconditionals="0" methods="55" coveredmethods="0"/>
-      <file name="codeChallengesController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/codeChallengesController.ts">
-        <metrics statements="47" coveredstatements="7" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="649" coveredstatements="103" conditionals="190" coveredconditionals="0" methods="63" coveredmethods="1"/>
+      <file name="codeChallengesController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/codeChallengesController.ts">
+        <metrics statements="43" coveredstatements="7" conditionals="11" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -65,87 +67,88 @@
         <line num="30" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="50" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="64" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="89" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="90" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="97" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-      </file>
-      <file name="eventsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/eventsController.ts">
-        <metrics statements="47" coveredstatements="7" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
         <line num="47" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="48" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="61" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
-        <line num="77" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="83" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="84" count="0" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
         <line num="90" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
       </file>
-      <file name="homeworkController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/homeworkController.ts">
+      <file name="eventsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/eventsController.ts">
+        <metrics statements="52" coveredstatements="8" conditionals="15" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+      </file>
+      <file name="homeworkController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/homeworkController.ts">
         <metrics statements="48" coveredstatements="7" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -196,7 +199,7 @@
         <line num="93" count="0" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
       </file>
-      <file name="jobsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/jobsController.ts">
+      <file name="jobsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/jobsController.ts">
         <metrics statements="54" coveredstatements="8" conditionals="27" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -253,7 +256,7 @@
         <line num="100" count="0" type="stmt"/>
         <line num="103" count="0" type="stmt"/>
       </file>
-      <file name="labsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/labsController.ts">
+      <file name="labsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/labsController.ts">
         <metrics statements="47" coveredstatements="7" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -303,7 +306,7 @@
         <line num="91" count="0" type="stmt"/>
         <line num="94" count="0" type="stmt"/>
       </file>
-      <file name="lecturesController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/lecturesController.ts">
+      <file name="lecturesController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/lecturesController.ts">
         <metrics statements="56" coveredstatements="8" conditionals="15" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -362,7 +365,7 @@
         <line num="108" count="0" type="stmt"/>
         <line num="111" count="0" type="stmt"/>
       </file>
-      <file name="logController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/logController.ts">
+      <file name="logController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/logController.ts">
         <metrics statements="14" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
@@ -379,8 +382,8 @@
         <line num="34" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
       </file>
-      <file name="newsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/newsController.ts">
-        <metrics statements="51" coveredstatements="8" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="newsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/newsController.ts">
+        <metrics statements="51" coveredstatements="11" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -417,9 +420,9 @@
         <line num="66" count="0" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="72" count="1" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="81" count="1" type="stmt"/>
         <line num="82" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -433,7 +436,7 @@
         <line num="98" count="0" type="stmt"/>
         <line num="101" count="0" type="stmt"/>
       </file>
-      <file name="restaurantsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/restaurantsController.ts">
+      <file name="restaurantsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/restaurantsController.ts">
         <metrics statements="57" coveredstatements="8" conditionals="18" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -493,13 +496,71 @@
         <line num="106" count="0" type="stmt"/>
         <line num="109" count="0" type="stmt"/>
       </file>
-      <file name="tutorialsController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/tutorialsController.ts">
-        <metrics statements="53" coveredstatements="8" conditionals="17" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="studentsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/studentsController.ts">
+        <metrics statements="55" coveredstatements="9" conditionals="12" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="95" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="102" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+      </file>
+      <file name="tutorialsController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/tutorialsController.ts">
+        <metrics statements="52" coveredstatements="8" conditionals="13" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -513,43 +574,42 @@
         <line num="30" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="41" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="59" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="75" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
         <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
-        <line num="87" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="89" count="0" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="83" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="90" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="93" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="94" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
         <line num="100" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
       </file>
-      <file name="usersController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/usersController.ts">
+      <file name="usersController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/usersController.ts">
         <metrics statements="65" coveredstatements="10" conditionals="21" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -617,39 +677,38 @@
         <line num="141" count="0" type="stmt"/>
         <line num="143" count="0" type="stmt"/>
       </file>
-      <file name="wellnessController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/wellnessController.ts">
-        <metrics statements="47" coveredstatements="7" conditionals="16" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="wellnessController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/wellnessController.ts">
+        <metrics statements="55" coveredstatements="8" conditionals="14" coveredconditionals="0" methods="5" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="41" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="47" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="50" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="61" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="62" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="67" count="1" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
@@ -661,16 +720,25 @@
         <line num="79" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
         <line num="81" count="0" type="stmt"/>
-        <line num="83" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="82" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="90" count="0" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="89" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
         <line num="94" count="0" type="stmt"/>
+        <line num="96" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers.practiceAPIs">
       <metrics statements="45" coveredstatements="7" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="beersController.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/controllers/practiceAPIs/beersController.ts">
+      <file name="beersController.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/controllers/practiceAPIs/beersController.ts">
         <metrics statements="45" coveredstatements="7" conditionals="14" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -720,15 +788,15 @@
       </file>
     </package>
     <package name="src.middleware">
-      <metrics statements="21" coveredstatements="5" conditionals="16" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="auth.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/middleware/auth.ts">
-        <metrics statements="16" coveredstatements="4" conditionals="8" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="21" coveredstatements="7" conditionals="16" coveredconditionals="1" methods="3" coveredmethods="1"/>
+      <file name="auth.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/middleware/auth.ts">
+        <metrics statements="16" coveredstatements="6" conditionals="8" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="14" count="0" type="stmt"/>
@@ -740,7 +808,7 @@
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
       </file>
-      <file name="checkBody.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/middleware/checkBody.ts">
+      <file name="checkBody.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/middleware/checkBody.ts">
         <metrics statements="5" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
@@ -750,74 +818,80 @@
       </file>
     </package>
     <package name="src.models">
-      <metrics statements="36" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="codeChallengeModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/codeChallengeModel.ts">
+      <metrics statements="39" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="codeChallengeModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/codeChallengeModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="eventModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/eventModel.ts">
+      <file name="eventModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/eventModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="homeworkModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/homeworkModel.ts">
+      <file name="homeworkModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/homeworkModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="jobModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/jobModel.ts">
+      <file name="jobModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/jobModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
-      <file name="labModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/labModel.ts">
+      <file name="labModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/labModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="lectureModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/lectureModel.ts">
+      <file name="lectureModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/lectureModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
       </file>
-      <file name="logsModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/logsModel.ts">
+      <file name="logsModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/logsModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
       </file>
-      <file name="newsModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/newsModel.ts">
+      <file name="newsModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/newsModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="restaurantModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/restaurantModel.ts">
+      <file name="restaurantModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/restaurantModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="tutorialModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/tutorialModel.ts">
+      <file name="studentModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/studentModel.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+      </file>
+      <file name="tutorialModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/tutorialModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="usersModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/usersModel.ts">
+      <file name="usersModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/usersModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
-      <file name="wellnessModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/wellnessModel.ts">
+      <file name="wellnessModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/wellnessModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -826,7 +900,7 @@
     </package>
     <package name="src.models.practiceAPIs">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="beerModel.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/models/practiceAPIs/beerModel.ts">
+      <file name="beerModel.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/models/practiceAPIs/beerModel.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -834,44 +908,21 @@
       </file>
     </package>
     <package name="src.routes">
-      <metrics statements="115" coveredstatements="115" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="codeChallengeRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/codeChallengeRoutes.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="138" coveredstatements="138" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="codeChallengeRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/codeChallengeRoutes.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
-      <file name="eventRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/eventRoutes.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-      </file>
-      <file name="homeworkRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/homeworkRoutes.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-      </file>
-      <file name="jobRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/jobRoutes.ts">
+      <file name="eventRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/eventRoutes.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -885,19 +936,20 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
-      <file name="labRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/labRoutes.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="homeworkRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/homeworkRoutes.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
-      <file name="lectureRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/lectureRoutes.ts">
+      <file name="jobRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/jobRoutes.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -911,7 +963,34 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
-      <file name="logRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/logRoutes.ts">
+      <file name="labRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/labRoutes.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="lectureRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/lectureRoutes.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="logRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/logRoutes.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -921,7 +1000,7 @@
         <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
       </file>
-      <file name="newsRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/newsRoutes.ts">
+      <file name="newsRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/newsRoutes.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -935,61 +1014,82 @@
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
-      <file name="restaurantRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/restaurantRoutes.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="restaurantRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/restaurantRoutes.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="studentRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/studentRoutes.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
-      <file name="tutorialRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/tutorialRoutes.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="tutorialRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/tutorialRoutes.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-      </file>
-      <file name="userRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/userRoutes.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-      </file>
-      <file name="wellnessRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/wellnessRoutes.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="userRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/userRoutes.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="wellnessRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/wellnessRoutes.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.routes.practiceAPIs">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="beerRoutes.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/routes/practiceAPIs/beerRoutes.ts">
+      <file name="beerRoutes.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/routes/practiceAPIs/beerRoutes.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -1003,20 +1103,20 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="15" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
-      <file name="mongoUtility.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/utils/mongoUtility.ts">
-        <metrics statements="9" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <metrics statements="15" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
+      <file name="mongoUtility.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/utils/mongoUtility.ts">
+        <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="17" count="0" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="1" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
       </file>
-      <file name="utils.ts" path="/Users/jonathans/bocacode/projects/bocacode-intranet/bocacode-intranet-api-typescript/src/utils/utils.ts">
+      <file name="utils.ts" path="/Users/User/bc-internship/bocacode-intranet-api-typescript/src/utils/utils.ts">
         <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
