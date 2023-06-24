@@ -54,10 +54,6 @@ export const updateNews: RequestHandler = async (req, res) => {
       addLog(log)
 
       res.send(newsUpdated)
-      if (Error) {
-        console.log(Error)
-        res.status(401).send({ error: 'Update not completed or Access Denied' })
-      }
     }
   } catch (err) {
     res.status(500).send({ error: err })
@@ -72,10 +68,6 @@ export const getNewsById: RequestHandler = async (req, res) => {
     res.status(200).send(newsFound)
   } catch (err) {
     res.status(500).send({ error: err })
-  }
-  if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
 }
 
