@@ -7,11 +7,6 @@ import { addLog } from './logController'
 export const addEvent: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
     try {
-      const duplicateEvent = req.body.uid ? await Events.findOne({ uid: req.body.uid }) : null
-      if (duplicateEvent) {
-        return res.status(401).json({ error: 'Event already in system' })
-      }
-
       const newEvent = { ...req.body, uid: createRandomId() }
 
       const eventCreated = await Events.create(newEvent)
@@ -42,7 +37,7 @@ export const updateEvent: RequestHandler = async (req, res) => {
 
   if (req.body) {
     try {
-      const eventUpdated = await Events.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
+      const eventUpdated = await Events.findOneAndUpdate({ uid: req.params.id }, { $set: req.body }, { new: true })
 
       if (eventUpdated) {
         const log = {
@@ -74,23 +69,19 @@ export const getEvents: RequestHandler = async (req, res) => {
 }
 
 export const getEvent: RequestHandler = async (req, res) => {
-  if(req.params) {
-    const  { id } = req.params
+  if(!req.params) return res.status(401).send({ error: 'ID missing or Access Denied'})
     try {
-      const userFound = await Events.findById(id)
-      res.status(200).send(userFound)
+      const { id } = req.params
+      const itemFound = await Events.findOne({uid: id})
+      res.status(200).send(itemFound)
     } catch (err) {
       res.status(500).send({ error: err})
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denie'})
   }
-}
+
 
 export const disableEvent: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
+  if (!req.params) return res.status(401).json({ error: 'Unable to update event' })
   try {
     const { id } = req.params
     const eventUpdated = await Events.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
@@ -104,6 +95,8 @@ export const disableEvent: RequestHandler = async (req, res) => {
       }
       addLog(log)
       res.status(200).send({ success: `Event id ${id} has been disabled ` })
+    } else {
+      res.status(200).send({ error: 'No event found with the provided id'})
     }
   } catch (err) {
     res.status(500).send({ error: err })
