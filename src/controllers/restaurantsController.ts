@@ -52,6 +52,8 @@ export const updateRestaurant: RequestHandler = async (req, res) => {
         addLog(log)
 
         res.status(200).send(restaurantUpdated)
+      } else {
+        res.status(401).send({ error: 'Update not completed or Access Denied' })
       }
     } catch (err) {
       res.status(500).send({ error: err })
