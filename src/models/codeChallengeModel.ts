@@ -8,7 +8,7 @@ const CodeChallengeSchema = new mongoose.Schema(
     title: { type: String, required: true },
     description: { type: String, required: true },
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: true, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }

@@ -9,7 +9,7 @@ const TutorialSchema = new mongoose.Schema(
     description: { type: String, required: true },
     url: { type: String, required: true },
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: true, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }

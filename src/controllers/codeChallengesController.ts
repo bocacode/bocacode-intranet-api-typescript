@@ -5,25 +5,25 @@ import CodeChallenges from '../models/codeChallengeModel'
 import { addLog } from './logController'
 
 export const addCodeChallenge: RequestHandler = async (req, res) => {
-  if (req.method === 'POST' && req.body) {
-    try {
-      const duplicateCodeChallenge = req.body.uid ? await CodeChallenges.findOne({ uid: req.body.uid }) : null
-      if (duplicateCodeChallenge) {
-        return res.status(401).json({ error: 'Code Challenge already in system' })
+  if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
+  try {
+    const duplicateCodeChallenge = req.body.uid ? await CodeChallenges.findOne({ uid: req.body.uid }) : null
+    if (duplicateCodeChallenge) {
+      return res.status(401).json({ error: 'Code Challenge already in system' })
+    }
+
+    const newCodeChallenge = { ...req.body, uid: createRandomId(), created_by: req.body.user_id}
+
+    const codeChallengeCreated = await CodeChallenges.create(newCodeChallenge)
+
+    if (codeChallengeCreated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'codeChallenge',
+        event_type: 'new',
+        reference_id: newCodeChallenge.uid,
       }
-
-      const newCodeChallenge = { ...req.body, uid: createRandomId(), created_by: req.body.user_id }
-
-      const codeChallengeCreated = await CodeChallenges.create(newCodeChallenge)
-
-      if (codeChallengeCreated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'codeChallenge',
-          event_type: 'new',
-          reference_id: newCodeChallenge.uid,
-        }
-        addLog(log)
+      addLog(log)
 
         res.send(codeChallengeCreated)
       } else {
@@ -34,36 +34,29 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
       res.status(500).json({ error: 'Invalid data or HTTP method' })
     }
   }
-}
 
 export const updateCodeChallenge: RequestHandler = async (req, res) => {
   if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
   if (!req.params) return res.status(401).send({ message: 'Unable to update code challenge' })
 
-  if (req.body) {
-    try {
-      const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-        { codeChallengeId: req.params.id },
-        { $set: req.body }
-      )
-
-      if (codeChallengeUpdated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'codeChallenge',
-          event_type: 'updated',
-          reference_id: codeChallengeUpdated.uid,
-        }
-        addLog(log)
-
-        res.send(codeChallengeUpdated)
+  try {
+    const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
+      { codeChallengeId: req.params.id },
+      { $set: req.body }
+    )
+    if (codeChallengeUpdated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'codeChallenge',
+        event_type: 'updated',
+        reference_id: codeChallengeUpdated.uid,
       }
-    } catch (err) {
-      res.status(500).send({ error: err })
+      addLog(log)
+
+      res.send(codeChallengeUpdated)
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  } catch (err) {
+    res.status(500).send({ error: err })
   }
 }
 
