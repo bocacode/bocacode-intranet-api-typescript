@@ -4,6 +4,7 @@ import { createRandomId } from '../utils/utils'
 import News from '../models/newsModel'
 import { addLog } from './logController'
 
+// testing
 export const addNews: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
     try {
