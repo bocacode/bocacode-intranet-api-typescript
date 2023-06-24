@@ -58,18 +58,143 @@ $ npm run start
 
 ---
 
-# Postman
+# Sample Routes
 
-### Test your endpoints and or request access to this Postman Collection:
+> Use these samples to test your endpoints and or requests:
 
-https://www.postman.com/veerii/workspace/bocacodeintranet/collection/3147299-f0ac715e-f4da-4c25-ba36-57d18b2f8672?action=share&creator=3147299&ctx=documentation
+## Get all:
+
+```javascript
+GET / api / restaurants / HTTP / 1.1
+Host: localhost: 4040
+
+// sample response
+[
+  {
+    "active": false,
+    "_id": "640a1e8fd56d69fff7b9e3ca",
+    "uid": "2335943",
+    "address": "7032 W Palmetto Park Rd, Boca Raton, FL 33433",
+    "menu_url": "starbucks.com/menu",
+    "name": "Starbucks ",
+    "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fstarbucks%20.jpeg?alt=media&token=404140bf-3139-4ad4-bd24-24de58e34ddf",
+    "rating": ["4"],
+    "created_by": "data seed",
+    "__v": 0,
+    "createdAt": "2023-03-09T17:59:43.845Z",
+    "updatedAt": "2023-03-09T17:59:43.845Z"
+  },
+  {
+    "active": false,
+    "_id": "640a1e8fd56d69fff7b9e3cb",
+    "uid": "2335943",
+    "address": "7028 W Palmetto Park Rd Ste 106, Boca Raton, FL 33433",
+    "menu_url": "https://www.chipotle.com/order/#menu",
+    "name": "Chipotle ",
+    "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fchipotle.jpeg?alt=media&token=6e0caaf6-82fd-45c4-9ea2-60441d8ff001",
+    "rating": ["3"],
+    "created_by": "data seed",
+    "__v": 0,
+    "createdAt": "2023-03-09T17:59:43.845Z",
+    "updatedAt": "2023-03-09T17:59:43.845Z"
+  }
+]
+```
+
+## Add One:
+
+```javascript
+POST /api/restaurants/ HTTP/1.1
+Host: localhost:4040
+Content-Type: application/json
+Content-Length: 388
+
+{
+    "address": "8979 W Palmetto Park Rd, Boca Raton, FL 33433",
+    "menu_url": "https://www.chipotle.com/order/#menu",
+    "name": "Chipotle 4",
+    "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fchipotle.jpeg?alt=media&token=6e0caaf6-82fd-45c4-9ea2-60441d8ff001",
+    "rating": [
+        "3"
+    ],
+    "user_id": "local admin"
+}
+
+// sample response
+{
+    "uid": "236954",
+    "address": "8979 W Palmetto Park Rd, Boca Raton, FL 33433",
+    "menu_url": "https://www.chipotle.com/order/#menu",
+    "name": "Chipotle 4",
+    "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fchipotle.jpeg?alt=media&token=6e0caaf6-82fd-45c4-9ea2-60441d8ff001",
+    "rating": [
+        "3"
+    ],
+    "created_by": "admin@gmail.com",
+    "active": false,
+    "_id": "649715527c16307d70b48737",
+    "createdAt": "2023-06-24T16:09:54.535Z",
+    "updatedAt": "2023-06-24T16:09:54.535Z",
+    "__v": 0
+}
+```
+
+## Edit One:
+
+```javascript
+PATCH /api/restaurants/2335943 HTTP/1.1
+Host: localhost:4040
+Content-Type: application/json
+Content-Length: 95
+
+{
+    "address": "8979 W New Address here Boca Raton, FL 33433",
+    "user_id": "local admin"
+}
+
+// sample response
+
+{
+  "active": false,
+  "_id": "640a1e8fd56d69fff7b9e3ca",
+  "uid": "2335943",
+  "address": "8979 W New Address here Boca Raton, FL 33433",
+  "menu_url": "starbucks.com/menu",
+  "name": "Starbucks ",
+  "photo_url": "https://firebasestorage.googleapis.com/v0/b/bocacode-portal.appspot.com/o/restaurants%2Fstarbucks%20.jpeg?alt=media&token=404140bf-3139-4ad4-bd24-24de58e34ddf",
+  "rating": ["4"],
+  "created_by": "data seed",
+  "__v": 0,
+  "createdAt": "2023-03-09T17:59:43.845Z",
+  "updatedAt": "2023-06-24T15:52:34.555Z"
+}
+```
+
+## Disable One:
+
+```javascript
+PATCH /api/restaurants/disable/236954 HTTP/1.1
+Host: localhost:4040
+Content-Type: application/json
+Content-Length: 36
+
+{
+    "user_id": "admin@gmail.com"
+}
+
+// sample response
+
+{
+    "success": "Restaurant id 236954 has been disabled "
+}
+```
 
 ## Steps:
 
 1. Sign up your user account, by sending a POST request with `RAW` JSON like this
 
 ```JSON
-// POST to - http://localhost:4040/api/users/signup 
+// POST to - http://localhost:4040/api/users/signup
 {
     "email": "jso1919@gmail.com",
     "password": "mypassword-here",
