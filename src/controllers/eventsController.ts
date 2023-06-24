@@ -37,9 +37,12 @@ export const addEvent: RequestHandler = async (req, res) => {
 }
 
 export const updateEvent: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Event' })
+
   if (req.body) {
     try {
-      const eventUpdated = await Events.findOneAndUpdate({ eventId: req.body.eventId }, { $set: req.body })
+      const eventUpdated = await Events.findOneAndUpdate({ eventId: req.params.eventId }, { $set: req.body })
 
       if (eventUpdated) {
         const log = {

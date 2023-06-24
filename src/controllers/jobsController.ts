@@ -37,25 +37,27 @@ export const addJob: RequestHandler = async (req, res) => {
 }
 
 export const updateJob: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).json({ error: 'Unable to update lecture' })
-  if (!req.body || !req.body?.created_by) return res.status(401).json({ error: 'Invalid request body' })
-  try {
-    const { id } = req.params
-    const jobUpdated = await Job.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Job' })
 
-    if (jobUpdated) {
-      const log = {
-        user_id: req.body.user_id,
-        model: 'job',
-        event_type: 'updated',
-        reference_id: jobUpdated.uid,
+  if (req.body) {
+    try {
+      const jobUpdated = await Job.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
+
+      if (jobUpdated) {
+        const log = {
+          user_id: req.body.user_id,
+          model: 'job',
+          event_type: 'updated',
+          reference_id: jobUpdated.uid,
+        }
+        addLog(log)
+
+        res.send(jobUpdated)
       }
-      addLog(log)
-
-      res.send(jobUpdated)
+    } catch (err) {
+      res.status(500).send({ error: err })
     }
-  } catch (err) {
-    res.status(500).send({ error: err })
   }
 }
 

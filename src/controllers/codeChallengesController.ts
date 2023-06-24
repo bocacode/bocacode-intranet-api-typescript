@@ -37,10 +37,13 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
 }
 
 export const updateCodeChallenge: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update code challenge' })
+
   if (req.body) {
     try {
       const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-        { codeChallengeId: req.body.codeChallengeId },
+        { codeChallengeId: req.params.codeChallengeId },
         { $set: req.body }
       )
 

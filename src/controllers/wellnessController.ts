@@ -37,9 +37,12 @@ export const addWellness: RequestHandler = async (req, res) => {
 }
 
 export const updateWellness: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Lecture' })
+
   if (req.body) {
     try {
-      const wellnessUpdated = await Wellness.findOneAndUpdate({ wellnessId: req.body.wellnessId }, { $set: req.body })
+      const wellnessUpdated = await Wellness.findOneAndUpdate({ wellnessId: req.params.wellnessId }, { $set: req.body })
 
       if (wellnessUpdated) {
         const log = {

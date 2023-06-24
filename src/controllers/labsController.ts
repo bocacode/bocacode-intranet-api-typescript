@@ -37,9 +37,12 @@ export const addLab: RequestHandler = async (req, res) => {
 }
 
 export const updateLab: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Lab' })
+
   if (req.body) {
     try {
-      const labUpdated = await Labs.findOneAndUpdate({ labId: req.body.labId }, { $set: req.body })
+      const labUpdated = await Labs.findOneAndUpdate({ labId: req.params.labId }, { $set: req.body })
 
       if (labUpdated) {
         const log = {
