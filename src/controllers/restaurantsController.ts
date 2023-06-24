@@ -77,7 +77,7 @@ export const getRestaurant: RequestHandler = async (req, res) => {
   if (req.params) {
     const { id } = req.params
     try {
-      const restaurantFound = await Restaurant.findById(id)
+      const restaurantFound = await Restaurant.findOne({ uid: id })
       res.status(200).send(restaurantFound)
     } catch (err) {
       res.status(500).send({ error: err })
@@ -94,7 +94,7 @@ export const disableRestaurant: RequestHandler = async (req, res) => {
 
   try {
     const { dealId } = req.params
-    const restaurantUpdated = await Restaurant.findOneAndUpdate({ _id: dealId }, { $set: { enabled: false } })
+    const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: dealId }, { $set: { enabled: false } })
     
     if (restaurantUpdated) {
       const log = {
