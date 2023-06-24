@@ -3,7 +3,6 @@ import { RequestHandler } from 'express'
 import { createRandomId } from '../utils/utils'
 import Restaurant from '../models/restaurantModel'
 import { addLog } from './logController'
-import { log } from 'console'
 
 export const addRestaurant: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
