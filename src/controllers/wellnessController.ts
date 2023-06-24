@@ -42,7 +42,7 @@ export const updateWellness: RequestHandler = async (req, res) => {
 
   if (req.body) {
     try {
-      const wellnessUpdated = await Wellness.findOneAndUpdate({ wellnessId: req.params.wellnessId }, { $set: req.body })
+      const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (wellnessUpdated) {
         const log = {
@@ -77,8 +77,8 @@ export const disableWellness: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { wellnessId } = req.params
-    const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: wellnessId }, { $set: { enabled: false } })
+    const { id } = req.params
+    const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (wellnessUpdated) {
       const log = {
@@ -88,7 +88,7 @@ export const disableWellness: RequestHandler = async (req, res) => {
         reference_id: wellnessUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Wellness id ${wellnessId} has been disabled ` })
+      res.status(200).send({ success: `Wellness id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

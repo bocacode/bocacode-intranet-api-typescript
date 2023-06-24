@@ -43,7 +43,7 @@ export const updateCodeChallenge: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
       const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-        { codeChallengeId: req.params.codeChallengeId },
+        { codeChallengeId: req.params.id },
         { $set: req.body }
       )
 
@@ -80,9 +80,9 @@ export const disableCodeChallenge: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { codeChallengeId } = req.params
+    const { id } = req.params
     const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-      { uid: codeChallengeId },
+      { uid: id },
       { $set: { enabled: false } }
     )
 
@@ -94,7 +94,7 @@ export const disableCodeChallenge: RequestHandler = async (req, res) => {
         reference_id: codeChallengeUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Code Challenge id ${codeChallengeId} has been disabled ` })
+      res.status(200).send({ success: `Code Challenge id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

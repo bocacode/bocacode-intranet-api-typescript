@@ -6,9 +6,9 @@ import { checkRequestBody } from '../middleware/checkBody'
 const router = Router()
 
 router.route('/').get(auth, getLectures)
-router.route('/:lectureId').get(auth, getLecture)
+router.route('/:id').get(auth, getLecture)
 router.route('/').post(auth, checkRequestBody, addLecture)
-router.route('/disable/:lectureId').patch(auth, checkRequestBody, disableLecture)
-router.route('/:lectureId').patch(auth, checkRequestBody, updateLecture)
+router.route('/disable/:id').patch(auth, checkRequestBody, disableLecture)
+router.route('/:id').patch(auth, checkRequestBody, updateLecture)
 
 export default router

@@ -6,7 +6,7 @@ const router = Router()
 
 router.route('/').get(auth, getLabs)
 router.route('/').post(auth, addLab)
-router.route('/disable/:labId').patch(auth, disableLab)
-router.route('/:labId').patch(auth, updateLab)
+router.route('/disable/:id').patch(auth, disableLab)
+router.route('/:id').patch(auth, updateLab)
 
 export default router
