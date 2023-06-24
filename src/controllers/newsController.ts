@@ -58,18 +58,18 @@ export const updateNews: RequestHandler = async (req, res) => {
   }
 }
 
-export const getNewsById: RequestHandler = async (req, res) => {
+export const getNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'ID missing or Access Denied' })
   try {
     const { id } = req.params
-    const newsFound = await News.findById(id)
+    const newsFound = await News.findOne({ uid: id })
     res.status(200).send(newsFound)
   } catch (err) {
     res.status(500).send({ error: err })
   }
 }
 
-export const getNews: RequestHandler = async (req, res) => {
+export const getAllNews: RequestHandler = async (req, res) => {
   try {
     const allNews = await News.find()
     res.send(allNews)
