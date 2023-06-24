@@ -2,18 +2,20 @@
 
 ##### New Features
 
-*  adding logs with changes (90cf0eb8)
+*  adding logs with changes (5f64feec)
+*  adding logs with changes (fe8d4589)
 
 ##### Bug Fixes
 
-*  update CHANGELOG.md (6070ee73)
-*  remove github action (cdc46216)
-*  update release yaml (9aac5a03)
-*  update release yaml (378e02e0)
-*  update release yaml (4b3a35af)
+*  update CHANGELOG.md (6e4d6ee6)
+*  remove github action (1de48deb)
+*  update release yaml (b3769380)
+*  update release yaml (06a35bde)
+*  update release yaml (f8f201f5)
 
 ##### Other Changes
 
+* bocacode/bocacode-intranet-api-typescript into 28-add-unit-tests-restaurants (01589821)
 * true to disable and more fail-safes (f6d8ba01)
 *  created and tested endpoints to post, get, update and disable, pending auth (efbead6e)
 * **restaurants:**  added feature to add and edit restaurants (a5f8d69c)
