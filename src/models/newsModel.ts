@@ -9,7 +9,7 @@ const NewsSchema = new mongoose.Schema(
     photoURL: {type: String, required: true},
     link: { type: String, required: true },
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: false, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }
