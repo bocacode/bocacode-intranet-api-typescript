@@ -5,59 +5,54 @@ import Alumni from '../models/alumniModel'
 import { addLog } from './logController'
 
 export const addAlumni: RequestHandler = async (req, res) => {
-  if (req.method === 'POST' && req.body) {
-    try {
-      const duplicateAlumni = req.body.uid ? await Alumni.findOne({ uid: req.body.uid }) : null
-      if (duplicateAlumni) {
-        return res.status(401).json({ error: 'Alumni already in system' })
-      }
-
-      const newAlumni = { ...req.body, uid: createRandomId() }
-
-      const alumniCreated = await Alumni.create(newAlumni)
-
-      if (alumniCreated) {
-        const log = {
-          user_id: req.body.created_by,
-          model: 'alumni',
-          event_type: 'new',
-          reference_id: newAlumni.uid,
-        }
-        addLog(log)
-
-        res.status(200).send('Alumni created')
-      } else {
-        res.status(401).json({ error: 'Deal was not created' })
-      }
-    } catch (error) {
-      console.log(error)
-      res.status(500).json({ error: 'Invalid data or HTTP method' })
+  if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
+  try {
+    const duplicateAlumni = req.body.uid ? await Alumni.findOne({ uid: req.body.uid }) : null
+    if (duplicateAlumni) {
+      return res.status(401).json({ error: 'Alumni already in system' })
     }
+
+    const newAlumni = { ...req.body, uid: createRandomId() }
+
+    const alumniCreated = await Alumni.create(newAlumni)
+
+    if (alumniCreated) {
+      const log = {
+        user_id: req.body.created_by,
+        model: 'alumni',
+        event_type: 'new',
+        reference_id: newAlumni.uid,
+      }
+      addLog(log)
+
+      res.status(200).send('Alumni created')
+    } else {
+      res.status(401).json({ error: 'Alumni was not created' })
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Invalid data or HTTP method' })
   }
 }
 
 export const updateAlumni: RequestHandler = async (req, res) => {
-  if (req.body) {
-    try {
-      const alumniUpdated = await Alumni.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
+  if (!req.params) return res.status(401).json({ error: 'Unable to update alumni' })
+  try {
+    const alumniUpdated = await Alumni.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
 
-      if (alumniUpdated) {
-        const log = {
-          user_id: req.body.created_by,
-          model: 'alumni',
-          event_type: 'updated',
-          reference_id: alumniUpdated.uid,
-        }
-        addLog(log)
-
-        res.status(200).send(alumniUpdated)
+    if (alumniUpdated) {
+      const log = {
+        user_id: req.body.created_by,
+        model: 'alumni',
+        event_type: 'updated',
+        reference_id: alumniUpdated.uid,
       }
-    } catch (err) {
-      res.status(500).send({ error: err })
+      addLog(log)
+
+      res.status(200).send(alumniUpdated)
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  } catch (err) {
+    res.status(500).send({ error: err })
   }
 }
 
@@ -71,23 +66,18 @@ export const getAlumnis: RequestHandler = async (req, res) => {
 }
 
 export const getAlumni: RequestHandler = async (req, res) => {
-  if (req.params) {
+  if (!req.params) return res.status(401).send({ error: 'ID missing or Access Denied' })
+  try {
     const { id } = req.params
-    try {
-      const userFound = await Alumni.findById(id)
-      res.status(200).send(userFound)
-    } catch (err) {
-      res.status(500).send({ error: err })
-    }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+    const userFound = await Alumni.findById(id)
+    res.status(200).send(userFound)
+  } catch (err) {
+    res.status(500).send({ error: err })
   }
 }
 
 export const disableAlumni: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
   try {
     const { id } = req.params
     const alumniUpdated = await Alumni.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })

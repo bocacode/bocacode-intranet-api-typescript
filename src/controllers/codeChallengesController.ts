@@ -5,62 +5,56 @@ import CodeChallenges from '../models/codeChallengeModel'
 import { addLog } from './logController'
 
 export const addCodeChallenge: RequestHandler = async (req, res) => {
-  if (req.method === 'POST' && req.body) {
-    try {
-      const duplicateCodeChallenge = req.body.uid ? await CodeChallenges.findOne({ uid: req.body.uid }) : null
-      if (duplicateCodeChallenge) {
-        return res.status(401).json({ error: 'Code Challenge already in system' })
-      }
-
-      const newCodeChallenge = { ...req.body, uid: createRandomId() }
-
-      const codeChallengeCreated = await CodeChallenges.create(newCodeChallenge)
-
-      if (codeChallengeCreated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'codeChallenge',
-          event_type: 'new',
-          reference_id: newCodeChallenge.uid,
-        }
-        addLog(log)
-
-        res.send('Code Challenge created')
-      } else {
-        res.status(401).json({ error: 'Code Challenge was not created' })
-      }
-    } catch (error) {
-      console.log(error)
-      res.status(500).json({ error: 'Invalid data or HTTP method' })
+  if (req.method !== 'POST') return res.status(401).json({ error: 'Invalid HTTP method' })
+  try {
+    const duplicateCodeChallenge = req.body.uid ? await CodeChallenges.findOne({ uid: req.body.uid }) : null
+    if (duplicateCodeChallenge) {
+      return res.status(401).json({ error: 'Code Challenge already in system' })
     }
+
+    const newCodeChallenge = { ...req.body, uid: createRandomId() }
+
+    const codeChallengeCreated = await CodeChallenges.create(newCodeChallenge)
+
+    if (codeChallengeCreated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'codeChallenge',
+        event_type: 'new',
+        reference_id: newCodeChallenge.uid,
+      }
+      addLog(log)
+
+      res.send('Code Challenge created')
+    } else {
+      res.status(401).json({ error: 'Code Challenge was not created' })
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Invalid data or HTTP method' })
   }
 }
 
 export const updateCodeChallenge: RequestHandler = async (req, res) => {
-  if (req.body) {
-    try {
-      const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-        { codeChallengeId: req.body.codeChallengeId },
-        { $set: req.body }
-      )
-
-      if (codeChallengeUpdated) {
-        const log = {
-          user_id: req.body.user_id,
-          model: 'codeChallenge',
-          event_type: 'updated',
-          reference_id: codeChallengeUpdated.uid,
-        }
-        addLog(log)
-
-        res.send(codeChallengeUpdated)
+  if (!req.params) return res.status(401).json({ error: 'Unable to update code challenge' })
+  try {
+    const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
+      { codeChallengeId: req.body.codeChallengeId },
+      { $set: req.body }
+    )
+    if (codeChallengeUpdated) {
+      const log = {
+        user_id: req.body.user_id,
+        model: 'codeChallenge',
+        event_type: 'updated',
+        reference_id: codeChallengeUpdated.uid,
       }
-    } catch (err) {
-      res.status(500).send({ error: err })
+      addLog(log)
+
+      res.send(codeChallengeUpdated)
     }
-  } else if (Error) {
-    console.log(Error)
-    res.status(401).send({ error: 'Update not completed or Access Denied' })
+  } catch (err) {
+    res.status(500).send({ error: err })
   }
 }
 
