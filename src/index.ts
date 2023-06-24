@@ -22,6 +22,9 @@ app.use('/api/restaurants', restaurantRoutes)
 import homeworkRoutes from './routes/homeworkRoutes'
 app.use('/api/homeworks', homeworkRoutes)
 
+import studentsRoutes from './routes/studentRoutes'
+app.use('/api/students/', studentsRoutes)
+
 import tutorialRoutes from './routes/tutorialRoutes'
 app.use('/api/tutorials', tutorialRoutes)
 
