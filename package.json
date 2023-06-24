@@ -12,7 +12,8 @@
     "seed": "npm run build && node --trace-warnings dist/scripts/seedDb.js",
     "gcp-build": "tsc -p . && cp app.yaml ./dist && cp package.build.json ./dist/package.json && cp package-lock.json ./dist && cp .env.prod ./dist/.env",
     "clean": "gts clean",
-    "deploy": "yarn gcp-build && gcloud app deploy ./dist"
+    "deploy": "yarn gcp-build && gcloud app deploy ./dist",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=18",
@@ -59,6 +60,7 @@
     "nodemon": "^2.0.20",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "husky": "^8.0.0"
   }
 }
