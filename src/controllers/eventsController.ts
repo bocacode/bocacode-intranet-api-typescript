@@ -7,7 +7,7 @@ import { addLog } from './logController'
 export const addEvent: RequestHandler = async (req, res) => {
   if (req.method === 'POST' && req.body) {
     try {
-      const newEvent = { ...req.body, uid: createRandomId() }
+      const newEvent = { ...req.body, uid: createRandomId(), created_by: req.body.user_id }
 
       const eventCreated = await Events.create(newEvent)
 
