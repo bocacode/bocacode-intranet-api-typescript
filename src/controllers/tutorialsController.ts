@@ -25,7 +25,7 @@ export const addTutorial: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Tutorial created')
+        res.status(200).send('Tutorial created')
       } else {
         res.status(401).json({ error: 'Tutorial was not created' })
       }
@@ -84,7 +84,7 @@ export const getTutorial: RequestHandler = async (req, res) => {
 
 export const disableTutorial: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
+  
   try {
     const { tutorialId } = req.params
     const tutorialUpdated = await Tutorials.findOneAndUpdate({ uid: tutorialId }, { $set: { enabled: false } })
