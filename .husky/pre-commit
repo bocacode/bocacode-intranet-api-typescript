@@ -2,3 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 changelog generate
+git add .
+git commit -m "fix: update CHANGELOG.md"
+git push
