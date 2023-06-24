@@ -12,20 +12,20 @@ export const addRestaurant: RequestHandler = async (req, res) => {
         return res.status(401).json({ error: 'Property already in system' })
       }
 
-      const newRestaurant = { ...req.body, uid: createRandomId() }
+      const newRestaurant = { ...req.body, created_by: req.body.user_id, uid: createRandomId() }
 
       const restaurantCreated = await Restaurant.create(newRestaurant)
 
       if (restaurantCreated) {
         const log = {
-          user_id: req.body.created_by,
+          user_id: req.body.user_id,
           model: 'restaurant',
           event_type: 'new',
           reference_id: newRestaurant.uid,
         }
         addLog(log)
 
-        res.status(200).send('Restaurant created')
+        res.status(200).send(restaurantCreated)
       } else {
         res.status(401).json({ error: 'Deal was not created' })
       }
@@ -37,13 +37,14 @@ export const addRestaurant: RequestHandler = async (req, res) => {
 }
 
 export const updateRestaurant: RequestHandler = async (req, res) => {
+  const { id } = req.params
   if (req.body) {
     try {
-      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body }, {new: true})
+      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
 
       if (restaurantUpdated) {
         const log = {
-          user_id: req.body.created_by,
+          user_id: req.body.req.body.user_id,
           model: 'restaurant',
           event_type: 'updated',
           reference_id: restaurantUpdated.uid,
@@ -88,16 +89,13 @@ export const getRestaurant: RequestHandler = async (req, res) => {
 }
 
 export const disableRestaurant: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-  if (!req.body?.created_by) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-
   try {
     const { id } = req.params
     const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
-    
+
     if (restaurantUpdated) {
       const log = {
-        user_id: req.body.created_by,
+        user_id: req.body.user_id,
         model: 'restaurant',
         event_type: 'disabled',
         reference_id: restaurantUpdated.uid,
