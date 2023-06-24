@@ -7,6 +7,6 @@ const router = Router()
 router.route('/').get(auth, getWellness)
 router.route('/').post(auth, addWellness)
 router.route('/disable/:wellnessId').patch(auth, disableWellness)
-router.route('/update').patch(auth, updateWellness)
+router.route('/:wellnessId').patch(auth, updateWellness)
 
 export default router

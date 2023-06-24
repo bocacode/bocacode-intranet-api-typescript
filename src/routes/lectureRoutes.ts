@@ -9,6 +9,6 @@ router.route('/').get(auth, getLectures)
 router.route('/:lectureId').get(auth, getLecture)
 router.route('/').post(auth, checkRequestBody, addLecture)
 router.route('/disable/:lectureId').patch(auth, checkRequestBody, disableLecture)
-router.route('/update/:lectureId').patch(auth, checkRequestBody, updateLecture)
+router.route('/:lectureId').patch(auth, checkRequestBody, updateLecture)
 
 export default router

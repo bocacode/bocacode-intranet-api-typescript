@@ -7,6 +7,6 @@ const router = Router()
 router.route('/').get(auth, getHomeworks)
 router.route('/').post(auth, addHomework)
 router.route('/disable/:homeworkId').patch(auth, disableHomework)
-router.route('/update').patch(auth, updateHomework)
+router.route('/:homeworkId').patch(auth, updateHomework)
 
 export default router
