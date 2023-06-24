@@ -12,7 +12,7 @@ export const addAlumni: RequestHandler = async (req, res) => {
       return res.status(401).json({ error: 'Alumni already in system' })
     }
 
-    const newAlumni = { ...req.body, uid: createRandomId() }
+    const newAlumni = { ...req.body, uid: createRandomId() ,created_by: req.body.user_id }
 
     const alumniCreated = await Alumni.create(newAlumni)
 

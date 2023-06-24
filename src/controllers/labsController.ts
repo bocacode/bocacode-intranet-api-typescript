@@ -12,7 +12,7 @@ export const addLab: RequestHandler = async (req, res) => {
         return res.status(401).json({ error: 'Lab already in system' })
       }
 
-      const newLab = { ...req.body, uid: createRandomId() }
+      const newLab = { ...req.body, uid: createRandomId(), created_by: req.body.user_id }
 
       const labCreated = await Labs.create(newLab)
 

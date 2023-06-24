@@ -12,7 +12,7 @@ export const addTutorial: RequestHandler = async (req, res) => {
       return res.status(401).json({ error: 'Tutorial already in system' })
     }
 
-    const newTutorial = { ...req.body, uid: createRandomId() }
+    const newTutorial = { ...req.body, uid: createRandomId(), created_by: req.body.user_id}
 
     const tutorialCreated = await Tutorials.create(newTutorial)
 
