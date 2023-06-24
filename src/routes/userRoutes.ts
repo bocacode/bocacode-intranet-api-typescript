@@ -5,6 +5,7 @@ import { checkRequestBody } from '../middleware/checkBody'
 
 const router = Router()
 
+router.route('/').get(auth, getUsers)
 router.route('/:id').get(auth, getUser)
 router.route('/signup').post(checkRequestBody, addUser)
 router.route('/login').post(login)
