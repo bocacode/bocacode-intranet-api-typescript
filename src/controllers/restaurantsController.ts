@@ -39,7 +39,7 @@ export const addRestaurant: RequestHandler = async (req, res) => {
 export const updateRestaurant: RequestHandler = async (req, res) => {
   if (req.body) {
     try {
-      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
+      const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body }, {new: true})
 
       if (restaurantUpdated) {
         const log = {
@@ -51,6 +51,8 @@ export const updateRestaurant: RequestHandler = async (req, res) => {
         addLog(log)
 
         res.status(200).send(restaurantUpdated)
+      } else {
+        res.status(401).send({ error: 'Update not completed or Access Denied' })
       }
     } catch (err) {
       res.status(500).send({ error: err })
@@ -74,8 +76,8 @@ export const getRestaurant: RequestHandler = async (req, res) => {
   if (req.params) {
     const { id } = req.params
     try {
-      const userFound = await Restaurant.findById(id)
-      res.status(200).send(userFound)
+      const restaurantFound = await Restaurant.findOne({ uid: id })
+      res.status(200).send(restaurantFound)
     } catch (err) {
       res.status(500).send({ error: err })
     }
@@ -87,20 +89,23 @@ export const getRestaurant: RequestHandler = async (req, res) => {
 
 export const disableRestaurant: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
+  if (!req.body?.created_by) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { uid } = req.params
-    const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: uid }, { $set: { enabled: false } })
-
+    const { id } = req.params
+    const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
+    
     if (restaurantUpdated) {
       const log = {
-        user_id: req.body.user_id,
+        user_id: req.body.created_by,
         model: 'restaurant',
         event_type: 'disabled',
         reference_id: restaurantUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Restaurant id ${uid} has been disabled ` })
+      res.status(200).send({ success: `Restaurant id ${id} has been disabled ` })
+    } else {
+      res.status(404).send({ success: `Restaurant with ${id} not found ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })
