@@ -70,6 +70,21 @@ export const getEvents: RequestHandler = async (req, res) => {
   }
 }
 
+export const getEvent: RequestHandler = async (req, res) => {
+  if(req.params) {
+    const  { id } = req.params
+    try {
+      const userFound = await Events.findById(id)
+      res.status(200).send(userFound)
+    } catch (err) {
+      res.status(500).send({ error: err})
+    }
+  } else if (Error) {
+    console.log(Error)
+    res.status(401).send({ error: 'Update not completed or Access Denie'})
+  }
+}
+
 export const disableEvent: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
