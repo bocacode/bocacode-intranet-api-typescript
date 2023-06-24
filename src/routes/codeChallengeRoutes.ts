@@ -6,12 +6,13 @@ import {
   getCodeChallenges,
   updateCodeChallenge,
 } from '../controllers/codeChallengesController'
+import { checkRequestBody } from '../middleware/checkBody'
 
 const router = Router()
 
 router.route('/').get(auth, getCodeChallenges)
-router.route('/').post(auth, addCodeChallenge)
-router.route('/disable/:codeChallengeId').patch(auth, disableCodeChallenge)
-router.route('/update').patch(auth, updateCodeChallenge)
+router.route('/').post(auth, checkRequestBody, addCodeChallenge)
+router.route('/disable/:codeChallengeId').patch(auth, checkRequestBody, disableCodeChallenge)
+router.route('/update').patch(auth, checkRequestBody, updateCodeChallenge)
 
 export default router
