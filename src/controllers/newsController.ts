@@ -38,9 +38,10 @@ export const addNews: RequestHandler = async (req, res) => {
 }
 
 export const updateNews: RequestHandler = async (req, res) => {
-  if (req.body) {
+  if (req.body && req.params) {
+    const { newsId } = req.params
     try {
-      const newsUpdated = await News.findOneAndUpdate({ newsId: req.body.newsId }, { $set: req.body })
+      const newsUpdated = await News.findOneAndUpdate({ uid: newsId }, { $set: req.body })
 
       if (newsUpdated) {
         const log = {
@@ -61,9 +62,10 @@ export const updateNews: RequestHandler = async (req, res) => {
     res.status(401).send({ error: 'Update not completed or Access Denied' })
   }
 }
+
 export const getNewsById: RequestHandler = async (req, res) => {
   if (req.params) {
-    const {newsId} = req.params
+    const { newsId } = req.params
     try {
       const newsFound = await News.findById(newsId)
       res.status(200).send(newsFound)
@@ -101,6 +103,9 @@ export const disableNews: RequestHandler = async (req, res) => {
       }
       addLog(log)
       res.status(200).send({ success: `News article id ${newsId} has been disabled ` })
+    }
+    else {
+      res.status(404).send({ error: 'No news article found with the provided id' })
     }
   } catch (err) {
     res.status(500).send({ error: err })
