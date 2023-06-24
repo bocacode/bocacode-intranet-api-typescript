@@ -7,8 +7,8 @@ const router = Router()
 
 router.route('/').get(auth, getNews)
 router.route('/:id').get(auth, getNewsById)
-router.route('/').post(auth, addNews)
-router.route('/disable/:id').patch(auth, disableNews)
+router.route('/').post(auth, checkRequestBody, addNews)
+router.route('/disable/:id').patch(auth, checkRequestBody, disableNews)
 router.route('/:id').patch(auth, checkRequestBody, updateNews)
 
 export default router
