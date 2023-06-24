@@ -38,10 +38,10 @@ export const addNews: RequestHandler = async (req, res) => {
 }
 
 export const updateNews: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).json({ error: 'Unable to update lecture' })
+  if (!req.params) return res.status(401).json({ error: 'Unable to update news' })
   if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
-  const { id } = req.params
   try {
+    const { id } = req.params
     const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
 
     if (newsUpdated) {
@@ -65,9 +65,9 @@ export const updateNews: RequestHandler = async (req, res) => {
 }
 
 export const getNewsById: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
-  const { id } = req.params
+  if (!req.params) return res.status(401).send({ error: 'ID missing or Access Denied' })
   try {
+    const { id } = req.params
     const newsFound = await News.findById(id)
     res.status(200).send(newsFound)
   } catch (err) {
