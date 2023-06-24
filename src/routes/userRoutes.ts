@@ -6,7 +6,7 @@ const router = Router()
 
 router.route('/signup').post(addUser)
 router.route('/login').post(login)
-router.route('/update').patch(auth, updateUser)
+router.route('/:id').patch(auth, updateUser)
 router.route('/:id').get(auth, getUser)
 router.route('/').get(auth, getUsers)
 

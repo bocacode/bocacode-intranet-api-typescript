@@ -25,7 +25,7 @@ export const addAlumni: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.status(200).send('Alumni created')
+        res.status(200).send(alumniCreated)
       } else {
         res.status(401).json({ error: 'Deal was not created' })
       }
@@ -37,9 +37,12 @@ export const addAlumni: RequestHandler = async (req, res) => {
 }
 
 export const updateAlumni: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Alumni' })
+
   if (req.body) {
     try {
-      const alumniUpdated = await Alumni.findOneAndUpdate({ uid: req.body.uid }, { $set: req.body })
+      const alumniUpdated = await Alumni.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (alumniUpdated) {
         const log = {

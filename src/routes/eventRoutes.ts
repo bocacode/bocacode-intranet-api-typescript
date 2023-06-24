@@ -6,7 +6,7 @@ const router = Router()
 
 router.route('/').get(auth, getEvents)
 router.route('/').post(auth, addEvent)
-router.route('/disable/:eventId').patch(auth, disableEvent)
-router.route('/update').patch(auth, updateEvent)
+router.route('/disable/:id').patch(auth, disableEvent)
+router.route('/:id').patch(auth, updateEvent)
 
 export default router

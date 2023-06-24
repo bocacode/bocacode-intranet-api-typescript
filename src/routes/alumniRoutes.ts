@@ -14,6 +14,6 @@ router.route('/').get(auth, getAlumnis)
 router.route('/:id').get(auth, getAlumni)
 router.route('/').post(auth, addAlumni)
 router.route('/disable/:id').patch(auth, disableAlumni)
-router.route('/update').patch(auth, updateAlumni)
+router.route('/:id').patch(auth, updateAlumni)
 
 export default router

@@ -25,7 +25,7 @@ export const addWellness: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Wellness created')
+        res.send(wellnessCreated)
       } else {
         res.status(401).json({ error: 'Wellness was not created' })
       }
@@ -37,9 +37,12 @@ export const addWellness: RequestHandler = async (req, res) => {
 }
 
 export const updateWellness: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Lecture' })
+
   if (req.body) {
     try {
-      const wellnessUpdated = await Wellness.findOneAndUpdate({ wellnessId: req.body.wellnessId }, { $set: req.body })
+      const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (wellnessUpdated) {
         const log = {
@@ -74,8 +77,8 @@ export const disableWellness: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { wellnessId } = req.params
-    const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: wellnessId }, { $set: { enabled: false } })
+    const { id } = req.params
+    const wellnessUpdated = await Wellness.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (wellnessUpdated) {
       const log = {
@@ -85,7 +88,7 @@ export const disableWellness: RequestHandler = async (req, res) => {
         reference_id: wellnessUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Wellness id ${wellnessId} has been disabled ` })
+      res.status(200).send({ success: `Wellness id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

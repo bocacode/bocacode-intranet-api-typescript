@@ -25,7 +25,7 @@ export const addHomework: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Homework created')
+        res.send(homeworkCreated)
       } else {
         res.status(401).json({ error: 'Homework was not created' })
       }
@@ -37,9 +37,12 @@ export const addHomework: RequestHandler = async (req, res) => {
 }
 
 export const updateHomework: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Lecture' })
+
   if (req.body) {
     try {
-      const homeworkUpdated = await Homeworks.findOneAndUpdate({ homeworkId: req.body.homeworkId }, { $set: req.body })
+      const homeworkUpdated = await Homeworks.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (homeworkUpdated) {
         const log = {
