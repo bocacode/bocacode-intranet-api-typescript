@@ -7,7 +7,7 @@ const router = Router()
 router.route('/').get(auth, getTutorials)
 router.route('/').post(auth, addTutorial)
 router.route('/:id').get(auth, getTutorial)
-router.route('/disable/:tutorialId').patch(auth, disableTutorial)
-router.route('/update').patch(auth, updateTutorial)
+router.route('/disable/:id').patch(auth, disableTutorial)
+router.route('/update/:id').patch(auth, updateTutorial)
 
 export default router

@@ -37,9 +37,10 @@ export const addTutorial: RequestHandler = async (req, res) => {
 }
 
 export const updateTutorial: RequestHandler = async (req, res) => {
-  if (req.body) {
+  if (req.body && req.params) {
+    const {id} = req.params
     try {
-      const tutorialUpdated = await Tutorials.findOneAndUpdate({ tutorialId: req.body.tutorialId }, { $set: req.body })
+      const tutorialUpdated = await Tutorials.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
 
       if (tutorialUpdated) {
         const log = {
@@ -86,8 +87,8 @@ export const disableTutorial: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
   
   try {
-    const { tutorialId } = req.params
-    const tutorialUpdated = await Tutorials.findOneAndUpdate({ uid: tutorialId }, { $set: { enabled: false } })
+    const { id } = req.params
+    const tutorialUpdated = await Tutorials.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (tutorialUpdated) {
       const log = {
@@ -97,7 +98,7 @@ export const disableTutorial: RequestHandler = async (req, res) => {
         reference_id: tutorialUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Tutorial id ${tutorialId} has been disabled ` })
+      res.status(200).send({ success: `Tutorial id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })
