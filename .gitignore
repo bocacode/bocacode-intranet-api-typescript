@@ -7,6 +7,9 @@ package-lock.json
 # build folder
 dist
 
+# coverage
+coverage
+
 # environment variable s
 .env
 .env.prod
