@@ -25,7 +25,7 @@ export const addLab: RequestHandler = async (req, res) => {
         }
         addLog(log)
 
-        res.send('Lab created')
+        res.send(labCreated)
       } else {
         res.status(401).json({ error: 'Lab was not created' })
       }
@@ -37,9 +37,12 @@ export const addLab: RequestHandler = async (req, res) => {
 }
 
 export const updateLab: RequestHandler = async (req, res) => {
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update Lab' })
+
   if (req.body) {
     try {
-      const labUpdated = await Labs.findOneAndUpdate({ labId: req.body.labId }, { $set: req.body })
+      const labUpdated = await Labs.findOneAndUpdate({ uid: req.params.id }, { $set: req.body })
 
       if (labUpdated) {
         const log = {
@@ -74,8 +77,8 @@ export const disableLab: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { labId } = req.params
-    const labUpdated = await Labs.findOneAndUpdate({ uid: labId }, { $set: { enabled: false } })
+    const { id } = req.params
+    const labUpdated = await Labs.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (labUpdated) {
       const log = {
@@ -85,7 +88,7 @@ export const disableLab: RequestHandler = async (req, res) => {
         reference_id: labUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Lab id ${labId} has been disabled ` })
+      res.status(200).send({ success: `Lab id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

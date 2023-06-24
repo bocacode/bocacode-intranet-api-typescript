@@ -7,7 +7,7 @@ const router = Router()
 
 router.route('/').get(auth, getLabs)
 router.route('/').post(auth, checkRequestBody, addLab)
-router.route('/disable/:labId').patch(auth, checkRequestBody, disableLab)
-router.route('/update').patch(auth, checkRequestBody, updateLab)
+router.route('/disable/:id').patch(auth, checkRequestBody, disableLab)
+router.route('/:id').patch(auth, checkRequestBody, updateLab)
 
 export default router

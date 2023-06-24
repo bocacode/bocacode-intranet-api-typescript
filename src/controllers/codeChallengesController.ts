@@ -25,21 +25,23 @@ export const addCodeChallenge: RequestHandler = async (req, res) => {
       }
       addLog(log)
 
-      res.send('Code Challenge created')
-    } else {
-      res.status(401).json({ error: 'Code Challenge was not created' })
+        res.send(codeChallengeCreated)
+      } else {
+        res.status(401).json({ error: 'Code Challenge was not created' })
+      }
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ error: 'Invalid data or HTTP method' })
     }
-  } catch (error) {
-    console.log(error)
-    res.status(500).json({ error: 'Invalid data or HTTP method' })
   }
-}
 
 export const updateCodeChallenge: RequestHandler = async (req, res) => {
-  if (!req.params) return res.status(401).json({ error: 'Unable to update code challenge' })
+  if (req.method !== 'PATCH') return res.status(401).json({ error: 'Invalid request method' })
+  if (!req.params) return res.status(401).send({ message: 'Unable to update code challenge' })
+
   try {
     const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-      { codeChallengeId: req.body.codeChallengeId },
+      { codeChallengeId: req.params.id },
       { $set: req.body }
     )
     if (codeChallengeUpdated) {
@@ -71,9 +73,9 @@ export const disableCodeChallenge: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { codeChallengeId } = req.params
+    const { id } = req.params
     const codeChallengeUpdated = await CodeChallenges.findOneAndUpdate(
-      { uid: codeChallengeId },
+      { uid: id },
       { $set: { enabled: false } }
     )
 
@@ -85,7 +87,7 @@ export const disableCodeChallenge: RequestHandler = async (req, res) => {
         reference_id: codeChallengeUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Code Challenge id ${codeChallengeId} has been disabled ` })
+      res.status(200).send({ success: `Code Challenge id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })

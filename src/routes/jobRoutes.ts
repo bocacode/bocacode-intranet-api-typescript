@@ -9,6 +9,6 @@ router.route('/').get(auth, getJobs)
 router.route('/:id').get(auth, getJob)
 router.route('/').post(auth, checkRequestBody, addJob)
 router.route('/disable/:id').patch(auth, checkRequestBody, disableJob)
-router.route('/update').patch(auth, checkRequestBody, updateJob)
+router.route('/:id').patch(auth, checkRequestBody, updateJob)
 
 export default router

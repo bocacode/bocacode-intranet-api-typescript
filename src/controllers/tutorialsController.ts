@@ -25,7 +25,7 @@ export const addTutorial: RequestHandler = async (req, res) => {
       }
       addLog(log)
 
-      res.status(200).send('Tutorial created')
+      res.status(200).send(tutorialCreated)
     } else {
       res.status(401).json({ error: 'Tutorial was not created' })
     }
