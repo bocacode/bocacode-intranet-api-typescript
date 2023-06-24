@@ -2,6 +2,7 @@
 
 ##### New Features
 
+*  add new husky script (e39f0bf6)
 *  adding logs with changes (5f64feec)
 *  adding logs with changes (fe8d4589)
 
