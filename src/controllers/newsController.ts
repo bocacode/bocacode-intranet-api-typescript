@@ -90,9 +90,10 @@ export const getNews: RequestHandler = async (req, res) => {
 
 export const disableNews: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
+  if (!req.body || !req.body?.user_id) return res.status(401).json({ error: 'Invalid request body' })
   try {
     const { id } = req.params
-    const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
+    const newsUpdated = await News.findOneAndUpdate({ uid: id }, { $set: { enabled: false } }, { new: true })
 
     if (newsUpdated) {
       const log = {
