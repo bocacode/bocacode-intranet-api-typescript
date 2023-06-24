@@ -89,8 +89,8 @@ export const disableAlumni: RequestHandler = async (req, res) => {
   if (!req.params) return res.status(401).send({ error: 'Update not completed or Access Denied' })
 
   try {
-    const { uid } = req.params
-    const alumniUpdated = await Alumni.findOneAndUpdate({ uid: uid }, { $set: { enabled: false } })
+    const { id } = req.params
+    const alumniUpdated = await Alumni.findOneAndUpdate({ uid: id }, { $set: { enabled: false } })
 
     if (alumniUpdated) {
       const log = {
@@ -100,7 +100,7 @@ export const disableAlumni: RequestHandler = async (req, res) => {
         reference_id: alumniUpdated.uid,
       }
       addLog(log)
-      res.status(200).send({ success: `Alumni id ${uid} has been disabled ` })
+      res.status(200).send({ success: `Alumni id ${id} has been disabled ` })
     }
   } catch (err) {
     res.status(500).send({ error: err })
