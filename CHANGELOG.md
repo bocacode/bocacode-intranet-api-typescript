@@ -14,6 +14,7 @@
 
 ##### Bug Fixes
 
+*  add clear seed (8c6e35f7)
 *  coverage git ignored (cb8eb651)
 *  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
