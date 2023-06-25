@@ -27,8 +27,7 @@
     "title": "Espresso",
     "description": "An espresso shot can be served solo or used as the foundation of most coffee drinks, like lattes and macchiatos.",
     "ingredients": ["1oz Espresso"],
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
-    "id": 5
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg"
   },
   {
     "title": "Doppio",

@@ -55,4 +55,7 @@ app.use('/api/beers', beerRoutes)
 import cohortRoutes from './routes/cohortRoutes'
 app.use('/api/cohorts', cohortRoutes)
 
+import coffeeRoutes from './routes/practiceAPIs/coffeeRoutes'
+app.use('/api/coffees', coffeeRoutes)
+
 mongooseConnect()

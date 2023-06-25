@@ -6,9 +6,9 @@ const CoffeeSchema = new mongoose.Schema(
     image: { type: String, required: true },
     title: { type: String, required: true },
     description: { type: String, required: true},
-    ingredients: { type: String, required: true},
+    ingredients: { type: Array, required: true},
     created_by: { type: String, required: true },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: true, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }
