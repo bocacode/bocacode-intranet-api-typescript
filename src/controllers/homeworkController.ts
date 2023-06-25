@@ -12,7 +12,7 @@ export const addHomework: RequestHandler = async (req, res) => {
         return res.status(401).json({ error: 'Homework already in system' })
       }
 
-      const newHomework = { ...req.body, uid: createRandomId() }
+      const newHomework = { ...req.body, uid: createRandomId(), created_by: req.body.user_id }
 
       const homeworkCreated = await Homeworks.create(newHomework)
 
