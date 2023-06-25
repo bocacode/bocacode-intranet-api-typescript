@@ -30,6 +30,21 @@ const eventsData = require('../../old_data/events.json')
 import ChallengeModel from '../models/codeChallengeModel'
 const challengesData = require('../../old_data/challenges.json')
 
+import studentModel from '../models/studentModel'
+const studentsData = require('../../old_data/students.json')
+
+import usersModel from '../models/usersModel'
+const usersData = require('../../old_data/users.json')
+
+import logsModel from '../models/logsModel'
+const logsData = require('../../old_data/logs.json')
+
+import wellnessModel from '../models/wellnessModel'
+const wellnessData = require('../../old_data/wellness.json')
+
+import cohortModel from '../models/cohortModel' 
+const cohortsData = require('../../old_data/cohort.json')
+
 mongoose.set('strictQuery', false)
 mongoose
   .connect(
@@ -69,13 +84,18 @@ const seedDB = async (data: any, type: any, name: string) => {
 }
 
 Promise.all([
-  // seedDB(restaurantData, RestaurantModel, 'Restaurants'),
-  // seedDB(tutorialsData, TutorialModal, 'Tutorials'),
-  // seedDB(homeworkData, HomeworkModal, 'Homeworks'),
-  // seedDB(jobsData, JobsModal, 'Jobs'),
-  // seedDB(labsData, LabsModal, 'Labs'),
-  // seedDB(lecturesData, LectureModel, 'Lectures'),
-  // seedDB(newsData, NewsModel, 'News'),
-  // seedDB(eventsData, EventModel, 'Events'),
-  // seedDB(challengesData, ChallengeModel, 'Events'),
+  seedDB(restaurantData, RestaurantModel, 'Restaurants'),
+  seedDB(tutorialsData, TutorialModal, 'Tutorials'),
+  seedDB(homeworkData, HomeworkModal, 'Homeworks'),
+  seedDB(jobsData, JobsModal, 'Jobs'),
+  seedDB(labsData, LabsModal, 'Labs'),
+  seedDB(lecturesData, LectureModel, 'Lectures'),
+  seedDB(newsData, NewsModel, 'News'),
+  seedDB(eventsData, EventModel, 'Events'),
+  seedDB(challengesData, ChallengeModel, 'Events'),
+  seedDB(studentsData, studentModel, 'Students'),
+  seedDB(usersData, usersModel, 'Users'),
+  seedDB(logsData, logsModel, 'Logs'),
+  seedDB(wellnessData, wellnessModel, 'Wellness'),
+  seedDB(cohortsData, cohortModel, 'Cohorts')
 ]).then(() => mongoose.connection.close())

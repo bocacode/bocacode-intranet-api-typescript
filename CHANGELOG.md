@@ -2,6 +2,7 @@
 
 ##### Chores
 
+*  did students (e816a3e4)
 *  did user and merge (1a006f2a)
 *  jsondata (a80761b0)
 *  logs data done (03e3771d)
