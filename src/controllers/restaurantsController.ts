@@ -43,7 +43,7 @@ export const updateRestaurant: RequestHandler = async (req, res) => {
       const restaurantUpdated = await Restaurant.findOneAndUpdate({ uid: id }, { $set: req.body }, { new: true })
       if (restaurantUpdated) {
         const log = {
-          user_id: req.body.req.body.user_id,
+          user_id: req.body.user_id,
           model: 'restaurant',
           event_type: 'updated',
           reference_id: restaurantUpdated.uid,
