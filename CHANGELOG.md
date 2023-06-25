@@ -2,6 +2,7 @@
 
 ##### Chores
 
+*  did user and merge (1a006f2a)
 *  jsondata (a80761b0)
 *  logs data done (03e3771d)
 *  test (1193d39e)
