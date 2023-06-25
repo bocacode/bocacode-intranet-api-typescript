@@ -31,7 +31,40 @@
   "author": "Jonathan Sanchez",
   "contributors": [
     {
-      "name": "Cassandra Curcio"
+      "name": "Team Spartans",
+      "description": "Winners of 7/23/23 Intranet Hackathon",
+      "members": [
+        {
+          "name": "Ralph Sébastien Placide",
+          "gitHub": "https://github.com/ralphZero"
+        },
+        {
+          "name": "Idan Fischer",
+          "gitHub": "https://github.com/IdanFischer"
+        },
+        {
+          "name": "Anthony Murphy",
+          "gitHub": "https://github.com/AnthonyM04"
+        },
+        {
+          "name": "Adi Fischer",
+          "gitHub": "https://github.com/AdiFischer"
+        },
+        {
+          "name": "Sarah Kuss",
+          "gitHub": "https://github.com/sarahkuss"
+        },
+        {
+          "name": "Rodrigo Henriques",
+          "gitHub": "https://github.com/prorodrigoh"
+        }
+      ]
+    },
+    {
+      "name": "previous contributors",
+      "members": [
+        "Cassandra Curcio"
+      ]
     }
   ],
   "license": "ISC",
