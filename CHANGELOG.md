@@ -2,6 +2,7 @@
 
 ##### Chores
 
+
 *  all data done and seed ready to go (c7179bc2)
 *  did students (e816a3e4)
 *  did user and merge (1a006f2a)
@@ -19,6 +20,7 @@
 
 ##### Bug Fixes
 
+*  add clear seed (8c6e35f7)
 *  coverage git ignored (cb8eb651)
 *  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
