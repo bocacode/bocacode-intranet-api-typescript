@@ -1,13 +1,19 @@
-#### 1.0.0 (2023-06-24)
+#### 1.0.0 (2023-06-25)
+
+##### Chores
+
+* **server:**  updated readme with unit test and configuration (48ff3b7e)
 
 ##### New Features
 
+*  merge 'main' into 63-unit-test-for-get-alls (d6cfe936)
 *  add new husky script (e39f0bf6)
 *  adding logs with changes (5f64feec)
 *  adding logs with changes (fe8d4589)
 
 ##### Bug Fixes
 
+*  coverage git ignored (cb8eb651)
 *  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
 *  remove github action (1de48deb)
