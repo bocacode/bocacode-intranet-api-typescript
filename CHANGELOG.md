@@ -2,6 +2,7 @@
 
 ##### Chores
 
+*  test (1193d39e)
 * **server:**  updated readme with unit test and configuration (48ff3b7e)
 
 ##### New Features
