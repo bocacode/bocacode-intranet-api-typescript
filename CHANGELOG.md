@@ -1,4 +1,8 @@
-#### 1.0.0 (2023-06-24)
+#### 1.0.0 (2023-06-25)
+
+##### Chores
+
+* **server:**  updated readme with unit test and configuration (48ff3b7e)
 
 ##### New Features
 
