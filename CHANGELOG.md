@@ -2,6 +2,7 @@
 
 ##### Chores
 
+*  all data done and seed ready to go (c7179bc2)
 *  did students (e816a3e4)
 *  did user and merge (1a006f2a)
 *  jsondata (a80761b0)
