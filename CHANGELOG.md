@@ -2,6 +2,7 @@
 
 ##### Chores
 
+*  jsondata (a80761b0)
 *  logs data done (03e3771d)
 *  test (1193d39e)
 * **server:**  updated readme with unit test and configuration (48ff3b7e)

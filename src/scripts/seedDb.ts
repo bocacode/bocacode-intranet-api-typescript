@@ -69,13 +69,13 @@ const seedDB = async (data: any, type: any, name: string) => {
 }
 
 Promise.all([
-  seedDB(restaurantData, RestaurantModel, 'Restaurants'),
-  seedDB(tutorialsData, TutorialModal, 'Tutorials'),
-  seedDB(homeworkData, HomeworkModal, 'Homeworks'),
-  seedDB(jobsData, JobsModal, 'Jobs'),
-  seedDB(labsData, LabsModal, 'Labs'),
-  seedDB(lecturesData, LectureModel, 'Lectures'),
-  seedDB(newsData, NewsModel, 'News'),
-  seedDB(eventsData, EventModel, 'Events'),
-  seedDB(challengesData, ChallengeModel, 'Events'),
+  // seedDB(restaurantData, RestaurantModel, 'Restaurants'),
+  // seedDB(tutorialsData, TutorialModal, 'Tutorials'),
+  // seedDB(homeworkData, HomeworkModal, 'Homeworks'),
+  // seedDB(jobsData, JobsModal, 'Jobs'),
+  // seedDB(labsData, LabsModal, 'Labs'),
+  // seedDB(lecturesData, LectureModel, 'Lectures'),
+  // seedDB(newsData, NewsModel, 'News'),
+  // seedDB(eventsData, EventModel, 'Events'),
+  // seedDB(challengesData, ChallengeModel, 'Events'),
 ]).then(() => mongoose.connection.close())
