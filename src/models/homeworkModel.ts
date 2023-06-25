@@ -8,7 +8,7 @@ const HomeworkSchema = new mongoose.Schema(
     created_by: { type: String, required: true },
     subtopic: { type: String },
     question: { type: String },
-    enabled: { type: Boolean },
+    enabled: { type: Boolean, default: true, required: true },
     modified_by: { type: String },
   },
   { timestamps: true }

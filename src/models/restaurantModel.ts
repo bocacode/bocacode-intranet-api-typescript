@@ -11,7 +11,7 @@ const RestaurantSchema = new mongoose.Schema(
     average_rating: { type: Number },
     created_by: { type: String, required: true },
     modified_by: { type: String },
-    active: { type: Boolean, default: false, required: true },
+    active: { type: Boolean, default: true, required: true },
   },
   { timestamps: true }
 )

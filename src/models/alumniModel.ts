@@ -10,7 +10,7 @@ const AlumniSchema = new mongoose.Schema(
     rating: { type: Array },
     created_by: { type: String, required: true },
     modified_by: { type: String },
-    active: { type: Boolean, default: false, required: true },
+    active: { type: Boolean, default: true, required: true },
   },
   { timestamps: true }
 )
