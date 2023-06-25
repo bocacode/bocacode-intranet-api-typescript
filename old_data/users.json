@@ -1,0 +1,26 @@
+[
+  {
+    "email": "idanIF@gmail.com",
+    "access_level": 0,
+    "first_name": "Idan",
+    "last_name": "Friedman",
+    "password": "138sA&@#usu&#&$UJEj08*H77",
+    "active": true
+  },
+  {
+    "email": "ilansucks@hotmail.com",
+    "access_level": 0,
+    "first_name": "ilan",
+    "last_name": "sucksalot",
+    "password": "ASasfgf0)*ASY*)ASY83#$9H83$&$%&",
+    "active": true
+  },
+  {
+    "email": "Jonathonteambest@yahoo.com",
+    "access_level": 10,
+    "first_name": "Jonathan",
+    "last_name": "Teambest",
+    "password": "U&#7474r7dAY#&4udhfjs7!ehr$%&",
+    "active": true
+  }
+]
