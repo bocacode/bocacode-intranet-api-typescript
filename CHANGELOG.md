@@ -1,13 +1,27 @@
-#### 1.0.0 (2023-06-24)
+#### 1.0.0 (2023-06-25)
+
+##### Chores
+
+
+*  all data done and seed ready to go (c7179bc2)
+*  did students (e816a3e4)
+*  did user and merge (1a006f2a)
+*  jsondata (a80761b0)
+*  logs data done (03e3771d)
+*  test (1193d39e)
+* **server:**  updated readme with unit test and configuration (48ff3b7e)
 
 ##### New Features
 
+*  merge 'main' into 63-unit-test-for-get-alls (d6cfe936)
 *  add new husky script (e39f0bf6)
 *  adding logs with changes (5f64feec)
 *  adding logs with changes (fe8d4589)
 
 ##### Bug Fixes
 
+*  add clear seed (8c6e35f7)
+*  coverage git ignored (cb8eb651)
 *  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
 *  remove github action (1de48deb)
