@@ -1,6 +1,6 @@
 import mongoose, { ConnectOptions } from 'mongoose'
 
-mongoose.set('debug', true)
+if (process.env.NODE_ENV === 'development') mongoose.set('debug', true)
 
 export const mongooseConnect = async () => {
   mongoose.set('strictQuery', false)

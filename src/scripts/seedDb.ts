@@ -1,83 +1,55 @@
-import mongoose, { ConnectOptions } from 'mongoose'
+import mongoose from 'mongoose'
+import { mongooseConnect } from '../utils/mongoUtility'
 import 'dotenv/config'
 
-import { addLog } from '../controllers/logController'
-
 import RestaurantModel from '../models/restaurantModel'
-const restaurantData = require('../../old_data/restaurants.json')
+const restaurantData = require('../../seed_data/restaurants.json')
 
 import TutorialModal from '../models/tutorialModel'
-const tutorialsData = require('../../old_data/tutorials.json')
+const tutorialsData = require('../../seed_data/tutorials.json')
 
 import HomeworkModal from '../models/homeworkModel'
-const homeworkData = require('../../old_data/homeworks.json')
+const homeworkData = require('../../seed_data/homeworks.json')
 
 import JobsModal from '../models/jobModel'
-const jobsData = require('../../old_data/jobs.json')
+const jobsData = require('../../seed_data/jobs.json')
 
 import LabsModal from '../models/labModel'
-const labsData = require('../../old_data/labs.json')
+const labsData = require('../../seed_data/labs.json')
 
 import LectureModel from '../models/lectureModel'
-const lecturesData = require('../../old_data/lectures.json')
+const lecturesData = require('../../seed_data/lectures.json')
 
 import NewsModel from '../models/newsModel'
-const newsData = require('../../old_data/news.json')
+const newsData = require('../../seed_data/news.json')
 
 import EventModel from '../models/eventModel'
-const eventsData = require('../../old_data/events.json')
+const eventsData = require('../../seed_data/events.json')
 
 import ChallengeModel from '../models/codeChallengeModel'
-const challengesData = require('../../old_data/challenges.json')
+const challengesData = require('../../seed_data/challenges.json')
 
 import studentModel from '../models/studentModel'
-const studentsData = require('../../old_data/students.json')
+const studentsData = require('../../seed_data/students.json')
 
 import usersModel from '../models/usersModel'
-const usersData = require('../../old_data/users.json')
+const usersData = require('../../seed_data/users.json')
 
 import logsModel from '../models/logsModel'
-const logsData = require('../../old_data/logs.json')
+const logsData = require('../../seed_data/logs.json')
 
 import wellnessModel from '../models/wellnessModel'
-const wellnessData = require('../../old_data/wellness.json')
+const wellnessData = require('../../seed_data/wellness.json')
 
-import cohortModel from '../models/cohortModel' 
-const cohortsData = require('../../old_data/cohort.json')
+import cohortModel from '../models/cohortModel'
+const cohortsData = require('../../seed_data/cohort.json')
 
-mongoose.set('strictQuery', false)
-mongoose
-  .connect(
-    process.env.MONGO_URI as string,
-    {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    } as ConnectOptions
-  )
-  .then((result: any) => {
-    if (result.STATES['1']) {
-      console.log(`Connected to Mongo -  ${process.env.PORT}`)
-    } else {
-      console.error
-    }
-  })
-  .catch((err) => console.error(err))
+mongooseConnect()
 
 const seedDB = async (data: any, type: any, name: string) => {
   try {
-    // await Restaurant.deleteMany({})  // enable only to delete all items in collection
     const dummyDataCreated = await type.insertMany(data)
-    if (dummyDataCreated) {
-      // const log = {
-      //   user_id: 'admin',
-      //   model: 'deal',
-      //   event_type: 'Dummy type Created',
-      //   reference_id: 'dummy-data',
-      console.log(`${name} => where created in local Mongo DB`)
-    }
-    // addLog(log)
-    // console.log(`'All ${type} -> `, allData) // to get all the data back
-    // }
+    if (dummyDataCreated) console.log(`${name} => where created in local Mongo DB`)
   } catch (error) {
     console.log('error -> ', error)
   }
@@ -92,10 +64,12 @@ Promise.all([
   seedDB(lecturesData, LectureModel, 'Lectures'),
   seedDB(newsData, NewsModel, 'News'),
   seedDB(eventsData, EventModel, 'Events'),
-  seedDB(challengesData, ChallengeModel, 'Events'),
+  seedDB(challengesData, ChallengeModel, 'Challenges'),
   seedDB(studentsData, studentModel, 'Students'),
   seedDB(usersData, usersModel, 'Users'),
   seedDB(logsData, logsModel, 'Logs'),
   seedDB(wellnessData, wellnessModel, 'Wellness'),
-  seedDB(cohortsData, cohortModel, 'Cohorts')
-]).then(() => mongoose.connection.close())
+  seedDB(cohortsData, cohortModel, 'Cohorts'),
+])
+  .then(() => mongoose.connection.close())
+  .catch((err) => console.error(err))
