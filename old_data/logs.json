@@ -1,0 +1,20 @@
+[
+  {
+    "user_id": "idanIF@gmail.com",
+    "model": "lecture",
+    "event_type": "new",
+    "reference_id": "236758"
+  },
+  {
+    "user_id": "JohnDoe@hotmail.com",
+    "model": "event",
+    "event_type": "disabled",
+    "reference_id": "235673"
+  },
+  {
+    "user_id": "AMsleeperIF@yahoo.com",
+    "model": "job",
+    "event_type": "disabled",
+    "reference_id": "235371"
+  }
+]
