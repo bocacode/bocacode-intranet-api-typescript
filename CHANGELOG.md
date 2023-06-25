@@ -2,6 +2,12 @@
 
 ##### Chores
 
+*  all data done and seed ready to go (c7179bc2)
+*  did students (e816a3e4)
+*  did user and merge (1a006f2a)
+*  jsondata (a80761b0)
+*  logs data done (03e3771d)
+*  test (1193d39e)
 * **server:**  updated readme with unit test and configuration (48ff3b7e)
 
 ##### New Features
