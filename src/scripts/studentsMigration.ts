@@ -1,11 +1,13 @@
 import { createRandomId } from '../utils/utils'
 import axios from 'axios'
 import Students from '../models/studentModel'
+import e from 'express'
 
 interface CurrentData {
   github: string
   imageFull: string
   name: string
+  linkedin: string
   id: number
   userSlug: string
   prevTitle: string
@@ -22,76 +24,54 @@ interface CurrentData {
 }
 
 interface MigratedData {
-  github: { type: string; required: true }
-  image_full: { type: string; required: true }
-  name: { type: string; required: true }
-  email: { type: string; required: true }
-  linkedin: { type: string; required: true }
-  uid: { type: string; required: true }
-  user_slug: { type: string; required: true }
-  prev_title: { type: string; required: true }
-  created_by: { type: string; required: true }
-  inspiration: { type: string; required: true }
-  most_important_skill: { type: string; required: true }
-  why_boca_code: { type: string; required: true }
-  project_title: { type: string; required: true }
-  project: { type: string; required: true }
-  project_about: { type: string; required: true }
-  project_image: { type: string; required: true }
-  resume: { type: string; required: true }
-  about: { type: string; required: true }
-  doc_id: { type: string; required: true }
-  enabled: { type: boolean; required: true; default: true }
-  modified_by: { type: string }
+  github: string
+  image_full: string
+  name: string
+  email: string
+  linkedin: string
+  uid: string
+  user_slug: string
+  prev_title: string
+  created_by: string
+  inspiration: string
+  most_important_skill: string
+  why_boca_code: string
+  project_title: string
+  project: string
+  project_about: string
+  project_image: string
+  resume: string
+  about: string
+  doc_id: string
+  enabled: boolean
+  modified_by: string
 }
 
-async function migrateData(currentData: CurrentData) {
+function migrateData(currentData: CurrentData) {
   const migratedData: MigratedData = {
-    github: { type: 'String', required: true },
-    image_full: { type: 'String', required: true },
-    name: { type: 'String', required: true },
-    email: { type: 'String', required: true },
-    linkedin: { type: 'String', required: true },
-    uid: { type: 'String', required: true },
-    user_slug: { type: 'String', required: true },
-    prev_title: { type: 'String', required: true },
-    created_by: { type: 'String', required: true },
-    inspiration: { type: 'String', required: true },
-    most_important_skill: { type: 'String', required: true },
-    why_boca_code: { type: 'String', required: true },
-    project_title: { type: 'String', required: true },
-    project: { type: 'String', required: true },
-    project_about: { type: 'String', required: true },
-    project_image: { type: 'String', required: true },
-    resume: { type: 'String', required: true },
-    about: { type: 'String', required: true },
-    doc_id: { type: 'String', required: true },
-    enabled: { type: true, required: true, default: true },
-    modified_by: { type: 'String' },
+    github: currentData.github,
+    image_full: currentData.imageFull,
+    name: currentData.name,
+    email: 'migration_script@bocacode.com',
+    linkedin: currentData.linkedin,
+    uid: createRandomId().toString(),
+    user_slug: currentData.userSlug,
+    prev_title: currentData.prevTitle,
+    created_by: 'migration_script@bocacode.com',
+    inspiration: currentData.inspiration,
+    most_important_skill: currentData.mostImportantSkill,
+    why_boca_code: currentData.whyBocaCode,
+    project_title: currentData.projectTitle,
+    project: currentData.project,
+    project_about: currentData.projectAbout,
+    project_image: currentData.projectImage,
+    resume: currentData.resume,
+    about: currentData.about,
+    doc_id: currentData.docId,
+    modified_by: 'migration_script@bocacode.com',
+    enabled: true,
   }
-
-  migratedData.github.type = currentData.github
-  migratedData.image_full.type = currentData.imageFull
-  migratedData.name.type = currentData.name
-  migratedData.email.type = 'migration_script@bocacode.com'
-  migratedData.uid.type = createRandomId().toString()
-  migratedData.user_slug.type = currentData.userSlug
-  migratedData.prev_title.type = currentData.prevTitle
-  migratedData.created_by.type = 'migration_script@bocacode.com'
-  migratedData.inspiration.type = currentData.inspiration
-  migratedData.most_important_skill.type = currentData.mostImportantSkill
-  migratedData.why_boca_code.type = currentData.whyBocaCode
-  migratedData.project_title.type = currentData.projectTitle
-  migratedData.project.type = currentData.project
-  migratedData.project_about.type = currentData.projectAbout
-  migratedData.project_image.type = currentData.projectImage
-  migratedData.resume.type = currentData.resume
-  migratedData.about.type = currentData.about
-  migratedData.doc_id.type = currentData.docId
-  migratedData.modified_by.type = 'migration_script@bocacode.com'
-
-  //   return migratedData
-  await Students.create(migratedData)
+  return migratedData
 }
 
 // Usage example
@@ -121,12 +101,13 @@ async function migrateData(currentData: CurrentData) {
 
 // 1. fetch data from https://bocacode-api.web.app/candidates into a json file
 
-async function downloadData(url: string): Promise<CurrentData> {
+async function downloadData(url: string): Promise<CurrentData[]> {
   try {
     const response = await axios.get(url)
-    return response.data
+    const data: CurrentData[] = await response.data
+    return data
   } catch (error) {
-    throw new Error(`Failed to download data from ${url}. Error: ${error}`)
+    throw new Error(`Failed to fetch data from ${url}. Error: ${error}`)
   }
 }
 
@@ -134,9 +115,16 @@ async function downloadData(url: string): Promise<CurrentData> {
 const url = 'https://bocacode-api.web.app/candidates'
 downloadData(url)
   .then(async (data) => {
-    console.log(data)
-    // Process the downloaded data
-    await migrateData(data)
+    const studentsData = data as CurrentData[]
+    for (const student of studentsData) {
+      const migratedData = migrateData(student)
+      // console.log(migratedData)
+      try {
+        await Students.create(migratedData)
+      } catch (error) {
+        console.error(error)
+      }
+    }
   })
   .catch((error) => {
     console.error(error)

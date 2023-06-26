@@ -1,4 +1,4 @@
-#### 1.0.0 (2023-06-25)
+#### 1.0.0 (2023-06-26)
 
 ##### Chores
 
@@ -12,6 +12,7 @@
 
 ##### Bug Fixes
 
+*  added items (1cfcf45d)
 *  add genereate-changelog as dev dependency (414898e2)
 *  update CHANGELOG.md (6e4d6ee6)
 *  remove github action (1de48deb)
