@@ -1,7 +1,8 @@
-#### 1.0.0 (2023-06-25)
+#### 1.0.0 (2023-06-26)
 
 ##### Chores
 
+* **cleanup:**  updated read me and seed scripts (0bfa2f33)
 *  merged main (4ca90008)
 *  all data done and seed ready to go (c7179bc2)
 *  did students (e816a3e4)
